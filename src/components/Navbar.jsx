@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import KeshavLogo from '../assets/keshav-logo/default.png';
+import KeshavLogo from '../assets/keshav-logo/logo.png';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
