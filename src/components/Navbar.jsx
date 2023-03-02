@@ -9,7 +9,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleClick = () => setNav(!nav);
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+        <div className='fixed w-full h-[40px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
             <div>
                 <img src={KeshavLogo} alt="Logo Image" style={{ width: '50px' }} />
             </div>
@@ -89,9 +89,9 @@ const Navbar = () => {
                         </a>
                     </li>
                     {/* Email */}
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#174d41]'>
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#27a98d]'>
                         <a className='flex justify-between items-center w-full text-gray-300'
-                            href="https://www.linkedin.com/in/keshav-kunver/" target="_blank">
+                            href="mailto:keshav@kunver.com" target="_blank">
                             Email <HiOutlineMail size={30} />
                         </a>
                     </li>
