@@ -1,0 +1,45 @@
+# dependencies
+/node_modules
+
+# build output
+/build
+/build.zip
+
+# system files
+.DS_Store
+src/.DS_Store
+assets/.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# testing
+/coverage
+
+# environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# misc
+*.pem
+*.key
+
+# IDEs/editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# cache
+.eslintcache
+.cache/
+node_modules/.cache/
+*.pack
+*.old
+
+# OS-specific
+Thumbs.db
