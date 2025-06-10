@@ -77,11 +77,12 @@ const Home = () => {
 
                     {/* Headshot Photo */}
                     <div className='mt-8 lg:mt-0 lg:flex-shrink-0 lg:transform lg:translate-x-15'>
-                        <div className='w-64 h-64 lg:w-80 lg:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-[#a32638] shadow-lg'>
+                        <div className='w-64 h-64 lg:w-80 lg:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-[#a32638] shadow-lg bg-[#112240]'>
                             <img
                                 src={headshotImage}
                                 alt="Keshav's headshot"
-                                className='w-full h-full object-cover object-top'
+                                className='w-full h-full object-cover object-top transition-opacity duration-300'
+                                loading="eager"
                             />
                         </div>
                     </div>
