@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Sprint cycle circle -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#3498DB" stroke-width="3" stroke-dasharray="8 4"/>
+  
+  <!-- Sprint phases -->
+  <!-- Planning -->
+  <circle cx="32" cy="12" r="6" fill="#E74C3C" stroke="#C0392B" stroke-width="1"/>
+  <text x="32" y="15" text-anchor="middle" fill="white" font-size="5" font-weight="bold" font-family="Arial">PLAN</text>
+  
+  <!-- Development -->
+  <circle cx="52" cy="32" r="6" fill="#27AE60" stroke="#229954" stroke-width="1"/>
+  <text x="52" y="35" text-anchor="middle" fill="white" font-size="5" font-weight="bold" font-family="Arial">DEV</text>
+  
+  <!-- Review -->
+  <circle cx="32" cy="52" r="6" fill="#F39C12" stroke="#E67E22" stroke-width="1"/>
+  <text x="32" y="55" text-anchor="middle" fill="white" font-size="5" font-weight="bold" font-family="Arial">REV</text>
+  
+  <!-- Retrospective -->
+  <circle cx="12" cy="32" r="6" fill="#9B59B6" stroke="#8E44AD" stroke-width="1"/>
+  <text x="12" y="35" text-anchor="middle" fill="white" font-size="5" font-weight="bold" font-family="Arial">RETRO</text>
+  
+  <!-- Direction arrows -->
+  <path d="M 38 18 Q 46 26 46 32" fill="none" stroke="#2C3E50" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 46 38 Q 38 46 32 46" fill="none" stroke="#2C3E50" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 26 46 Q 18 38 18 32" fill="none" stroke="#2C3E50" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 18 26 Q 26 18 32 18" fill="none" stroke="#2C3E50" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Center iteration indicator -->
+  <circle cx="32" cy="32" r="4" fill="#34495E"/>
+  <text x="32" y="35" text-anchor="middle" fill="white" font-size="4" font-weight="bold" font-family="Arial">SPRINT</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 3, 0 6" fill="#2C3E50"/>
+    </marker>
+  </defs>
+</svg> 

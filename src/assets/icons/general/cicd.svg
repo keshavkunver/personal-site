@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Pipeline flow -->
+  <rect x="4" y="26" width="56" height="12" rx="6" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="1"/>
+  
+  <!-- Build stage -->
+  <circle cx="14" cy="32" r="6" fill="#3498DB" stroke="#2980B9" stroke-width="2"/>
+  <text x="14" y="35" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">BUILD</text>
+  
+  <!-- Test stage -->
+  <circle cx="32" cy="32" r="6" fill="#F39C12" stroke="#E67E22" stroke-width="2"/>
+  <text x="32" y="35" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">TEST</text>
+  
+  <!-- Deploy stage -->
+  <circle cx="50" cy="32" r="6" fill="#27AE60" stroke="#229954" stroke-width="2"/>
+  <text x="50" y="35" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">DEPLOY</text>
+  
+  <!-- Flow arrows -->
+  <polygon points="22,30 26,32 22,34" fill="#2C3E50"/>
+  <polygon points="40,30 44,32 40,34" fill="#2C3E50"/>
+  
+  <!-- Code input -->
+  <rect x="2" y="12" width="16" height="8" rx="2" fill="#9B59B6" stroke="#8E44AD" stroke-width="1"/>
+  <text x="10" y="17" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">CODE</text>
+  
+  <!-- Production output -->
+  <rect x="46" y="44" width="16" height="8" rx="2" fill="#E74C3C" stroke="#C0392B" stroke-width="1"/>
+  <text x="54" y="49" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">PROD</text>
+  
+  <!-- Connection lines -->
+  <line x1="10" y1="20" x2="14" y2="26" stroke="#95A5A6" stroke-width="2"/>
+  <line x1="50" y1="38" x2="54" y2="44" stroke="#95A5A6" stroke-width="2"/>
+  
+  <!-- Success indicators -->
+  <circle cx="14" cy="20" r="2" fill="#2ECC71"/>
+  <circle cx="32" cy="20" r="2" fill="#2ECC71"/>
+  <circle cx="50" cy="20" r="2" fill="#2ECC71"/>
+</svg> 

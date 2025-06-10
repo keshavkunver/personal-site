@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Kankin
+font link: https://www.fontfabric.com/kankin-free-font/
+font author: Font Fabric
+font author site: http://www.fontfabric.com/
+
+
+icon designer: ali zizai
+icon designer link: /alizizai
+        
+{"bg-gradient-0":"#181B80","bg-gradient-1":"#181ED9","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
