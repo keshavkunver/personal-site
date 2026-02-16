@@ -1,4 +1,4 @@
-export { About } from './About';
 export { default as Contact } from './Contact';
 export { default as Home } from './Home';
-export { default as Skills } from './Skills'; 
+export { default as Capabilities } from './Capabilities';
+export { default as Experience } from './Experience'; 

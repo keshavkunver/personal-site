@@ -1,0 +1,3 @@
+module.exports=[87924,(a,b,c)=>{"use strict";b.exports=a.r(42602).vendored["react-ssr"].ReactJsxRuntime},35112,(a,b,c)=>{"use strict";b.exports=a.r(42602).vendored["react-ssr"].ReactDOM},98111,a=>{a.v("/_next/static/media/eternal-dharma-logo.cb441c12.png")},23355,a=>{a.v("/_next/static/media/fourthspace-logo.6ab9287e.png")},35571,a=>{a.v("/_next/static/media/headshot.44e7fe07.png")}];
+
+//# sourceMappingURL=_3312f53f._.js.map
