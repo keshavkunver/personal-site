@@ -4,6 +4,8 @@
 # build output
 /build
 /build.zip
+/.next
+/out
 
 # system files
 .DS_Store
