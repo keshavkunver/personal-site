@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               "name": "Keshav Kunver",
               "url": "https://www.kunver.com",
-              "jobTitle": "Technical Founder",
+              "jobTitle": "Software Engineer & Founder",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Independent"
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
                 "0 to 1 Building",
                 "Startup Engineering"
               ],
-              "description": "Technical Founder building AI-native products from 0 → 1.",
+              "description": "Software Engineer and Founder building reliable AI-native products from 0 → 1.",
               "sameAs": [
                 "https://www.linkedin.com/in/keshav-kunver",
                 "https://github.com/keshavkunver"
