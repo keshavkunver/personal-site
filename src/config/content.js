@@ -101,7 +101,8 @@ export const writing = [
   {
     title: "We Have ChatGPT, Why Write?",
     url: "/blog/why-i-still-write",
-    description: "And that is exactly why.",
+    description: "AI removes friction, and friction is what builds cognition. Don't outsource your mind.",
+    readingTime: "3 min read",
   },
   {
     title: "Dharma, Regret, and the Clock",

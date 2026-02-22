@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import Link from 'next/link';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Section, Card } from '../ui';
 import { writing } from '../../config/content';
@@ -42,19 +43,25 @@ const Writing = () => {
         variants={itemVariants}
         className="mb-8"
       >
-        <Card className="relative">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-accent text-xs font-medium uppercase tracking-wider">Featured</span>
-            <span className="text-text-tertiary text-xs">·</span>
-            <span className="text-text-tertiary text-xs">Coming soon</span>
-          </div>
-          <h3 className="text-xl font-semibold text-text-primary mb-3">
-            {pinnedArticle.title}
-          </h3>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            That is <em className="italic">exactly</em> why.
-          </p>
-        </Card>
+        <Link href={pinnedArticle.url} className="block group">
+          <Card className="relative transition-all duration-200 group-hover:border-border/80">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-accent text-xs font-medium uppercase tracking-wider">Featured</span>
+              {pinnedArticle.readingTime && (
+                <>
+                  <span className="text-text-tertiary text-xs">·</span>
+                  <span className="text-text-tertiary text-xs">{pinnedArticle.readingTime}</span>
+                </>
+              )}
+            </div>
+            <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+              {pinnedArticle.title}
+            </h3>
+            <p className="text-text-secondary text-sm leading-relaxed">
+              {pinnedArticle.description}
+            </p>
+          </Card>
+        </Link>
       </motion.div>
 
       {/* Expandable Section */}
