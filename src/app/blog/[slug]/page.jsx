@@ -7,175 +7,13 @@ import { motion } from 'framer-motion';
 import Feedback from '../../../components/blog/Feedback';
 import ShareButton from '../../../components/blog/ShareButton';
 import ReadingProgress from '../../../components/blog/ReadingProgress';
+import articles from '../../../config/articles';
+
 const defaultArticleMeta = {
   readingTime: null,
   footnotes: [],
   signature: null,
   postscript: null,
-};
-
-const articles = {
-  'why-i-still-write': {
-    title: 'We Have ChatGPT, Why Write?',
-    date: 'February 2026',
-    readingTime: '3 min read',
-    footnotes: [
-      {
-        id: 1,
-        text: 'Sparrow, B., Liu, J., & Wegner, D. M. (2011). Google effects on memory: Cognitive consequences of having information at our fingertips. Science, 333(6043), 776-778.',
-      },
-      { id: 2, text: 'AI helped revise this piece for clarity and flow.' },
-    ],
-    signature: 'Keshav',
-    content: `
-I remember being able to sit down and write a five-paragraph argumentative essay in under an hour. I was able to score A's on all my persuasive and argumentative essays (humble brag). Just a pencil and a piece of paper. I didn't have access to grammar tools, never mind LLM prompts. There was no assistance. It was just thought, structure, and execution.
-
-Somewhere along the way, that ability dulled.
-
-I didn't lose intelligence. I *outsourced* friction.
-
-I chose convenience over resistance more often than I realized.
-
-Anyone as intrigued by technical advancement as I am probably uses generative AI every day. There are many use cases for GenAI, of course, but just from the technical side, it does the following for me:
-- **Accelerates** product development
-- Helps me prototype and make ideas **tangible**
-- Sharpens **iteration** speed.
-
-So, don't get me wrong. I'm not anti-AI. I build with it all the time.
-
-But I've noticed something that makes me a bit uncomfortable. As I rely on it to structure my thinking, I skip the *cognitive reps*. What happens if we stop doing the hard parts ourselves?
-
-This isn't just intuition. In 2011, cognitive psychologist Betsy Sparrow and her colleagues showed something interesting.[^1] When people expect information to be stored externally and easily retrievable, they're less likely to remember it themselves.
-
-And why would we need to? Our brains and bodies are incredibly resourceful. The brain literally optimizes for efficiency. If it doesn't need to build a pathway for remembering information, then it won't.
-
-I remind myself that writing is structured thinking. It forces clarity, and it exposes gaps in reasoning. It strengthens argumentation and communication.
-
-AI removes friction, and *friction* is what builds cognition. That's the trade-off.
-
-Life is a series of trade-offs. This is one that concerns me. AI itself is not the danger here. **Dependency** is.
-
-It's completely reasonable to use AI as a grammar coach, a clarity editor, or just a second set of eyes.
-
-But the ideas must *originate* from us humans.
-
-We have to remember generative models are trained on existing data. They recombine patterns from the past. Innovation, however, requires new synthesis. If we increasingly outsource the act of forming and articulating ideas, we risk weakening the very mechanism that produces progress in our society.
-
-Effective communication is **not optional**. It is leverage everywhere in our lives… whether in engineering, leadership, relationships, entrepreneurship, etc.
-
-If we stop practicing effective communication, the skill decays.
-
-It's a dilemma we have to face head-on. AI is stellar at writing on its own.[^2] But I wrote this because I don't want to lose the ability to think independently and express original ideas.
-
-LLMs will continue to improve. We can't fight that. So we should too, alongside it.
-
-Keep writing and keep thinking.
-
-Don't outsource your mind.
-    `,
-  },
-  'dharma-regret-and-the-clock': {
-    title: 'Dharma, Regret, and the Clock',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The AI acceleration: how quickly the landscape is shifting
-      • The wake-up call: realizing time isn't infinite
-      • Dharma / purpose: what you're actually here to do
-      • Regret as a compass: using it to guide decisions, not paralyze
-      • The shift: what changed in how you approach work and life
-
-      ...
-    `,
-  },
-  'the-productivity-trap': {
-    title: 'The Productivity Trap',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The illusion: feeling busy vs. being effective
-      • Examples: the tasks that feel productive but aren't moving the needle
-      • The lever: identifying the one thing that actually matters
-      • How I catch myself: the mental check I run now
-      • The uncomfortable truth: why we default to busywork
-
-      ...
-    `,
-  },
-  'the-polyglot-paradox': {
-    title: 'The Polyglot Paradox',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The appeal: knowing multiple languages, frameworks, skills feels impressive
-      • The irony: breadth without depth leaves you replaceable
-      • The translation to skills: trying to learn everything means excelling at nothing
-      • The uncomfortable realization: when I noticed this in myself
-      • The shift: depth over breadth, and how to choose what to go deep on
-
-      ...
-    `,
-  },
-  'health-advice-nobody-asked-for': {
-    title: 'Health Advice Nobody Asked For',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The disclaimer: this is what worked for me, not a prescription
-      • The unconventional stuff: tips you won't find in mainstream advice
-      • The practical nuggets: real, actionable things I actually do
-      • Why most advice fails: it's generic and ignores individual context
-      • The mindset shift: treating health like an experiment, not a rulebook
-
-      ...
-    `,
-  },
-  'the-2am-question': {
-    title: 'The 2am Question',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The pattern: that surge of energy and ideas when everyone else is asleep
-      • The realization: this isn't random, it's a signal
-      • The research: why night feels like "your time"
-      • The uncomfortable truth: daytime isn't fulfilling the things you care about
-      • The question: what would change if your day looked more like your 2am?
-
-      ...
-    `,
-  },
-  'too-many-interests': {
-    title: 'Too Many Interests',
-    date: 'February 2026',
-    content: `
-      [Your content here]
-
-      Placeholder outline (replace with your actual writing):
-
-      • The problem: genuinely curious about too many things
-      • The paralysis: when everything is interesting, how do you choose?
-      • The question I kept asking myself: what do I actually do?
-      • The tension: fear of missing out on paths not taken
-      • Where I landed: still figuring it out
-
-      ...
-    `,
-  },
 };
 
 export default function BlogPost() {
@@ -239,7 +77,11 @@ export default function BlogPost() {
               let i = 0;
               while (i < lines.length) {
                 const line = lines[i];
-                if (line.trim().startsWith('- ')) {
+                const imgMatch = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+                if (imgMatch) {
+                  blocks.push({ type: 'image', alt: imgMatch[1], src: imgMatch[2] });
+                  i++;
+                } else if (line.trim().startsWith('- ')) {
                   const items = [];
                   while (i < lines.length && lines[i].trim().startsWith('- ')) {
                     items.push(lines[i].trim().slice(2));
@@ -304,7 +146,21 @@ export default function BlogPost() {
                 <>
                   <div ref={readingEndRef}>
                   {blocks.map((block, i) =>
-                    block.type === 'list' ? (
+                    block.type === 'image' ? (
+                      <figure key={i} className="my-10">
+                        <img
+                          src={block.src}
+                          alt={block.alt}
+                          className="w-full rounded-lg border border-dark-border"
+                        />
+                        {block.alt && (
+                          <figcaption className="text-center mt-3">
+                            <span className="text-text-tertiary text-sm">{block.alt}</span>
+                            <span className="block text-text-tertiary/50 text-xs mt-1">Graph generated by AI</span>
+                          </figcaption>
+                        )}
+                      </figure>
+                    ) : block.type === 'list' ? (
                       <ul key={i} className="list-disc list-inside text-text-secondary leading-loose mb-6 space-y-2">
                         {block.items.map((item, j) => (
                           <li key={j}>{parseEmphasis(item)}</li>

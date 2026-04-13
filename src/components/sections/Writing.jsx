@@ -103,17 +103,35 @@ const Writing = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <Card className="h-full flex flex-col">
-                        <h3 className="text-lg font-semibold text-text-primary mb-3">
-                          {post.title}
-                        </h3>
-                        <p className="text-text-secondary text-sm leading-relaxed mb-5 line-clamp-2 min-h-[2.5rem]">
-                          {post.description}
-                        </p>
-                        <span className="text-text-tertiary text-xs font-medium mt-auto">
-                          Coming soon
-                        </span>
-                      </Card>
+                      {post.published ? (
+                        <Link href={post.url} className="block group h-full">
+                          <Card className="h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
+                            <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+                              {post.title}
+                            </h3>
+                            <p className="text-text-secondary text-sm leading-relaxed mb-5 line-clamp-2 min-h-[2.5rem]">
+                              {post.description}
+                            </p>
+                            {post.readingTime && (
+                              <span className="text-text-tertiary text-xs font-medium mt-auto">
+                                {post.readingTime}
+                              </span>
+                            )}
+                          </Card>
+                        </Link>
+                      ) : (
+                        <Card className="h-full flex flex-col">
+                          <h3 className="text-lg font-semibold text-text-primary mb-3">
+                            {post.title}
+                          </h3>
+                          <p className="text-text-secondary text-sm leading-relaxed mb-5 line-clamp-2 min-h-[2.5rem]">
+                            {post.description}
+                          </p>
+                          <span className="text-text-tertiary text-xs font-medium mt-auto">
+                            Coming soon
+                          </span>
+                        </Card>
+                      )}
                     </motion.div>
                   ))}
                 </div>

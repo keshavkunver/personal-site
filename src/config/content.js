@@ -105,6 +105,13 @@ export const writing = [
     readingTime: "3 min read",
   },
   {
+    title: "Too Many Interests",
+    url: "/blog/too-many-interests",
+    description: "I want to learn everything. So what do I actually do?",
+    readingTime: "4 min read",
+    published: true,
+  },
+  {
     title: "Dharma, Regret, and the Clock",
     url: "/blog/dharma-regret-and-the-clock",
     description: "On finding purpose before AI reshapes everything, and why I stopped waiting.",
@@ -128,11 +135,6 @@ export const writing = [
     title: "The 2am Question",
     url: "/blog/the-2am-question",
     description: "Why do I only feel motivated when everyone else is asleep?",
-  },
-  {
-    title: "Too Many Interests",
-    url: "/blog/too-many-interests",
-    description: "I want to learn everything. So what do I actually do?",
   },
 ];
 
