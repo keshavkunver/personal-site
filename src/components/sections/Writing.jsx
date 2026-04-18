@@ -45,21 +45,23 @@ const Writing = () => {
       >
         <Link href={pinnedArticle.url} className="block group">
           <Card className="relative transition-all duration-200 group-hover:border-border/80">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-accent text-xs font-medium uppercase tracking-wider">Featured</span>
-              {pinnedArticle.readingTime && (
-                <>
-                  <span className="text-text-tertiary text-xs">·</span>
-                  <span className="text-text-tertiary text-xs">{pinnedArticle.readingTime}</span>
-                </>
-              )}
-            </div>
             <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
               {pinnedArticle.title}
             </h3>
-            <p className="text-text-secondary text-sm leading-relaxed">
+            <p className="text-text-secondary text-sm leading-relaxed mb-5">
               {pinnedArticle.description}
             </p>
+            <div className="flex items-center gap-2">
+              {pinnedArticle.date && (
+                <span className="text-text-tertiary text-xs">{pinnedArticle.date}</span>
+              )}
+              {pinnedArticle.date && pinnedArticle.readingTime && (
+                <span className="text-text-tertiary text-xs">·</span>
+              )}
+              {pinnedArticle.readingTime && (
+                <span className="text-text-tertiary text-xs">{pinnedArticle.readingTime}</span>
+              )}
+            </div>
           </Card>
         </Link>
       </motion.div>
@@ -112,11 +114,17 @@ const Writing = () => {
                             <p className="text-text-secondary text-sm leading-relaxed mb-5 line-clamp-2 min-h-[2.5rem]">
                               {post.description}
                             </p>
-                            {post.readingTime && (
-                              <span className="text-text-tertiary text-xs font-medium mt-auto">
-                                {post.readingTime}
-                              </span>
-                            )}
+                            <div className="flex items-center gap-2 mt-auto">
+                              {post.date && (
+                                <span className="text-text-tertiary text-xs">{post.date}</span>
+                              )}
+                              {post.date && post.readingTime && (
+                                <span className="text-text-tertiary text-xs">·</span>
+                              )}
+                              {post.readingTime && (
+                                <span className="text-text-tertiary text-xs">{post.readingTime}</span>
+                              )}
+                            </div>
                           </Card>
                         </Link>
                       ) : (

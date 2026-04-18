@@ -31,9 +31,9 @@ export const selectedWork = [
   {
     id: "fourthspace",
     name: "FourthSpace",
-    problem: "Tech keeps people scrolling, distracted, and dependent. We wanted to build something that does the opposite.",
-    built: "A web app that helps people get their focus back, ask better questions, and actually do something with their time.",
-    outcome: "MVP live. My antidote to distraction.",
+    problem: "Social media isn't social. People scroll for hours and end up lonelier than when they started.",
+    built: "A web app where content leads to connection. Users discover content around their interests, then get matched with others who share them. Consuming becomes connecting.",
+    outcome: "MVP live. Curing the loneliness epidemic, starting now.",
     stack: ["Next.js", "TypeScript", "Supabase", "Claude", "PWA", "Tailwind CSS"],
     links: {
       website: "https://www.fourthspace.vip/",
@@ -60,16 +60,16 @@ export const selectedWork = [
 
 export const capabilities = [
   {
-    category: "AI & Product Development",
-    skills: ["LLM Integration", "Prompt Engineering", "RAG Pipelines", "AI-Assisted Development", "AI-Native Products"],
+    category: "AI-First Development",
+    skills: ["AI-Assisted Engineering (Claude Code, Cursor)", "LLM Integration", "Prompt Engineering"],
   },
   {
     category: "Full-Stack Engineering",
-    skills: ["React", "React Native", "TypeScript", "Node.js", "Python", "Firebase", "REST APIs"],
+    skills: ["React / React Native", "TypeScript / Node.js", "Python", "Supabase / Firebase"],
   },
   {
     category: "Quality & Delivery",
-    skills: ["Test Automation", "CI/CD", "System Design", "Database Design"],
+    skills: ["Test Automation", "CI/CD", "System Design"],
   },
 ];
 
@@ -103,38 +103,44 @@ export const writing = [
     url: "/blog/why-i-still-write",
     description: "AI removes friction, and friction is what builds cognition. Don't outsource your mind.",
     readingTime: "3 min read",
+    date: "February 2026",
+    tag: "AI",
   },
   {
     title: "Too Many Interests",
     url: "/blog/too-many-interests",
     description: "I want to learn everything. So what do I actually do?",
     readingTime: "4 min read",
+    date: "April 2026",
+    tag: "Life",
     published: true,
-  },
-  {
-    title: "Dharma, Regret, and the Clock",
-    url: "/blog/dharma-regret-and-the-clock",
-    description: "On finding purpose before AI reshapes everything, and why I stopped waiting.",
-  },
-  {
-    title: "The Productivity Trap",
-    url: "/blog/the-productivity-trap",
-    description: "How I catch myself doing busywork disguised as progress.",
-  },
-  {
-    title: "The Polyglot Paradox",
-    url: "/blog/the-polyglot-paradox",
-    description: "I speak four languages. Sometimes I wonder if that held me back.",
   },
   {
     title: "Health Advice Nobody Asked For",
     url: "/blog/health-advice-nobody-asked-for",
-    description: "What actually worked for me. Not for everyone.",
+    description: "What actually worked for me. For almost anyone.",
+    readingTime: "4 min read",
+    date: "April 2026",
+    tag: "Health",
+    published: true,
   },
   {
     title: "The 2am Question",
     url: "/blog/the-2am-question",
     description: "Why do I only feel motivated when everyone else is asleep?",
+    tag: "Life",
+  },
+  {
+    title: "The Productivity Trap",
+    url: "/blog/the-productivity-trap",
+    description: "How I catch myself doing busywork disguised as progress.",
+    tag: "Work",
+  },
+  {
+    title: "Dharma, Regret, and the Clock",
+    url: "/blog/dharma-regret-and-the-clock",
+    description: "On finding purpose before AI reshapes everything, and why I stopped waiting.",
+    tag: "Life",
   },
 ];
 
