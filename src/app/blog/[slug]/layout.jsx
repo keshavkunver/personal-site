@@ -12,6 +12,8 @@ export async function generateMetadata({ params }) {
 
   const title = `${article.title} | Keshav Kunver`;
   const description = article.description ?? article.title;
+  const metaParts = [article.tag, article.readingTime].filter(Boolean);
+  const ogDescription = metaParts.length > 0 ? `${metaParts.join(' · ')} · ${description}` : description;
   const url = `https://www.kunver.com/blog/${slug}`;
 
   return {
@@ -19,15 +21,17 @@ export async function generateMetadata({ params }) {
     description,
     openGraph: {
       title,
-      description,
+      description: ogDescription,
       url,
       type: 'article',
       siteName: 'Keshav Kunver',
+      images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
-      description,
+      description: ogDescription,
+      images: ['/og.png'],
     },
     alternates: {
       canonical: url,
