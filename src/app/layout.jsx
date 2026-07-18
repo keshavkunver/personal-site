@@ -10,9 +10,9 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Keshav Kunver | Engineer & Founder',
-  description: 'Software Engineer and Founder building reliable AI-native products from 0 → 1.',
-  keywords: ['Keshav Kunver', 'Software Engineer', 'Founder', 'AI Products', 'React Native', 'Full-Stack'],
+  title: 'Keshav Kunver | AI Engineer',
+  description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
+  keywords: ['Keshav Kunver', 'AI Engineer', 'LLM', 'AI Agents', 'RAG', 'LLM Evaluation', 'React Native'],
   authors: [{ name: 'Keshav Kunver' }],
   creator: 'Keshav Kunver',
   publisher: 'Keshav Kunver',
@@ -24,14 +24,16 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.kunver.com',
-    title: 'Keshav Kunver | Engineer & Founder',
-    description: 'Building reliable AI-native products from 0 → 1.',
+    title: 'Keshav Kunver | AI Engineer',
+    description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
     siteName: 'Keshav Kunver',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Keshav Kunver | Engineer & Founder',
-    description: 'Building reliable AI-native products from 0 → 1.',
+    title: 'Keshav Kunver | AI Engineer',
+    description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
+    images: ['/og.png'],
   },
   robots: {
     index: true,
@@ -63,7 +65,7 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               "name": "Keshav Kunver",
               "url": "https://www.kunver.com",
-              "jobTitle": "Software Engineer & Founder",
+              "jobTitle": "AI Engineer",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Independent"
@@ -81,16 +83,14 @@ export default function RootLayout({ children }) {
                 }
               ],
               "knowsAbout": [
+                "LLM Agents",
+                "RAG",
+                "LLM Evaluation",
                 "AI Product Development",
                 "React Native",
-                "AI Integration",
-                "Backend Engineering",
-                "Automation",
-                "Product Engineering",
-                "0 to 1 Building",
-                "Startup Engineering"
+                "Backend Engineering"
               ],
-              "description": "Software Engineer and Founder building reliable AI-native products from 0 → 1.",
+              "description": "AI Engineer building production LLM apps: agents, RAG, and the evals that keep them from breaking.",
               "sameAs": [
                 "https://www.linkedin.com/in/keshav-kunver",
                 "https://github.com/keshavkunver"
