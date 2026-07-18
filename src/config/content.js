@@ -4,6 +4,7 @@
 // Import images statically for Next.js
 import edharmaLogo from '../assets/images/projects/eternal-dharma/eternal-dharma-logo.png';
 import fourthspaceImg from '../assets/images/projects/fourthspace/fourthspace-logo.png';
+import hoopintelImg from '../assets/images/projects/hoop-intel/hoopintel-screenshot.png';
 
 export const personalInfo = {
   name: "Keshav Kunver",
@@ -32,11 +33,12 @@ export const selectedWork = [
     id: "fourthspace",
     name: "FourthSpace",
     problem: "Social media isn't social. People scroll for hours and end up lonelier than when they started.",
-    built: "A web app where content leads to connection. Users discover content around their interests, then get matched with others who share them. Consuming becomes connecting.",
-    outcome: "MVP live. Curing the loneliness epidemic, starting now.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Claude", "PWA", "Tailwind CSS"],
+    built: "A social web app with an AI agent that plans real-world meetups from natural-language chat. Built on a Claude tool-calling agent with multi-turn confirmation and safety guardrails, a real-time voice AI moderator (Pegasus, on LiveKit), and ~20 generative endpoints. Backed by a unit-test suite that encodes past agent failures as regression tests.",
+    outcome: "MVP live.",
+    stack: ["Next.js", "React 19", "TypeScript", "Supabase", "Vercel", "Anthropic Claude", "LiveKit", "Python"],
     links: {
       website: "https://www.fourthspace.vip/",
+      writeup: "/blog/building-fourthspace",
     },
     image: fourthspaceImg,
     featured: true,
@@ -46,16 +48,28 @@ export const selectedWork = [
     id: "eternal-dharma",
     name: "Eternal Dharma",
     problem: "People want spiritual guidance but don't know where to start or how to apply ancient wisdom to modern life.",
-    built: "iOS app with Krishna AI that gives personalized advice based on the Bhagavad Gita, plus daily verses and streak tracking.",
-    outcome: "200+ users finding daily guidance",
-    stack: ["React Native", "TypeScript", "Expo", "Firebase", "OpenAI"],
+    built: "An iOS app giving personalized, scripture-grounded spiritual guidance. A persona-constrained LLM assistant (Claude) with a scripture-sourced system prompt and citation rules, backed by structured verse and commentary data.",
+    outcome: "Grew to 200+ users at peak",
+    stack: ["React Native", "Expo", "TypeScript", "Firebase", "Claude (via OpenRouter)"],
     links: {
       appStore: "https://apps.apple.com/us/app/eternal-dharma/id6744546350",
     },
     image: edharmaLogo,
     featured: true,
   },
-  // Only include 2-4 COMPLETED projects as featured
+  {
+    id: "hoopintel",
+    name: "HoopIntel",
+    problem: "Basketball stats are scattered and hard to read. Coaches, scouts, and fans want clear insights without digging through raw box scores.",
+    built: "A web app that turns player and team stats into visual, digestible analysis for coaches, scouts, and super-fans.",
+    outcome: "Live web app",
+    stack: ["Next.js", "Node.js", "D3.js", "Chart.js", "MongoDB"],
+    links: {
+      website: "https://hoop-intel-y2gw.onrender.com/",
+    },
+    image: hoopintelImg,
+    featured: true,
+  },
 ];
 
 export const capabilities = [

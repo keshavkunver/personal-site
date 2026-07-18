@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import { Section, Card, Tag } from '../ui';
 import { selectedWork } from '../../config/content';
@@ -72,10 +73,10 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
         {links && Object.keys(links).length > 0 && (
           <div className="flex gap-6 mt-auto pt-4 border-t border-dark-border">
             {links.appStore && (
-              <a 
-                href={links.appStore} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={links.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
               >
                 View App
@@ -83,15 +84,24 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
               </a>
             )}
             {links.website && (
-              <a 
-                href={links.website} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={links.website}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
               >
                 Website
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </a>
+            )}
+            {links.writeup && (
+              <Link
+                href={links.writeup}
+                className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
+              >
+                Read the write-up
+                <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+              </Link>
             )}
           </div>
         )}
