@@ -75,7 +75,7 @@ export const selectedWork = [
 export const capabilities = [
   {
     category: "AI Engineering",
-    description: "Building production LLM applications: tool-calling agents, RAG and retrieval, prompt engineering, structured outputs, and real-time voice AI. Hands-on with Anthropic Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
+    description: "Building production LLM applications: tool-calling agents, RAG and retrieval, prompt engineering, structured outputs, and real-time voice AI. Hands-on with Anthropic Claude, the Vercel AI SDK, and LiveKit.",
   },
   {
     category: "Reliability & Evaluation",
