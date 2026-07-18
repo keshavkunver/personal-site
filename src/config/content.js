@@ -9,7 +9,7 @@ import hoopintelImg from '../assets/images/projects/hoop-intel/hoopintel-screens
 export const personalInfo = {
   name: "Keshav Kunver",
   title: "AI Engineer building reliable AI-native products from 0 to 1.",
-  tagline: "I build production LLM apps: agents, RAG, and the evals that keep them from breaking. Six years as an SDET taught me how to make software behave under real conditions, and I bring that to AI.",
+  tagline: "I build production LLM apps: agents, RAG, and the evals that keep them from breaking.",
   location: "Los Angeles / Remote",
   email: "keshav@kunver.com",
   availability: "Available for opportunities",
@@ -75,16 +75,16 @@ export const selectedWork = [
 export const capabilities = [
   {
     category: "AI Engineering",
-    description: "Building production LLM applications: tool-calling agents, RAG and retrieval, prompt engineering, structured outputs, and real-time voice AI. Hands-on with Anthropic Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
+    description: "Production LLM apps: tool-calling agents, RAG, structured outputs, and real-time voice AI. Hands-on with Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
   },
   {
     category: "Reliability & Evaluation",
     lead: true,
-    description: "Making LLM apps behave in production. I build eval suites and regression tests that turn past agent failures into named tests, so the same bug can't ship twice. Six years as an SDET: test frameworks, API and mobile automation, CI/CD, and failure-mode thinking, now pointed at non-deterministic AI.",
+    description: "Eval suites and regression tests that turn past agent failures into named tests, so the same bug can't ship twice. Six years of SDET discipline, pointed at non-deterministic AI.",
   },
   {
     category: "Full-Stack Delivery",
-    description: "Shipping the whole product. Next.js, React, React Native, TypeScript, Python. Supabase, Firebase, Vercel. From idea to a live, monetized app.",
+    description: "Next.js, React, React Native, TypeScript, Python. Supabase, Firebase, Vercel. From idea to a live, monetized app.",
   },
 ];
 
@@ -129,6 +129,7 @@ export const writing = [
     readingTime: "3 min read",
     date: "February 2026",
     tag: "AI",
+    published: true,
   },
   {
     title: "Too Many Interests",

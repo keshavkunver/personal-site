@@ -11,8 +11,8 @@ const Writing = () => {
   const isInView = useInView(ref, { once: true, margin: '-10% 0px' });
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const pinnedArticle = writing[0];
-  const otherArticles = writing.slice(1);
+  const pinnedArticles = writing.slice(0, 2);
+  const otherArticles = writing.slice(2);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -35,35 +35,37 @@ const Writing = () => {
         <h2 className="text-h1 font-bold text-text-primary">Writing</h2>
       </motion.div>
 
-      {/* Featured Article */}
+      {/* Featured Articles (two pinned) */}
       <motion.div
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={itemVariants}
-        className="mb-8"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
       >
-        <Link href={pinnedArticle.url} className="block group">
-          <Card className="relative transition-all duration-200 group-hover:border-border/80">
-            <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
-              {pinnedArticle.title}
-            </h3>
-            <p className="text-text-secondary text-sm leading-relaxed mb-5">
-              {pinnedArticle.description}
-            </p>
-            <div className="flex items-center gap-2">
-              {pinnedArticle.date && (
-                <span className="text-text-tertiary text-xs">{pinnedArticle.date}</span>
-              )}
-              {pinnedArticle.date && pinnedArticle.readingTime && (
-                <span className="text-text-tertiary text-xs">·</span>
-              )}
-              {pinnedArticle.readingTime && (
-                <span className="text-text-tertiary text-xs">{pinnedArticle.readingTime}</span>
-              )}
-            </div>
-          </Card>
-        </Link>
+        {pinnedArticles.map((article, index) => (
+          <Link key={index} href={article.url} className="block group h-full">
+            <Card className="relative h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
+              <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+                {article.title}
+              </h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-5">
+                {article.description}
+              </p>
+              <div className="flex items-center gap-2 mt-auto">
+                {article.date && (
+                  <span className="text-text-tertiary text-xs">{article.date}</span>
+                )}
+                {article.date && article.readingTime && (
+                  <span className="text-text-tertiary text-xs">·</span>
+                )}
+                {article.readingTime && (
+                  <span className="text-text-tertiary text-xs">{article.readingTime}</span>
+                )}
+              </div>
+            </Card>
+          </Link>
+        ))}
       </motion.div>
 
       {/* Expandable Section */}

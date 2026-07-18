@@ -122,7 +122,7 @@ const Home = () => {
 
                     {/* Title/Role */}
                     <motion.p 
-                        className="text-xl sm:text-2xl text-text-secondary mb-6 font-medium tracking-wide"
+                        className="text-xl sm:text-2xl text-text-primary mb-6 font-semibold tracking-wide"
                         variants={itemVariants}
                     >
                         {personalInfo.title}

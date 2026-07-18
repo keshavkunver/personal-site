@@ -10,7 +10,7 @@ const MetricTile = ({ value, label, caption }) => {
         {label}
       </div>
       {caption && (
-        <div className="text-text-tertiary/70 text-xs mt-1.5">
+        <div className="text-text-secondary text-xs mt-1.5">
           {caption}
         </div>
       )}
