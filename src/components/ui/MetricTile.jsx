@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MetricTile = ({ value, label }) => {
+const MetricTile = ({ value, label, caption }) => {
   return (
     <div className="text-center py-4 px-2">
       <div className="text-3xl sm:text-4xl font-bold text-text-primary mb-2 tracking-tight">
@@ -9,6 +9,11 @@ const MetricTile = ({ value, label }) => {
       <div className="text-text-tertiary text-sm uppercase tracking-wider font-medium">
         {label}
       </div>
+      {caption && (
+        <div className="text-text-tertiary/70 text-xs mt-1.5">
+          {caption}
+        </div>
+      )}
     </div>
   );
 };

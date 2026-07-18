@@ -44,6 +44,7 @@ const ImpactStrip = () => {
               <MetricTile
                 value={metric.value}
                 label={metric.label}
+                caption={metric.caption}
               />
             </motion.div>
           ))}
