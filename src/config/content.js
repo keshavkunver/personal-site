@@ -7,9 +7,9 @@ import fourthspaceImg from '../assets/images/projects/fourthspace/fourthspace-lo
 
 export const personalInfo = {
   name: "Keshav Kunver",
-  title: "Engineer. Founder. Builder.",
-  tagline: "Building reliable AI-native products from 0 → 1.",
-  location: "Los Angeles",
+  title: "AI Engineer building reliable AI-native products from 0 to 1.",
+  tagline: "I build production LLM apps: agents, RAG, and the evals that keep them from breaking. Six years as an SDET taught me how to make software behave under real conditions, and I bring that to AI.",
+  location: "Los Angeles / Remote",
   email: "keshav@kunver.com",
   availability: "Available for opportunities",
 };
@@ -76,12 +76,12 @@ export const capabilities = [
 export const experience = [
   {
     company: "Infosys",
-    role: "Software Engineer",
+    role: "Software Development Engineer in Test (SDET)",
     duration: "Mar 2021 - Present",
     achievements: [
-      "Designed web testing framework architecture adopted across the team",
-      "Led API testing, delivering production-ready releases to stakeholders",
-      "Integrated AI tooling to accelerate test development and expand coverage",
+      "Design and maintain UI, API, and CI/CD test-automation frameworks that improve coverage and release stability",
+      "Cut regression effort 40% and related API defects 25%",
+      "Integrating AI tooling into the testing workflow",
     ],
     technologies: ["Java", "REST APIs", "MySQL", "React", "TypeScript", "CI/CD", "AI"],
   },
