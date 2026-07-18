@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { personalInfo } from '../../config/content';
 
 const Footer = () => {
@@ -7,6 +8,11 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto text-center space-y-2">
         <p className="text-text-tertiary/60 text-xs">
           Thanks for scrolling this far.
+        </p>
+        <p className="text-text-tertiary text-sm">
+          <Link href="/now" className="hover:text-text-primary transition-colors duration-200">
+            Now
+          </Link>
         </p>
         <p className="text-text-tertiary text-sm">
           © {new Date().getFullYear()} {personalInfo.name}
