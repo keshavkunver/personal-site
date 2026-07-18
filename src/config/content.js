@@ -99,6 +99,15 @@ export const experience = [
 
 export const writing = [
   {
+    title: 'FourthSpace: Shipping an LLM Agent That Plans Real-World Meetups',
+    url: '/blog/building-fourthspace',
+    description: 'A Claude tool-calling agent, a voice AI moderator, and the test suite that keeps them from breaking.',
+    readingTime: '3 min read',
+    date: 'July 2026',
+    tag: 'AI',
+    published: true,
+  },
+  {
     title: "We Have ChatGPT, Why Write?",
     url: "/blog/why-i-still-write",
     description: "AI removes friction, and friction is what builds cognition. Don't outsource your mind.",

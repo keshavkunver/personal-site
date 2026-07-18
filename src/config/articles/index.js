@@ -1,3 +1,4 @@
+import buildingFourthspace from './building-fourthspace';
 import whyIStillWrite from './why-i-still-write';
 import dharmaRegretAndTheClock from './dharma-regret-and-the-clock';
 import theProductivityTrap from './the-productivity-trap';
@@ -7,6 +8,7 @@ import the2amQuestion from './the-2am-question';
 import tooManyInterests from './too-many-interests';
 
 const articles = {
+  'building-fourthspace': buildingFourthspace,
   'why-i-still-write': whyIStillWrite,
   'dharma-regret-and-the-clock': dharmaRegretAndTheClock,
   'the-productivity-trap': theProductivityTrap,
