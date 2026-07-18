@@ -60,16 +60,17 @@ export const selectedWork = [
 
 export const capabilities = [
   {
-    category: "AI-First Development",
-    skills: ["AI-Assisted Engineering (Claude Code, Cursor)", "LLM Integration", "Prompt Engineering"],
+    category: "AI Engineering",
+    description: "Building production LLM applications: tool-calling agents, RAG and retrieval, prompt engineering, structured outputs, and real-time voice AI. Hands-on with Anthropic Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
   },
   {
-    category: "Full-Stack Engineering",
-    skills: ["React / React Native", "TypeScript / Node.js", "Python", "Supabase / Firebase"],
+    category: "Reliability & Evaluation",
+    lead: true,
+    description: "Making LLM apps behave in production. I build eval suites and regression tests that turn past agent failures into named tests, so the same bug can't ship twice. Six years as an SDET: test frameworks, API and mobile automation, CI/CD, and failure-mode thinking, now pointed at non-deterministic AI.",
   },
   {
-    category: "Quality & Delivery",
-    skills: ["Test Automation", "CI/CD", "System Design"],
+    category: "Full-Stack Delivery",
+    description: "Shipping the whole product. Next.js, React, React Native, TypeScript, Python. Supabase, Firebase, Vercel. From idea to a live, monetized app.",
   },
 ];
 
