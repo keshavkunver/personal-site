@@ -44,27 +44,41 @@ const Writing = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
       >
         {pinnedArticles.map((article, index) => (
-          <Link key={index} href={article.url} className="block group h-full">
-            <Card className="relative h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
-              <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+          article.published ? (
+            <Link key={index} href={article.url} className="block group h-full">
+              <Card className="relative h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
+                <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+                  {article.title}
+                </h3>
+                <p className="text-text-secondary text-sm leading-relaxed mb-5">
+                  {article.description}
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  {article.date && (
+                    <span className="text-text-tertiary text-xs">{article.date}</span>
+                  )}
+                  {article.date && article.readingTime && (
+                    <span className="text-text-tertiary text-xs">·</span>
+                  )}
+                  {article.readingTime && (
+                    <span className="text-text-tertiary text-xs">{article.readingTime}</span>
+                  )}
+                </div>
+              </Card>
+            </Link>
+          ) : (
+            <Card key={index} className="relative h-full flex flex-col">
+              <h3 className="text-xl font-semibold text-text-primary mb-3">
                 {article.title}
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-5">
                 {article.description}
               </p>
-              <div className="flex items-center gap-2 mt-auto">
-                {article.date && (
-                  <span className="text-text-tertiary text-xs">{article.date}</span>
-                )}
-                {article.date && article.readingTime && (
-                  <span className="text-text-tertiary text-xs">·</span>
-                )}
-                {article.readingTime && (
-                  <span className="text-text-tertiary text-xs">{article.readingTime}</span>
-                )}
-              </div>
+              <span className="text-text-tertiary text-xs font-medium mt-auto">
+                Coming soon
+              </span>
             </Card>
-          </Link>
+          )
         ))}
       </motion.div>
 
