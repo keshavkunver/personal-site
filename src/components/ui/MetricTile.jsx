@@ -6,7 +6,7 @@ const MetricTile = ({ value, label, caption }) => {
       <div className="text-3xl sm:text-4xl font-bold text-text-primary mb-2 tracking-tight">
         {value}
       </div>
-      <div className="text-text-tertiary text-sm uppercase tracking-wider font-medium">
+      <div className="text-text-tertiary text-xs uppercase tracking-[0.15em] font-medium">
         {label}
       </div>
       {caption && (

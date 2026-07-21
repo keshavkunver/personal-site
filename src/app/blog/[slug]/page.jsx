@@ -185,7 +185,7 @@ export default function BlogPost() {
                   </div>
                   {footnotes.length > 0 && (
                     <section className="mt-12 pt-8 border-t border-border">
-                      <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-4">
+                      <h3 className="text-xs font-medium uppercase tracking-[0.15em] text-text-tertiary mb-4">
                         Notes
                       </h3>
                       <ol className="space-y-3 text-sm text-text-secondary">

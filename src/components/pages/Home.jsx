@@ -19,7 +19,7 @@ const Home = () => {
     const smoothY = useSpring(mouseY, springConfig);
     
     // Create the gradient template
-    const spotlightBackground = useMotionTemplate`radial-gradient(600px circle at ${smoothX}px ${smoothY}px, rgba(59, 130, 246, 0.07), transparent 60%)`;
+    const spotlightBackground = useMotionTemplate`radial-gradient(600px circle at ${smoothX}px ${smoothY}px, rgba(255, 255, 255, 0.04), transparent 60%)`;
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -107,7 +107,7 @@ const Home = () => {
                 >
                     {/* Location badge */}
                     <motion.p 
-                        className="text-text-tertiary text-xs uppercase tracking-[0.2em] mb-6 font-medium"
+                        className="text-text-tertiary text-xs uppercase tracking-[0.15em] mb-6 font-medium"
                         variants={itemVariants}
                     >
                         {personalInfo.location}

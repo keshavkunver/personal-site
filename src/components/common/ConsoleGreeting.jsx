@@ -10,7 +10,7 @@ const ConsoleGreeting = () => {
     logged = true;
     console.log(
       '%cReading the code? I like you already. keshav@kunver.com',
-      'color: #3b82f6; font-size: 14px; font-weight: 600;'
+      'color: #ededed; font-size: 14px; font-weight: 600;'
     );
   }, []);
 
