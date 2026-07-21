@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
-import { Button, Section, TextReveal, MagneticButton } from '../ui';
+import { Button, Section, TextReveal } from '../ui';
 import { personalInfo, socialLinks } from '../../config/content';
 import headshotImage from '../../assets/images/profile/headshot.png';
 
@@ -153,21 +153,17 @@ const Home = () => {
                         <span>{personalInfo.availability}</span>
                     </motion.div>
 
-                    {/* CTAs with Magnetic Effect */}
-                    <motion.div 
+                    {/* CTAs */}
+                    <motion.div
                         className="flex flex-wrap gap-4 mb-10"
                         variants={itemVariants}
                     >
-                        <MagneticButton strength={0.4} radius={100}>
-                            <Button variant="primary" size="lg" href="#contact">
-                                Get in Touch
-                            </Button>
-                        </MagneticButton>
-                        <MagneticButton strength={0.4} radius={100}>
-                            <Button variant="secondary" size="lg" href="#work">
-                                View Work
-                            </Button>
-                        </MagneticButton>
+                        <Button variant="primary" size="lg" href="#contact">
+                            Get in Touch
+                        </Button>
+                        <Button variant="secondary" size="lg" href="#work">
+                            View Work
+                        </Button>
                         <a
                             href="/keshav-kunver-resume.pdf"
                             download

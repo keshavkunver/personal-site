@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Section, Button, MagneticButton } from '../ui';
+import { Section, Button } from '../ui';
 import { personalInfo, socialLinks } from '../../config/content';
 
 const Contact = () => {
@@ -37,28 +37,22 @@ const Contact = () => {
           Want to talk AI products or basketball? Either works.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <MagneticButton strength={0.4} radius={100}>
-            <Button variant="primary" size="lg" href={`mailto:${personalInfo.email}`}>
-              Email Me
-            </Button>
-          </MagneticButton>
-          <MagneticButton strength={0.4} radius={100}>
-            <Button variant="secondary" size="lg" href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-              Connect on LinkedIn
-            </Button>
-          </MagneticButton>
-          <MagneticButton strength={0.4} radius={100}>
-            <Button variant="secondary" size="lg" href="/keshav-kunver-resume.pdf" download>
-              Download resume (PDF)
-            </Button>
-          </MagneticButton>
+          <Button variant="primary" size="lg" href={`mailto:${personalInfo.email}`}>
+            Email Me
+          </Button>
+          <Button variant="secondary" size="lg" href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+            Connect on LinkedIn
+          </Button>
+          <Button variant="secondary" size="lg" href="/keshav-kunver-resume.pdf" download>
+            Download resume (PDF)
+          </Button>
         </motion.div>
 
         <motion.div 
