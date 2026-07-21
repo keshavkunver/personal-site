@@ -2,8 +2,8 @@ import React from 'react';
 
 const Tag = ({ children, className = '', variant = 'default' }) => {
   const variants = {
-    default: 'bg-dark-elevated/80 text-text-secondary border-dark-border',
-    accent: 'bg-accent/10 text-accent border-accent/20',
+    default: 'bg-white/[0.04] text-text-secondary border-dark-border',
+    accent: 'bg-accent-subtle text-text-primary border-dark-border-hover',
   };
 
   return (

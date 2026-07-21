@@ -16,18 +16,18 @@ module.exports = {
         'dark-elevated': '#1f1f1f',
 
         // Borders
-        'dark-border': '#262626',
-        'dark-border-hover': '#404040',
+        'dark-border': 'rgba(255, 255, 255, 0.07)',
+        'dark-border-hover': 'rgba(255, 255, 255, 0.14)',
 
         // Text hierarchy
         'text-primary': '#fafafa',
         'text-secondary': '#a3a3a3',
         'text-tertiary': '#8a8a8a',
 
-        // Accent colors
-        'accent': '#2563eb',
-        'accent-hover': '#1d4ed8',
-        'accent-subtle': 'rgba(37, 99, 235, 0.1)',
+        // Accent (monochrome system)
+        'accent': '#ededed',
+        'accent-hover': '#ffffff',
+        'accent-subtle': 'rgba(255, 255, 255, 0.08)',
       },
       fontSize: {
         'display': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.03em', fontWeight: '700' }],
@@ -45,14 +45,15 @@ module.exports = {
         '30': '7.5rem',
       },
       boxShadow: {
-        'glow': '0 0 40px -10px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 60px -15px rgba(59, 130, 246, 0.4)',
+        'glow': '0 0 40px -10px rgba(255, 255, 255, 0.08)',
+        'glow-lg': '0 0 60px -15px rgba(255, 255, 255, 0.10)',
         'card': '0 4px 20px -5px rgba(0, 0, 0, 0.5)',
         'card-hover': '0 8px 30px -5px rgba(0, 0, 0, 0.6)',
+        'inner-top': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.06)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-glow': 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
+        'hero-glow': 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 70%)',
       },
       transitionDuration: {
         '150': '150ms',
