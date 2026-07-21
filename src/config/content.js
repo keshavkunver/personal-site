@@ -24,7 +24,7 @@ export const socialLinks = {
 export const impactMetrics = [
   { value: "200+", label: "Users", caption: "Eternal Dharma, at peak" },
   { value: "4", label: "Products Shipped" },
-  { value: "1M+", label: "Views", caption: "Short-form social content (Eternal Dharma)" },
+  { value: "1M+", label: "Views", caption: "Short-form social content" },
   { value: "6+", label: "Years Experience" },
 ];
 
