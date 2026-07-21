@@ -9,6 +9,8 @@ import { selectedWork } from '../../config/content';
 
 // Project Card component for case study format
 const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isActive }) => {
+  const titleHref = links?.website || links?.appStore;
+
   return (
     <div className="relative">
       {/* Current focus tab */}
@@ -30,17 +32,30 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
         <div className="flex items-center gap-4 mb-6">
           {image && (
             <div className="w-14 h-14 rounded-xl overflow-hidden border border-dark-border bg-dark-elevated flex items-center justify-center flex-shrink-0">
-              <Image 
-                src={image} 
-                alt={name || "Project logo"} 
+              <Image
+                src={image}
+                alt={name || "Project logo"}
                 width={56}
                 height={56}
-                className="object-contain" 
+                className="object-contain"
               />
             </div>
           )}
           {name && (
-            <h3 className="text-xl font-semibold text-text-primary">{name}</h3>
+            titleHref ? (
+              <a
+                href={titleHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-20"
+              >
+                <h3 className="text-xl font-semibold text-text-primary hover:underline underline-offset-4 decoration-white/40 transition-colors duration-200">
+                  {name}
+                </h3>
+              </a>
+            ) : (
+              <h3 className="text-xl font-semibold text-text-primary">{name}</h3>
+            )
           )}
         </div>
 
