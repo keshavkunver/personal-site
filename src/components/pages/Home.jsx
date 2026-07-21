@@ -168,9 +168,9 @@ const Home = () => {
                     {/* Off the clock drawer */}
                     <motion.div variants={itemVariants} className="mb-10">
                         <details className="group">
-                            <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 rounded text-sm text-text-tertiary transition-colors duration-200 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg [&::-webkit-details-marker]:hidden">
+                            <summary className="inline-flex h-9 cursor-pointer list-none items-center gap-2 rounded-lg border border-dark-border px-4 font-heading text-sm font-medium text-text-secondary transition-all duration-200 hover:border-dark-border-hover hover:bg-white/[0.04] hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg [&::-webkit-details-marker]:hidden">
                                 Off the clock
-                                <span className="text-[9px] text-text-tertiary transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+                                <span className="text-[10px] text-text-tertiary transition-transform duration-200 group-open:rotate-180">&#9662;</span>
                             </summary>
                             <div className="mt-3 max-w-lg border-l-2 border-white/10 pl-4">
                                 <p className="text-text-secondary text-sm leading-relaxed mb-2.5">
