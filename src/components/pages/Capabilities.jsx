@@ -48,7 +48,7 @@ const Capabilities = () => {
         animate={isInView ? "visible" : "hidden"}
       >
         {capabilities.map((category, index) => (
-          <motion.div key={index} variants={itemVariants} className="relative">
+          <motion.div key={index} variants={itemVariants} className={`relative${category.lead ? ' mt-7 md:mt-0' : ''}`}>
             {category.lead && (
               <div className="absolute -top-[1.65rem] left-4 z-20">
                 <span
