@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/react"
 import SmoothScroll from '../components/providers/SmoothScroll'
+import ConsoleGreeting from '../components/common/ConsoleGreeting'
 import '../index.css'
 
 const inter = Inter({
@@ -103,6 +104,7 @@ export default function RootLayout({ children }) {
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <ConsoleGreeting />
         <Analytics />
       </body>
     </html>
