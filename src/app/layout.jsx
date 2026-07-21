@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Inter, Instrument_Sans } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/react"
 import SmoothScroll from '../components/providers/SmoothScroll'
 import ConsoleGreeting from '../components/common/ConsoleGreeting'
@@ -8,6 +8,13 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
+})
+
+const instrumentSans = Instrument_Sans({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-instrument-sans',
 })
 
 export const metadata = {
@@ -100,7 +107,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${inter.className} bg-dark-bg text-text-secondary antialiased`}>
+      <body className={`${inter.className} ${instrumentSans.variable} bg-dark-bg text-text-secondary antialiased`}>
         <SmoothScroll>
           {children}
         </SmoothScroll>

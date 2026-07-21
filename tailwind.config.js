@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['var(--font-instrument-sans)', 'Inter', 'sans-serif'],
+      },
       colors: {
         // Background layers
         'dark-bg': '#0a0a0a',
