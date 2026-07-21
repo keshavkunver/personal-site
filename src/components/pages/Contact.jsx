@@ -34,7 +34,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Happy to chat.
+          Want to talk AI products or basketball? Either works.
         </motion.p>
 
         <motion.div 
@@ -52,6 +52,11 @@ const Contact = () => {
           <MagneticButton strength={0.4} radius={100}>
             <Button variant="secondary" size="lg" href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
               Connect on LinkedIn
+            </Button>
+          </MagneticButton>
+          <MagneticButton strength={0.4} radius={100}>
+            <Button variant="secondary" size="lg" href="/keshav-kunver-resume.pdf" download>
+              Download resume (PDF)
             </Button>
           </MagneticButton>
         </motion.div>

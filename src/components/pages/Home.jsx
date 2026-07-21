@@ -129,11 +129,19 @@ const Home = () => {
                     </motion.p>
 
                     {/* Tagline */}
-                    <motion.p 
+                    <motion.p
                         className="text-lg text-text-tertiary max-w-lg mb-6 leading-relaxed"
                         variants={itemVariants}
                     >
                         {personalInfo.tagline}
+                    </motion.p>
+
+                    {/* Personality line */}
+                    <motion.p
+                        className="text-text-tertiary text-sm max-w-lg mb-6"
+                        variants={itemVariants}
+                    >
+                        My NBA dreams didn't pan out, so I redirected the obsession into software.
                     </motion.p>
 
                     {/* Availability */}
@@ -160,6 +168,13 @@ const Home = () => {
                                 View Work
                             </Button>
                         </MagneticButton>
+                        <a
+                            href="/keshav-kunver-resume.pdf"
+                            download
+                            className="self-center text-text-tertiary hover:text-text-primary transition-colors duration-200 text-sm"
+                        >
+                            Download resume (PDF)
+                        </a>
                     </motion.div>
 
                     {/* Social Links */}
