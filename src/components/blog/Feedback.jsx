@@ -114,7 +114,7 @@ export default function Feedback({ articleSlug }) {
           <button
             type="submit"
             disabled={state.submitting}
-            className="px-4 py-2 bg-accent hover:bg-accent-hover text-white text-sm font-medium rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-accent hover:bg-accent-hover text-dark-bg text-sm font-medium rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {state.submitting ? 'Sending...' : 'Submit'}
           </button>

@@ -52,7 +52,7 @@ const Capabilities = () => {
             {category.lead && (
               <div className="absolute -top-[1.65rem] left-4 z-20">
                 <span
-                  className="bg-dark-surface text-accent text-xs font-medium px-3 py-1.5 border border-accent/40 border-b-0 rounded-t-lg"
+                  className="bg-dark-surface text-text-primary text-xs font-medium px-3 py-1.5 border border-dark-border-hover border-b-0 rounded-t-lg"
                   style={{
                     borderBottomLeftRadius: 0,
                     borderBottomRightRadius: 0,
@@ -62,7 +62,7 @@ const Capabilities = () => {
                 </span>
               </div>
             )}
-            <Card hover className={`h-full ${category.lead ? 'border border-accent/40' : ''}`}>
+            <Card hover className={`h-full ${category.lead ? 'border border-dark-border-hover' : ''}`}>
               <h3 className="text-lg font-semibold text-text-primary mb-4">{category.category}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{category.description}</p>
             </Card>

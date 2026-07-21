@@ -47,7 +47,7 @@ const Writing = () => {
           article.published ? (
             <Link key={index} href={article.url} className="block group h-full">
               <Card className="relative h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
-                <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+                <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent-hover transition-colors duration-200">
                   {article.title}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-5">
@@ -124,7 +124,7 @@ const Writing = () => {
                       {post.published ? (
                         <Link href={post.url} className="block group h-full">
                           <Card className="h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
-                            <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-200">
+                            <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-accent-hover transition-colors duration-200">
                               {post.title}
                             </h3>
                             <p className="text-text-secondary text-sm leading-relaxed mb-5 line-clamp-2 min-h-[2.5rem]">

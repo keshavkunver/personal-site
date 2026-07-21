@@ -19,7 +19,7 @@ const Logo = ({ size = 'default', onClick }) => {
                 font-semibold
                 tracking-tight
                 text-text-primary
-                hover:text-accent
+                hover:text-accent-hover
                 transition-colors duration-200
             `}
             whileHover={{ scale: 1.02 }}
@@ -43,7 +43,7 @@ export const LogoMonogram = ({ size = 40, onClick }) => {
                 text-text-primary
                 font-semibold
                 hover:border-dark-border-hover
-                hover:text-accent
+                hover:text-accent-hover
                 transition-all duration-200
             "
             style={{ width: size, height: size, fontSize: size * 0.45 }}
