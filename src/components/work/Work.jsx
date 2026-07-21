@@ -14,10 +14,10 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
       {/* Current focus tab */}
       {isActive && (
         <div className="absolute -top-[1.65rem] left-4 z-20">
-          <span 
-            className="bg-dark-surface text-amber-400 text-xs font-medium px-3 py-1.5 border border-amber-500/40 border-b-0 rounded-t-lg"
-            style={{ 
-              borderBottomLeftRadius: 0, 
+          <span
+            className="bg-dark-surface text-text-primary text-xs font-medium px-3 py-1.5 border border-dark-border-hover border-b-0 rounded-t-lg"
+            style={{
+              borderBottomLeftRadius: 0,
               borderBottomRightRadius: 0,
             }}
           >
@@ -25,7 +25,7 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
           </span>
         </div>
       )}
-      <Card hover className={`flex flex-col h-full group ${isActive ? 'border border-amber-500/40' : ''}`}>
+      <Card hover className={`flex flex-col h-full group ${isActive ? 'border border-dark-border-hover' : ''}`}>
         {/* Project Header - Logo + Name */}
         <div className="flex items-center gap-4 mb-6">
           {image && (

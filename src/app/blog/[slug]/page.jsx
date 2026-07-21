@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Feedback from '../../../components/blog/Feedback';
 import ShareButton from '../../../components/blog/ShareButton';
 import ReadingProgress from '../../../components/blog/ReadingProgress';
@@ -39,11 +38,7 @@ export default function BlogPost() {
     <div className="min-h-screen bg-dark-bg">
       <ReadingProgress targetRef={readingEndRef} />
       <main className="max-w-2xl mx-auto px-6 pt-8 pb-16 md:pt-16 md:pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div>
           <div className="flex justify-between items-center mb-8">
             <Link 
               href="/#writing" 
@@ -203,7 +198,7 @@ export default function BlogPost() {
               );
             })()}
           </div>
-        </motion.div>
+        </div>
       </main>
     </div>
   );
