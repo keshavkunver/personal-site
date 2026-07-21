@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { Button, Section, TextReveal } from '../ui';
-import { personalInfo, socialLinks } from '../../config/content';
+import { personalInfo, socialLinks, offTheClock } from '../../config/content';
 import headshotImage from '../../assets/images/profile/headshot.png';
 
 const Home = () => {
@@ -105,13 +105,14 @@ const Home = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Location badge */}
-                    <motion.p 
-                        className="text-text-tertiary text-xs uppercase tracking-[0.15em] mb-6 font-medium"
+                    {/* Status line */}
+                    <motion.div
+                        className="flex items-center gap-2 text-text-tertiary text-xs uppercase tracking-[0.15em] font-medium mb-6"
                         variants={itemVariants}
                     >
-                        {personalInfo.location}
-                    </motion.p>
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <span>{personalInfo.availability}</span>
+                    </motion.div>
 
                     {/* Name as Main Headline */}
                     <h1 className="text-5xl sm:text-6xl lg:text-display font-bold text-text-primary mb-4 tracking-tight">
@@ -120,8 +121,16 @@ const Home = () => {
                         </TextReveal>
                     </h1>
 
+                    {/* Location eyebrow */}
+                    <motion.p
+                        className="text-text-tertiary text-xs uppercase tracking-[0.15em] font-medium mb-6"
+                        variants={itemVariants}
+                    >
+                        {personalInfo.location}
+                    </motion.p>
+
                     {/* Title/Role */}
-                    <motion.p 
+                    <motion.p
                         className="text-xl sm:text-2xl text-text-primary mb-6 font-semibold tracking-wide"
                         variants={itemVariants}
                     >
@@ -135,23 +144,6 @@ const Home = () => {
                     >
                         {personalInfo.tagline}
                     </motion.p>
-
-                    {/* Personality line */}
-                    <motion.p
-                        className="text-text-tertiary text-sm max-w-lg mb-6"
-                        variants={itemVariants}
-                    >
-                        My NBA dreams didn't pan out, so I redirected the obsession into software.
-                    </motion.p>
-
-                    {/* Availability */}
-                    <motion.div 
-                        className="flex items-center gap-2 text-text-tertiary text-sm mb-10"
-                        variants={itemVariants}
-                    >
-                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span>{personalInfo.availability}</span>
-                    </motion.div>
 
                     {/* CTAs */}
                     <motion.div
@@ -173,29 +165,56 @@ const Home = () => {
                         </a>
                     </motion.div>
 
+                    {/* Off the clock drawer */}
+                    <motion.div variants={itemVariants} className="mb-10">
+                        <details className="group">
+                            <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-sm text-text-tertiary transition-colors duration-200 hover:text-accent [&::-webkit-details-marker]:hidden">
+                                Off the clock
+                                <span className="text-[9px] text-text-tertiary transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+                            </summary>
+                            <div className="mt-3 max-w-lg border-l-2 border-white/10 pl-4">
+                                <p className="text-text-secondary text-sm leading-relaxed mb-2.5">
+                                    {offTheClock.intro}
+                                </p>
+                                <p className="text-sm leading-relaxed mb-2">
+                                    <span className="text-text-secondary">{offTheClock.predictionLabel}</span>{' '}
+                                    <span className="text-text-primary font-heading font-semibold">{offTheClock.prediction}</span>{' '}
+                                    <span className="text-text-tertiary/80 text-xs">· {offTheClock.receipt}</span>
+                                </p>
+                                <ul className="space-y-1.5">
+                                    {offTheClock.reasons.map((reason, i) => (
+                                        <li key={i} className="relative pl-3.5 text-text-tertiary text-[13px] leading-relaxed before:absolute before:left-0 before:top-[0.65em] before:h-px before:w-[5px] before:bg-white/30 before:content-['']">
+                                            {reason}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </details>
+                    </motion.div>
+
                     {/* Social Links */}
-                    <motion.div 
+                    <motion.div
                         className="flex items-center gap-6 text-sm"
                         variants={itemVariants}
                     >
-                        <a 
-                            href={socialLinks.linkedin} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href={socialLinks.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
                         >
                             LinkedIn
                         </a>
-                        <a 
-                            href={socialLinks.github} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href={socialLinks.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
                         >
                             GitHub
                         </a>
-                        <a 
-                            href={`mailto:${personalInfo.email}`} 
+                        <a
+                            href={`mailto:${personalInfo.email}`}
                             className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
                         >
                             Email

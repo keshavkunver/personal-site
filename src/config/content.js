@@ -10,9 +10,22 @@ export const personalInfo = {
   name: "Keshav Kunver",
   title: "AI Engineer building reliable AI-native products from 0 to 1.",
   tagline: "I build production LLM apps: agents, RAG, and the evals that keep them from breaking.",
-  location: "Los Angeles / Remote",
+  location: "Los Angeles",
   email: "keshav@kunver.com",
-  availability: "Available for opportunities",
+  availability: "Open to remote and hybrid roles",
+};
+
+export const offTheClock = {
+  intro: "My NBA dreams didn't pan out, so I redirected the obsession into software.",
+  predictionLabel: "My LeBron Prediction:",
+  prediction: "Golden State",
+  receipt: "on record since late June",
+  reasons: [
+    "He's been openly flirting with the idea of playing with Steph for years",
+    "Him and Draymond are extremely close",
+    "Year 24 Bron doesn't need to drive the bus. He'll be a great playmaking hub who finds shooters - peak Warriors basketball",
+    "The Bay is just an hour flight from home, Bronny's still a Laker, and Bryce is at Arizona. He stays relatively close",
+  ],
 };
 
 export const socialLinks = {
