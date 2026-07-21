@@ -38,7 +38,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-dark-bg">
       <ReadingProgress targetRef={readingEndRef} />
-      <div className="max-w-2xl mx-auto px-6 pt-8 pb-16 md:pt-16 md:pb-20">
+      <main className="max-w-2xl mx-auto px-6 pt-8 pb-16 md:pt-16 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -204,7 +204,7 @@ export default function BlogPost() {
             })()}
           </div>
         </motion.div>
-      </div>
+      </main>
     </div>
   );
 }

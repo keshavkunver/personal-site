@@ -19,12 +19,12 @@ module.exports = {
         // Text hierarchy
         'text-primary': '#fafafa',
         'text-secondary': '#a3a3a3',
-        'text-tertiary': '#737373',
+        'text-tertiary': '#8a8a8a',
 
         // Accent colors
-        'accent': '#3b82f6',
-        'accent-hover': '#2563eb',
-        'accent-subtle': 'rgba(59, 130, 246, 0.1)',
+        'accent': '#2563eb',
+        'accent-hover': '#1d4ed8',
+        'accent-subtle': 'rgba(37, 99, 235, 0.1)',
       },
       fontSize: {
         'display': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.03em', fontWeight: '700' }],

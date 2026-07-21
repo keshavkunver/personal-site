@@ -229,6 +229,7 @@ const Home = () => {
                             src={headshotImage}
                             alt={personalInfo.name}
                             fill
+                            sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 320px"
                             className="object-cover object-top"
                             priority
                         />
