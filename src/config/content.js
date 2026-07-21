@@ -19,12 +19,12 @@ export const offTheClock = {
   intro: "My NBA dreams didn't pan out, so I redirected the obsession into software.",
   predictionLabel: "My LeBron Prediction:",
   prediction: "Golden State",
-  receipt: "on record since late June",
+  receipt: "6/30/26",
   reasons: [
-    "He's been openly flirting with the idea of playing with Steph for years",
-    "Him and Draymond are extremely close",
-    "Year 24 Bron doesn't need to drive the bus. He'll be a great playmaking hub who finds shooters - peak Warriors basketball",
-    "The Bay is just an hour flight from home, Bronny's still a Laker, and Bryce is at Arizona. He stays relatively close",
+    "Been flirting with the Steph pairing for years",
+    "Extremely tight with Draymond",
+    "Year 24 Bron doesn't need the keys. Playmaking hub feeding shooters is peak Warriors basketball",
+    "An hour from home, Bronny's a Laker, Bryce is at Arizona",
   ],
 };
 
