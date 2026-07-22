@@ -25,13 +25,11 @@ export async function generateMetadata({ params }) {
       url,
       type: 'article',
       siteName: 'Keshav Kunver',
-      images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description: ogDescription,
-      images: ['/og.png'],
     },
     alternates: {
       canonical: url,
