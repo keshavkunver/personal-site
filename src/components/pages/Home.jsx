@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { track } from '@vercel/analytics';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { Button, Section, TextReveal } from '../ui';
 import { personalInfo, socialLinks, offTheClock } from '../../config/content';
@@ -159,6 +160,7 @@ const Home = () => {
                         <a
                             href="/keshav-kunver-resume.pdf"
                             download
+                            onClick={() => track('resume_download', { source: 'hero' })}
                             className="self-center text-text-tertiary hover:text-text-primary transition-colors duration-200 text-sm"
                         >
                             Download resume (PDF)
@@ -167,7 +169,7 @@ const Home = () => {
 
                     {/* Off the clock drawer */}
                     <motion.div variants={itemVariants} className="mb-10">
-                        <details className="group">
+                        <details className="group" onToggle={(e) => { if (e.currentTarget.open) track('off_the_clock_open'); }}>
                             <summary className="inline-flex h-9 cursor-pointer list-none items-center gap-2 rounded-lg border border-dark-border px-4 font-heading text-sm font-medium text-text-secondary transition-all duration-200 hover:border-dark-border-hover hover:bg-white/[0.04] hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg [&::-webkit-details-marker]:hidden">
                                 Off the clock
                                 <span className="text-[10px] text-text-tertiary transition-transform duration-200 group-open:rotate-180">&#9662;</span>

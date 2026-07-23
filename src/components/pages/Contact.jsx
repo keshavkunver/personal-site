@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { track } from '@vercel/analytics';
 import { motion } from 'framer-motion';
 import { Section, Button } from '../ui';
 import { personalInfo, socialLinks } from '../../config/content';
@@ -50,7 +51,7 @@ const Contact = () => {
           <Button variant="secondary" size="lg" href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
             Connect on LinkedIn
           </Button>
-          <Button variant="secondary" size="lg" href="/keshav-kunver-resume.pdf" download>
+          <Button variant="secondary" size="lg" href="/keshav-kunver-resume.pdf" download onClick={() => track('resume_download', { source: 'contact' })}>
             Download resume (PDF)
           </Button>
         </motion.div>

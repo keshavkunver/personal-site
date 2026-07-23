@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Section, Card } from '../ui';
 import { writing } from '../../config/content';
@@ -45,7 +46,7 @@ const Writing = () => {
       >
         {pinnedArticles.map((article, index) => (
           article.published ? (
-            <Link key={index} href={article.url} className="block group h-full">
+            <Link key={index} href={article.url} onClick={() => track('writing_card_click', { slug: article.url.replace('/blog/', '') })} className="block group h-full">
               <Card className="relative h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
                 <h3 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent-hover transition-colors duration-200">
                   {article.title}
@@ -122,7 +123,7 @@ const Writing = () => {
                       transition={{ delay: index * 0.1 }}
                     >
                       {post.published ? (
-                        <Link href={post.url} className="block group h-full">
+                        <Link href={post.url} onClick={() => track('writing_card_click', { slug: post.url.replace('/blog/', '') })} className="block group h-full">
                           <Card className="h-full flex flex-col transition-all duration-200 group-hover:border-border/80">
                             <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-accent-hover transition-colors duration-200">
                               {post.title}

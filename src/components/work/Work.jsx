@@ -3,12 +3,13 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 import { motion, useInView } from 'framer-motion';
 import { Section, Card, Tag } from '../ui';
 import { selectedWork } from '../../config/content';
 
 // Project Card component for case study format
-const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isActive }) => {
+const ProjectCard = ({ id, name, problem, built, outcome, stack, links, image, isActive }) => {
   const titleHref = links?.website || links?.appStore;
 
   return (
@@ -47,6 +48,7 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
                 href={titleHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track('work_card_click', { project: id, target: 'title' })}
                 className="relative z-20"
               >
                 <h3 className="text-xl font-semibold text-text-primary hover:underline underline-offset-4 decoration-white/40 transition-colors duration-200">
@@ -92,6 +94,7 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
                 href={links.appStore}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track('work_card_click', { project: id, target: 'appStore' })}
                 className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
               >
                 View App
@@ -103,6 +106,7 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
                 href={links.website}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track('work_card_click', { project: id, target: 'website' })}
                 className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
               >
                 Website
@@ -112,6 +116,7 @@ const ProjectCard = ({ name, problem, built, outcome, stack, links, image, isAct
             {links.writeup && (
               <Link
                 href={links.writeup}
+                onClick={() => track('work_card_click', { project: id, target: 'writeup' })}
                 className="relative z-20 cursor-pointer text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium inline-flex items-center gap-1"
               >
                 Read the write-up
