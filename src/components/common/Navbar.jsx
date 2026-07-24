@@ -259,14 +259,15 @@ const Navbar = () => {
                             />
                         </div>
 
+                        <div className='h-full overflow-y-auto relative z-10'>
                         <motion.div
-                            className='h-full flex flex-col justify-center items-center relative z-10'
+                            className='min-h-full flex flex-col justify-center items-center pt-[76px] pb-10'
                             variants={menuVariants}
                             initial='closed'
                             animate='open'
                             exit='closed'
                         >
-                            <ul className='flex flex-col items-center gap-2'>
+                            <ul className='flex flex-col items-center gap-1 sm:gap-2'>
                                 {navLinks.map((link, index) => {
                                     const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
                                     return (
@@ -277,7 +278,7 @@ const Navbar = () => {
                                             <button 
                                                 onClick={() => scrollToSection(link.id)} 
                                                 className={`
-                                                    text-4xl sm:text-5xl font-medium py-3 px-8
+                                                    text-3xl sm:text-5xl font-medium py-2 sm:py-3 px-8
                                                     transition-colors duration-200
                                                     ${activeSection === link.id 
                                                         ? 'text-text-primary' 
@@ -296,8 +297,8 @@ const Navbar = () => {
                             </ul>
 
                             {/* Mobile Social Links */}
-                            <motion.div 
-                                className='flex items-center gap-8 mt-16 text-sm'
+                            <motion.div
+                                className='flex items-center gap-8 mt-10 sm:mt-16 text-sm'
                                 variants={socialVariants}
                             >
                                 <a 
@@ -319,6 +320,7 @@ const Navbar = () => {
                                 </a>
                             </motion.div>
                         </motion.div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
