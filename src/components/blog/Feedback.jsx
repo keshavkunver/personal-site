@@ -107,7 +107,7 @@ export default function Feedback({ articleSlug }) {
               name="feedback"
               placeholder="Your feedback..."
               rows={3}
-              className="w-full px-4 py-3 bg-dark-surface border border-dark-border rounded-lg text-text-primary placeholder:text-text-tertiary/50 focus:outline-none focus:border-accent/50 transition-colors resize-none"
+              className="w-full px-4 py-3 bg-dark-surface border border-dark-border rounded-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/50 transition-colors resize-none"
               disabled={state.submitting}
             />
           </div>

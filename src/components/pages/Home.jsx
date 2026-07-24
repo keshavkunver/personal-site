@@ -181,7 +181,7 @@ const Home = () => {
                                 <p className="text-sm leading-relaxed mb-2">
                                     <span className="text-text-secondary">{offTheClock.predictionLabel}</span>{' '}
                                     <span className="text-text-primary font-heading font-semibold">{offTheClock.prediction}</span>{' '}
-                                    <span className="text-text-tertiary/80 text-xs">· {offTheClock.receipt}</span>
+                                    <span className="text-text-tertiary text-xs">· {offTheClock.receipt}</span>
                                 </p>
                                 <ul className="space-y-1.5">
                                     {offTheClock.reasons.map((reason, i) => (
