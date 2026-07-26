@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Feedback from '../../../components/blog/Feedback';
+import BuildPrompt from '../../../components/blog/BuildPrompt';
 import ShareButton from '../../../components/blog/ShareButton';
 import ReadingProgress from '../../../components/blog/ReadingProgress';
 import articles from '../../../config/articles';
@@ -194,6 +195,7 @@ export default function BlogPost() {
                     </section>
                   )}
                   <Feedback articleSlug={params?.slug ?? 'unknown'} />
+                  <BuildPrompt />
                 </>
               );
             })()}

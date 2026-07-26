@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { track } from '@vercel/analytics';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
+import Link from 'next/link';
 import { Button, Section, TextReveal } from '../ui';
 import { personalInfo, socialLinks, offTheClock } from '../../config/content';
 import headshotImage from '../../assets/images/profile/headshot.png';
@@ -166,6 +167,20 @@ const Home = () => {
                             Download resume (PDF)
                         </a>
                     </motion.div>
+
+                    {/* Build prompt */}
+                    <motion.p
+                        className="text-text-tertiary text-sm mb-10"
+                        variants={itemVariants}
+                    >
+                        I help non-technical people ship the thing they've been putting off.{' '}
+                        <Link
+                            href="/build"
+                            className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
+                        >
+                            Build with me
+                        </Link>
+                    </motion.p>
 
                     {/* Off the clock drawer */}
                     <motion.div variants={itemVariants} className="mb-10">

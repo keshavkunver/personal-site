@@ -187,12 +187,12 @@ const Navbar = () => {
                     <ul className='flex items-center gap-1'>
                         {navLinks.map((link) => (
                             <li key={link.id}>
-                                <button 
+                                <button
                                     onClick={() => scrollToSection(link.id)}
                                     className={`
                                         relative px-4 py-2 text-sm transition-colors duration-200 rounded-md
-                                        ${activeSection === link.id 
-                                            ? 'text-text-primary' 
+                                        ${activeSection === link.id
+                                            ? 'text-text-primary'
                                             : 'text-text-secondary hover:text-text-primary'
                                         }
                                     `}
@@ -212,17 +212,17 @@ const Navbar = () => {
 
                     {/* Social Links */}
                     <div className='flex items-center gap-6 pl-6 border-l border-dark-border/50'>
-                        <a 
-                            href={socialLinks.linkedin} 
-                            target="_blank" 
+                        <a
+                            href={socialLinks.linkedin}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className='text-text-tertiary hover:text-text-primary transition-colors duration-200 text-sm'
                         >
                             LinkedIn
                         </a>
-                        <a 
-                            href={socialLinks.github} 
-                            target="_blank" 
+                        <a
+                            href={socialLinks.github}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className='text-text-tertiary hover:text-text-primary transition-colors duration-200 text-sm'
                         >
@@ -271,17 +271,17 @@ const Navbar = () => {
                                 {navLinks.map((link, index) => {
                                     const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
                                     return (
-                                        <motion.li 
+                                        <motion.li
                                             key={link.id}
                                             variants={itemVariants}
                                         >
-                                            <button 
-                                                onClick={() => scrollToSection(link.id)} 
+                                            <button
+                                                onClick={() => scrollToSection(link.id)}
                                                 className={`
                                                     text-3xl sm:text-5xl font-medium py-2 sm:py-3 px-8
                                                     transition-colors duration-200
-                                                    ${activeSection === link.id 
-                                                        ? 'text-text-primary' 
+                                                    ${activeSection === link.id
+                                                        ? 'text-text-primary'
                                                         : 'text-text-tertiary hover:text-text-primary'
                                                     }
                                                 `}
