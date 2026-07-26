@@ -17,14 +17,14 @@ export const personalInfo = {
 
 export const offTheClock = {
   intro: "My NBA dreams didn't pan out, so I redirected the obsession into software.",
-  predictionLabel: "My LeBron Prediction:",
-  prediction: "Golden State",
-  receipt: "6/30/26",
+  predictionLabel: "NBA Finals Prediction:",
+  prediction: "76ers vs Lakers",
+  receipt: "7/26/26",
   reasons: [
-    "Been flirting with the Steph pairing for years",
-    "Extremely tight with Draymond",
-    "Year 24 Bron doesn't need the keys. Playmaking hub feeding shooters is peak Warriors basketball",
-    "An hour from home, Bronny's a Laker, Bryce is at Arizona",
+    "Bron, Jaylen Brown, and Embiid (when healthy) sound unstoppable",
+    "Luka has time to reset and more room to play like himself now that LeBron's gone",
+    "Philly's been starving for a Finals run, and the Lakers can be the dark horse even with the Thunder and Spurs heavily favored",
+    "#TrustTheProcess has finally come",
   ],
 };
 

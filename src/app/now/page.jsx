@@ -37,8 +37,9 @@ export default function NowPage() {
         </h1>
         <p className="text-text-tertiary text-sm mb-12">Updated July 2026</p>
         <p className="text-text-secondary leading-loose mb-6">
-          Right now I'm building FourthSpace: shipping the AI meetup-planning agent, improving
-          the voice moderator, and growing the eval suite as the product evolves. Live at{' '}
+          Building FourthSpace: shipping the AI meetup-planning agent, improving
+          the voice moderator, and growing the eval suite as the product evolves.
+          Live at{' '}
           <a
             href="https://www.fourthspace.vip/"
             target="_blank"
@@ -49,8 +50,24 @@ export default function NowPage() {
           </a>
           .
         </p>
-        <p className="text-text-secondary leading-loose">
+        <p className="text-text-secondary leading-loose mb-6">
           Also publishing an open-source RAG project with a full evaluation harness.
+        </p>
+        <p className="text-text-secondary leading-loose mb-6">
+          Outside of that: traveling, basketball and pickleball, and hanging out
+          with friends around LA.
+        </p>
+        <p className="text-text-secondary leading-loose">
+          And I'm taking on a few build sessions each month. One hour, screen share,
+          for non-technical people who want to actually ship the thing they've been
+          putting off. Details at{' '}
+          <Link
+            href="/build"
+            className="text-text-tertiary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
+          >
+            /build
+          </Link>
+          .
         </p>
       </div>
     </div>
