@@ -173,13 +173,14 @@ const Home = () => {
                         className="text-text-tertiary text-sm mb-10"
                         variants={itemVariants}
                     >
-                        I help non-technical people ship the thing they've been putting off.{' '}
+                        I also run one-hour{' '}
                         <Link
                             href="/build"
                             className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
                         >
-                            Build with me
+                            build sessions
                         </Link>
+                        {' '}for non-technical people.
                     </motion.p>
 
                     {/* Off the clock drawer */}

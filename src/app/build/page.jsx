@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Card } from '../../components/ui';
-import { personalInfo } from '../../config/content';
 
 const STRIPE_SINGLE = 'https://buy.stripe.com/8x27sL0UzfsdeoD70q0gw01';
 const STRIPE_THREE = 'https://buy.stripe.com/fZu6oH9r51Bn0xN0C20gw00';
@@ -13,7 +12,7 @@ const tiers = [
     id: 'single',
     price: '$150',
     name: 'One session',
-    description: 'One hour, one working thing.',
+    description: ['One hour.', 'One working thing.'],
     ctaLabel: 'Book a session ($150)',
     href: STRIPE_SINGLE,
   },
@@ -21,7 +20,7 @@ const tiers = [
     id: 'three',
     price: '$375',
     name: 'Ship it',
-    description: 'Three sessions to get it live.',
+    description: ['Three sessions.', 'Save $75.'],
     ctaLabel: 'Book three sessions ($375)',
     href: STRIPE_THREE,
   },
@@ -30,8 +29,8 @@ const tiers = [
     price: 'Custom',
     name: 'Ongoing',
     description: 'For bigger builds that need consistent time.',
-    ctaLabel: 'Get in touch',
-    href: 'mailto:keshav@kunver.com?subject=Ongoing%20build%20sessions&body=Hey%20Keshav%2C%20I%27m%20interested%20in%20ongoing%20sessions.%0D%0A%0D%0AHere%27s%20what%20I%27m%20building%3A%0D%0A',
+    ctaLabel: 'Email me',
+    href: 'mailto:keshav@kunver.com?subject=Ongoing%20build%20sessions',
   },
 ];
 
@@ -74,6 +73,19 @@ export default function BuildPage() {
         <p className="text-text-secondary leading-loose">
           So: one hour, we get on a call, and we build your thing together.
         </p>
+
+        <div className="mt-10 mb-12">
+          <a
+            href={STRIPE_SINGLE}
+            rel="noopener"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto"
+          >
+            Book a session
+          </a>
+          <p className="text-text-tertiary text-sm mt-3">
+            $150 for the hour. If nothing's running by the end, I refund it.
+          </p>
+        </div>
 
         <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
           Who this is for
@@ -119,6 +131,30 @@ export default function BuildPage() {
           prompts that actually worked, and where to go next.
         </p>
 
+        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+          What we can actually get done in an hour
+        </h2>
+        <div className="space-y-6 text-text-secondary leading-loose">
+          <p>
+            Not the whole thing. One real piece of it, live.
+          </p>
+          <p>
+            A landing page for the idea you keep describing at dinner, with a signup form that actually collects emails.
+          </p>
+          <p>
+            An intake form for your practice, so clients stop booking you over text.
+          </p>
+          <p>
+            The tracker that replaces the spreadsheet you outgrew, with the four fields you actually use.
+          </p>
+          <p>
+            A quote calculator, so you stop doing pricing math on the phone.
+          </p>
+          <p>
+            If yours isn't on this list, that's fine. Most of them aren't. The first ten minutes are me finding the version of your idea that fits in the other fifty.
+          </p>
+        </div>
+
         {/* Guarantee in a card */}
         <div className="mt-12">
           <Card>
@@ -149,8 +185,10 @@ export default function BuildPage() {
               Do I need to install anything first?
             </h3>
             <p className="text-text-secondary leading-loose">
-              No. Bring a laptop and your idea. We handle setup together, that's part
-              of the hour.
+              Nothing to install. One thing to do: sign up for a free Bolt account before we meet. Takes two minutes, it's the tool we'll build in, and it means we're not burning your first ten minutes on a signup form.
+            </p>
+            <p className="text-text-secondary leading-loose mt-6">
+              That's the only homework. Bring your idea and a laptop.
             </p>
           </div>
           <div>
@@ -191,7 +229,13 @@ export default function BuildPage() {
               <p className={`text-sm mt-1 ${tier.id === 'three' ? 'text-text-primary font-medium' : 'text-text-secondary'}`}>
                 {tier.name}
               </p>
-              <p className="text-text-tertiary text-sm mt-1">{tier.description}</p>
+              {Array.isArray(tier.description) ? (
+                tier.description.map((line, i) => (
+                  <p key={i} className="text-text-tertiary text-sm mt-1">{line}</p>
+                ))
+              ) : (
+                <p className="text-text-tertiary text-sm mt-1">{tier.description}</p>
+              )}
             </button>
           ))}
         </div>
@@ -208,17 +252,11 @@ export default function BuildPage() {
           >
             {ctaLabel}
           </a>
-          <p className="text-text-tertiary text-sm mt-4">
-            Booking three?{' '}
-            <a
-              href={STRIPE_THREE}
-              rel="noopener"
-              className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
-            >
-              Start here
-            </a>
-            .
-          </p>
+          {selected === 'ongoing' && (
+            <p className="text-text-secondary text-sm mt-3">
+              keshav@kunver.com
+            </p>
+          )}
         </div>
       </div>
     </div>
