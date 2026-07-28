@@ -5,11 +5,8 @@ import Link from 'next/link';
 import { Card } from '../../components/ui';
 import { personalInfo } from '../../config/content';
 
-// TODO: Replace with real Stripe payment links when ready
-const STRIPE_SINGLE = null;
-const STRIPE_THREE = null;
-// TODO: Replace with real playbook link when ready
-const PLAYBOOK_URL = null;
+const STRIPE_SINGLE = 'https://buy.stripe.com/test_8x27sL0UzfsdeoD70q0gw01';
+const STRIPE_THREE = 'https://buy.stripe.com/test_fZu6oH9r51Bn0xN0C20gw00';
 
 const tiers = [
   {
@@ -19,7 +16,6 @@ const tiers = [
     description: 'One hour, one working thing.',
     ctaLabel: 'Book a session ($150)',
     href: STRIPE_SINGLE,
-    external: true,
   },
   {
     id: 'three',
@@ -28,16 +24,14 @@ const tiers = [
     description: 'Three sessions to get it live.',
     ctaLabel: 'Book three sessions ($375)',
     href: STRIPE_THREE,
-    external: true,
   },
   {
     id: 'ongoing',
-    price: "Let's talk",
+    price: 'Custom',
     name: 'Ongoing',
     description: 'For bigger builds that need consistent time.',
     ctaLabel: 'Get in touch',
     href: `mailto:${personalInfo.email}`,
-    external: false,
   },
 ];
 
@@ -45,14 +39,8 @@ export default function BuildPage() {
   const [selected, setSelected] = useState(null);
 
   const activeTier = tiers.find((t) => t.id === selected);
-  const bookingReady = !!(STRIPE_SINGLE && STRIPE_THREE);
-  const ctaLabel = bookingReady
-    ? (activeTier ? activeTier.ctaLabel : 'Book a session')
-    : 'Sessions opening soon';
-  const ctaHref = bookingReady
-    ? (activeTier ? activeTier.href : STRIPE_SINGLE)
-    : null;
-  const ctaExternal = activeTier ? activeTier.external : true;
+  const ctaLabel = activeTier ? activeTier.ctaLabel : 'Book a session';
+  const ctaHref = activeTier ? activeTier.href : STRIPE_SINGLE;
 
   return (
     <div className="min-h-screen bg-dark-bg">
@@ -208,43 +196,29 @@ export default function BuildPage() {
           ))}
         </div>
         <p className="text-text-secondary text-sm leading-relaxed">
-          I'm only taking four or five of these a month.
+          I'm only taking 5 of these a month.
         </p>
 
         {/* CTA area */}
         <div className="mt-16 pt-10 border-t border-dark-border">
-          {ctaHref ? (
+          <a
+            href={ctaHref}
+            rel="noopener"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto"
+          >
+            {ctaLabel}
+          </a>
+          <p className="text-text-tertiary text-sm mt-4">
+            Booking three?{' '}
             <a
-              href={ctaHref}
-              {...(ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              className="inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto"
+              href={STRIPE_THREE}
+              rel="noopener"
+              className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
             >
-              {ctaLabel}
+              Start here
             </a>
-          ) : (
-            <span className="inline-flex h-11 items-center justify-center rounded-lg bg-dark-elevated px-6 font-heading text-base font-medium text-text-tertiary w-full sm:w-auto cursor-default">
-              {ctaLabel}
-            </span>
-          )}
-          {!bookingReady && (
-            <p className="text-text-tertiary text-sm mt-3">
-              Setting up scheduling now. Check back soon.
-            </p>
-          )}
-          {PLAYBOOK_URL && (
-            <p className="text-text-tertiary text-sm mt-6 leading-relaxed">
-              Not ready to book? I wrote{' '}
-              <a
-                href={PLAYBOOK_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
-              >
-                The Vibe Code Playbook
-              </a>
-              {' '}for this exact person. Zero to a working app, no documentation, $29.
-            </p>
-          )}
+            .
+          </p>
         </div>
       </div>
     </div>
