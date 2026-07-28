@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { Card } from '../../components/ui';
 import { personalInfo } from '../../config/content';
 
-const STRIPE_SINGLE = 'https://buy.stripe.com/test_8x27sL0UzfsdeoD70q0gw01';
-const STRIPE_THREE = 'https://buy.stripe.com/test_fZu6oH9r51Bn0xN0C20gw00';
+const STRIPE_SINGLE = 'https://buy.stripe.com/8x27sL0UzfsdeoD70q0gw01';
+const STRIPE_THREE = 'https://buy.stripe.com/fZu6oH9r51Bn0xN0C20gw00';
 
 const tiers = [
   {
@@ -31,7 +31,7 @@ const tiers = [
     name: 'Ongoing',
     description: 'For bigger builds that need consistent time.',
     ctaLabel: 'Get in touch',
-    href: `mailto:${personalInfo.email}`,
+    href: 'mailto:keshav@kunver.com?subject=Ongoing%20build%20sessions&body=Hey%20Keshav%2C%20I%27m%20interested%20in%20ongoing%20sessions.%0D%0A%0D%0AHere%27s%20what%20I%27m%20building%3A%0D%0A',
   },
 ];
 
