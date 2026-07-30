@@ -187,7 +187,7 @@ export default function BuildPage() {
             <p className="text-text-secondary leading-loose">
               Nothing to install. One thing to do: sign up for a free{' '}
               <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline">Bolt</a>
-              {' '}account before we meet. Takes two minutes, it's the tool we'll build in, and it means we're not burning your first ten minutes on a signup form.
+              {' '}account before we meet. It's the tool we'll build in, and it saves us from spending session time on setup.
             </p>
             <p className="text-text-secondary leading-loose mt-6">
               That's the only homework. Bring your idea and a laptop.
