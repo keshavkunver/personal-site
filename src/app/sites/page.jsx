@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Card, BeforeAfterSlider } from '../../components/ui';
 
-const CONTACT_EMAIL = 'keshav@kunver.com';
-const CTA_HREF = `mailto:${CONTACT_EMAIL}?subject=Site%20rebuild%20—%20here%27s%20my%20site`;
+const CONTACT_EMAIL = 'sites@kunver.com';
+const CTA_HREF = `mailto:${CONTACT_EMAIL}?subject=Here%27s%20my%20site`;
 
 // TODO: real client work only. One great comparison beats six mediocre ones.
 const showcase = [
@@ -25,19 +25,19 @@ const showcase = [
 const steps = [
   {
     title: 'Send us your site',
-    body: 'TODO: e.g. "Email the link. That’s it. No forms, no discovery call yet."',
+    body: 'TODO: e.g. "Email the link. No call, no forms."',
   },
   {
-    title: 'We scope a fixed price',
-    body: 'TODO: e.g. "Within two days you get back what we’d change, how long it takes, and what it costs. One number, no hourly billing."',
+    title: 'Get a fixed price',
+    body: 'TODO: e.g. "One number back in two days. No hourly billing."',
   },
   {
     title: 'We build, you review',
-    body: 'TODO: e.g. "You see the new site on a live preview link while your current site stays up. Nothing switches until you say so."',
+    body: 'TODO: e.g. "Live preview link. Your current site stays up until you say go."',
   },
   {
     title: 'Launch',
-    body: 'TODO: e.g. "We point your domain at the new site. You own everything."',
+    body: 'TODO: e.g. "We point your domain. You own everything."',
   },
 ];
 
@@ -64,24 +64,20 @@ const tiers = [
 
 const faqs = [
   {
-    q: 'Do I need to move my hosting?',
-    a: 'TODO: answer honestly based on how you deploy (e.g. "Usually yes, and we handle the move. Hosting for a site like this is $0–$20/month.")',
-  },
-  {
     q: 'Do I own the site after?',
-    a: 'TODO: e.g. "Yes. The code, the domain, the accounts — all yours. No monthly fee to keep it alive."',
+    a: 'TODO: e.g. "Yes. Code, domain, accounts — all yours. No monthly fee to us."',
   },
   {
     q: 'How long does it take?',
     a: 'TODO: honest range, e.g. "A refresh is about a week. A rebuild is two to three."',
   },
   {
-    q: 'What if I want changes later?',
-    a: 'TODO: e.g. "Small fixes are free for the first month. After that, email us and we’ll quote it."',
+    q: 'Will my domain and email keep working?',
+    a: 'TODO: cover hosting moves here too, e.g. "Yes. We handle the hosting move; email stays exactly as it is."',
   },
   {
-    q: 'Will my domain and email keep working?',
-    a: 'TODO: e.g. "Yes. We only touch where the domain points. Email stays exactly as it is."',
+    q: 'What if I want changes later?',
+    a: 'TODO: e.g. "Small fixes are free the first month. After that, email us."',
   },
 ];
 
@@ -153,19 +149,17 @@ export default function SitesPage() {
 
         {/* What we do / don't do */}
         <h2 className='text-2xl font-bold text-text-primary mt-16 mb-4 tracking-tight'>
-          What we actually do
+          What we do
         </h2>
-        <div className='space-y-6 text-text-secondary leading-loose'>
-          {/* TODO: tighten this scope list to what you genuinely want to take on. */}
+        <div className='space-y-4 text-text-secondary leading-relaxed'>
+          {/* TODO: tighten to what you genuinely want to take on. */}
           <p>
-            Full rebuilds. Visual refreshes. Fixing the mobile version nobody
-            can use. Making it fast. Adding the booking form, contact form, or
-            payment link your site should have had from the start.
+            Rebuilds. Refreshes. Mobile fixes. Speed. The booking form or
+            payment link your site should already have.
           </p>
-          <p>
-            {/* TODO: the "not us" list — kills bad-fit emails before they're sent. */}
-            What we don&apos;t do: TODO &mdash; e.g. large e-commerce platforms,
-            ongoing SEO retainers, social media.
+          <p className='text-text-tertiary'>
+            {/* TODO: the "not us" list — kills bad-fit emails. */}
+            Not us: TODO &mdash; e.g. big e-commerce, SEO retainers, social media.
           </p>
         </div>
 
@@ -255,11 +249,6 @@ export default function SitesPage() {
 
         {/* Closing CTA */}
         <div className='mt-16 pt-10 border-t border-dark-border'>
-          <p className='text-text-secondary leading-loose mb-6'>
-            {/* TODO: one closing line, e.g. "Worst case, you get a free
-                teardown of your current site." */}
-            TODO: closing line.
-          </p>
           <a
             href={CTA_HREF}
             className='inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto'
