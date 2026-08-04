@@ -6,3 +6,4 @@ export { default as Section } from './Section';
 export { default as AnimateOnScroll, StaggerContainer, StaggerItem } from './AnimateOnScroll';
 export { default as TextReveal, TextRevealMask, AnimatedGradientText } from './TextReveal';
 export { default as ScrollProgress } from './ScrollProgress';
+export { default as BeforeAfterSlider } from './BeforeAfterSlider';
