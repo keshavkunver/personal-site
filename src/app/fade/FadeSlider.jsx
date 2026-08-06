@@ -19,7 +19,7 @@ const placeholder = (label) =>
     </svg>`
   )}`;
 
-export default function FadeSlider({ before, after, view, revealText }) {
+export default function FadeSlider({ before, after, view, revealText, onRevealChange }) {
   // 0 = full before, 100 = full after
   const [value, setValue] = useState(50);
   const [imgError, setImgError] = useState({ before: false, after: false });
@@ -32,6 +32,11 @@ export default function FadeSlider({ before, after, view, revealText }) {
   const confettiTimerRef = useRef(null);
 
   useEffect(() => () => clearTimeout(confettiTimerRef.current), []);
+
+  useEffect(() => {
+    onRevealChange?.(revealed);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [revealed]);
 
   function snip() {
     const now = performance.now();

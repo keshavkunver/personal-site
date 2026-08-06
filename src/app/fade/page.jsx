@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import FadeSlider from './FadeSlider';
+import FadeGallery from './FadeGallery';
 import MuteButton from './MuteButton';
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'The Fade',
-    description: 'Some people get a before and after text. One person gets a whole page.',
+    description: 'Open this with sound on, Rups ;)',
     url: 'https://kunver.com/fade',
     type: 'website',
     siteName: 'Keshav Kunver',
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'The Fade',
-    description: 'Some people get a before and after text. One person gets a whole page.',
+    description: 'Open this with sound on, Rups ;)',
     images: ['/fade/og.jpg'],
   },
   robots: {
@@ -41,36 +41,15 @@ export default function FadePage() {
         <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-4 tracking-tight">
           The Fade
         </h1>
+        <p className="text-text-secondary mb-2">
+          I know you liked the curls but they must go.
+        </p>
         <p className="text-text-tertiary text-sm mb-10">
           Drag the scissors all the way. Sound on.
         </p>
       </div>
 
-      <div className="max-w-2xl mx-auto px-6">
-        <p className="text-text-tertiary text-xs font-semibold tracking-[0.25em] uppercase mb-3">
-          Front
-        </p>
-        <FadeSlider
-          before="/fade/front-before.jpg"
-          after="/fade/front-after.jpg"
-          view="front"
-          revealText="I'm HIM."
-        />
-
-        <p className="text-text-tertiary text-xs font-semibold tracking-[0.25em] uppercase mt-12 mb-3">
-          Side
-        </p>
-        <FadeSlider
-          before="/fade/side-before.jpg"
-          after="/fade/side-after.jpg"
-          view="side"
-          revealText="You may bark now."
-        />
-
-        <p className="text-center text-text-tertiary text-sm mt-10 pb-20">
-          Some people get a before and after text. One person gets a whole page.
-        </p>
-      </div>
+      <FadeGallery />
 
       <MuteButton />
     </div>
