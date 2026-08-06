@@ -42,7 +42,7 @@ export default function FadePage() {
           The Fade
         </h1>
         <p className="text-text-secondary mb-2">
-          I know you liked the curls but they must go.
+          I know you liked the curls but they must go, meri jaan.
         </p>
         <p className="text-text-tertiary text-sm mb-10">
           Drag the scissors all the way. Sound on.
