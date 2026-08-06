@@ -25,9 +25,9 @@ export const metadata = {
   creator: 'Keshav Kunver',
   publisher: 'Keshav Kunver',
   metadataBase: new URL('https://www.kunver.com'),
-  alternates: {
-    canonical: '/',
-  },
+  // No site-wide alternates here: a root-level canonical is inherited by every
+  // route that doesn't override it, making pages canonicalize to the homepage.
+  // Each page/layout sets its own canonical instead.
   openGraph: {
     type: 'website',
     locale: 'en_US',

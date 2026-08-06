@@ -5,6 +5,23 @@ import MuteButton from './MuteButton';
 export const metadata = {
   title: 'The Fade | Keshav Kunver',
   description: 'A haircut, before and after.',
+  alternates: {
+    canonical: 'https://kunver.com/fade',
+  },
+  openGraph: {
+    title: 'The Fade',
+    description: 'Some people get a before and after text. One person gets a whole page.',
+    url: 'https://kunver.com/fade',
+    type: 'website',
+    siteName: 'Keshav Kunver',
+    images: [{ url: '/fade/og.jpg', width: 1200, height: 630, alt: 'The Fade' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Fade',
+    description: 'Some people get a before and after text. One person gets a whole page.',
+    images: ['/fade/og.jpg'],
+  },
   robots: {
     index: false,
     follow: false,
