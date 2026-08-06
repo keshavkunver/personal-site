@@ -36,7 +36,12 @@ export default function FadePage() {
   // starts downloading the clips alongside the photos, instead of
   // waiting for hydration before the audio fetches can begin.
   SOUNDS.forEach((name) =>
-    preload(`/fade/sounds/${name}.mp3`, { as: 'fetch', crossOrigin: 'anonymous' })
+    preload(`/fade/sounds/${name}.mp3`, {
+      as: 'fetch',
+      crossOrigin: 'anonymous',
+      // The reveal clips must win bandwidth against the photos on slow links.
+      fetchPriority: name === 'before' || name === 'after' ? 'high' : 'auto',
+    })
   );
 
   return (
