@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { FiVolume2, FiVolumeX } from 'react-icons/fi';
-import { isMuted, setMuted } from './audio';
+import { initAudio, isMuted, setMuted } from './audio';
 
 export default function MuteButton() {
   const [muted, setMutedState] = useState(isMuted);
@@ -11,6 +11,9 @@ export default function MuteButton() {
     const next = !muted;
     setMutedState(next);
     setMuted(next);
+    // Any tap is a valid iOS activation gesture - use it to unstick a
+    // suspended context too.
+    initAudio();
   }
 
   return (

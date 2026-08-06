@@ -47,6 +47,18 @@ function warnOnce(name, err) {
   console.warn(`[fade] sound unavailable: ${SOUND_URLS[name]}`, err);
 }
 
+function ensureContext() {
+  if (state.ctx) return;
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  if (!Ctx) return;
+  const ctx = new Ctx();
+  const gain = ctx.createGain();
+  gain.gain.value = state.muted ? 0 : VOLUME;
+  gain.connect(ctx.destination);
+  state.ctx = ctx;
+  state.gain = gain;
+}
+
 export function preloadAudio() {
   if (state.fetchPromise) return;
   state.fetchPromise = Promise.all(
@@ -60,31 +72,11 @@ export function preloadAudio() {
       }
     })
   );
-}
-
-export function initAudio() {
-  preloadAudio();
-  if (!state.unlockEl) {
-    try {
-      const el = new Audio(SILENT_WAV);
-      el.loop = true;
-      el.play().catch(() => {});
-      state.unlockEl = el;
-    } catch {
-      // audio element unavailable; Web Audio may still work
-    }
-  }
-  if (!state.ctx) {
-    const Ctx = window.AudioContext || window.webkitAudioContext;
-    if (!Ctx) return;
-    const ctx = new Ctx();
-    const gain = ctx.createGain();
-    gain.gain.value = state.muted ? 0 : VOLUME;
-    gain.connect(ctx.destination);
-    state.ctx = ctx;
-    state.gain = gain;
-  }
-  if (!state.decodeStarted) {
+  // Decode immediately as bytes land. A pre-gesture AudioContext starts
+  // suspended, but decoding works while suspended, so buffers are ready
+  // the moment the user first touches anything.
+  ensureContext();
+  if (state.ctx && !state.decodeStarted) {
     state.decodeStarted = true;
     state.fetchPromise.then(() =>
       Promise.all(
@@ -99,8 +91,31 @@ export function initAudio() {
       )
     );
   }
-  // Called from user gestures, so this resume is allowed.
-  if (state.ctx.state === 'suspended') state.ctx.resume();
+}
+
+// Call from EVERY user gesture (pointer down AND up, key presses, button
+// taps). iOS only grants audio activation on certain gestures - notably
+// the end of a tap, not the start of a captured drag - so each call
+// retries the suspended-context resume and the silent unlock element
+// until one gesture sticks.
+export function initAudio() {
+  preloadAudio();
+  ensureContext();
+  if (!state.unlockEl) {
+    try {
+      const el = new Audio(SILENT_WAV);
+      el.loop = true;
+      state.unlockEl = el;
+    } catch {
+      // audio element unavailable; Web Audio may still work
+    }
+  }
+  if (state.unlockEl && state.unlockEl.paused) {
+    state.unlockEl.play().catch(() => {});
+  }
+  if (state.ctx && state.ctx.state !== 'running') {
+    state.ctx.resume().catch(() => {});
+  }
 }
 
 function flushPending(name) {

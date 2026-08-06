@@ -141,6 +141,10 @@ export default function FadeSlider({
 
   function onPointerEnd() {
     draggingRef.current = false;
+    // iOS grants audio activation at the END of a touch, not the start of
+    // a captured drag - retry the context resume here so a queued reveal
+    // clip starts the moment the finger lifts.
+    initAudio();
   }
 
   function onKeyDown(e) {
