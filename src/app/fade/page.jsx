@@ -45,7 +45,7 @@ export default function FadePage() {
           I know you liked the curls but they must go, meri jaan.
         </p>
         <p className="text-text-tertiary text-sm mb-10">
-          Drag the scissors all the way. Sound on.
+          Drag the scissors all the way. Sound/Ringer on, bb :)
         </p>
       </div>
 
