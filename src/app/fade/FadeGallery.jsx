@@ -1,12 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FadeSlider from './FadeSlider';
+import { preloadAudio } from './audio';
 
 export default function FadeGallery() {
   // Sticky: once a slider has been fully revealed, it counts forever,
   // so the payoff line doesn't retract if a slider gets re-blurred.
   const [revealedOnce, setRevealedOnce] = useState({ front: false, side: false });
+
+  // Start fetching the mp3 bytes at page load so a fast first drag
+  // doesn't reach the reveal before its clip has downloaded.
+  useEffect(() => {
+    preloadAudio();
+  }, []);
   const bothRevealed = revealedOnce.front && revealedOnce.side;
 
   const markRevealed = (view) => (revealed) => {
