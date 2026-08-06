@@ -74,6 +74,15 @@ export function play(name, { rate = 1, channel } = {}) {
   }
 }
 
+export function stopChannel(channel) {
+  try {
+    state.channels[channel]?.stop();
+  } catch {
+    // already stopped
+  }
+  delete state.channels[channel];
+}
+
 export function setMuted(muted) {
   state.muted = muted;
   if (state.ctx && state.gain) {

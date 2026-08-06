@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { FiScissors } from 'react-icons/fi';
-import { initAudio, play } from './audio';
+import { initAudio, play, stopChannel } from './audio';
 
 const SNIP_THROTTLE_MS = 120;
 const CONFETTI_COOLDOWN_MS = 3000;
@@ -81,6 +81,9 @@ export default function FadeSlider({
     // Snap near the edges so a finger can actually land the full reveal.
     if (v > 98.5) v = 100;
     else if (v < 1.5) v = 0;
+    // With edge-triggered clips, the middle is a reset point: snap to it
+    // and cut whatever clip is playing.
+    else if (edgeTrigger && v >= 48 && v <= 52) v = 50;
     setValue(v);
 
     const fx = fxRef.current;
@@ -97,6 +100,14 @@ export default function FadeSlider({
     if (v > 10 && v < 90) {
       fx.chimeFired = false;
       fx.tromboneFired = false;
+    }
+    if (edgeTrigger) {
+      if (v === 50 && !fx.midReset) {
+        fx.midReset = true;
+        stopChannel(view);
+      } else if (v !== 50) {
+        fx.midReset = false;
+      }
     }
     if (v >= 100) {
       setRevealed(true);
