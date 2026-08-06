@@ -30,7 +30,7 @@ export default function FadeGallery() {
         before="/fade/front-before.jpg"
         after="/fade/front-after.jpg"
         view="front"
-        revealText="I'm HIM."
+        revealText="Tera Raja is HIM."
         onRevealChange={markRevealed('front')}
         highSound="after"
         lowSound="before"
