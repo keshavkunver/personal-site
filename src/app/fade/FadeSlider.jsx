@@ -30,6 +30,8 @@ export default function FadeSlider({
   highSound = 'chime',
   lowSound = 'trombone',
   edgeTrigger = false,
+  // For below-the-fold sliders: defer image download until scrolled near.
+  lazy = false,
 }) {
   // 0 = full before, 100 = full after
   const [value, setValue] = useState(50);
@@ -184,6 +186,7 @@ export default function FadeSlider({
       <img
         src={beforeSrc}
         alt={`Before the haircut, ${view} view`}
+        loading={lazy ? 'lazy' : undefined}
         draggable={false}
         onError={() => setImgError((s) => (s.before ? s : { ...s, before: true }))}
         className="absolute inset-0 w-full h-full object-cover"
@@ -197,6 +200,7 @@ export default function FadeSlider({
         <img
           src={afterSrc}
           alt={`After the haircut, ${view} view`}
+          loading={lazy ? 'lazy' : undefined}
           draggable={false}
           onError={() => setImgError((s) => (s.after ? s : { ...s, after: true }))}
           className="absolute inset-0 w-full h-full object-cover"

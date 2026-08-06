@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import { preload } from 'react-dom';
 import FadeGallery from './FadeGallery';
 import MuteButton from './MuteButton';
+
+const SOUNDS = ['snip', 'chime', 'trombone', 'before', 'after'];
 
 export const metadata = {
   title: 'The Fade | Keshav Kunver',
@@ -29,6 +32,13 @@ export const metadata = {
 };
 
 export default function FadePage() {
+  // Emit <link rel="preload"> tags in the initial HTML so the browser
+  // starts downloading the clips alongside the photos, instead of
+  // waiting for hydration before the audio fetches can begin.
+  SOUNDS.forEach((name) =>
+    preload(`/fade/sounds/${name}.mp3`, { as: 'fetch', crossOrigin: 'anonymous' })
+  );
+
   return (
     <div className="min-h-screen bg-dark-bg">
       <div className="max-w-2xl mx-auto px-6 pt-8 md:pt-16">

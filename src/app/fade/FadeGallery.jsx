@@ -46,6 +46,7 @@ export default function FadeGallery() {
         view="side"
         revealText="You may bark now."
         onRevealChange={markRevealed('side')}
+        lazy
       />
 
       <p
