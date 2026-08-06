@@ -19,7 +19,18 @@ const placeholder = (label) =>
     </svg>`
   )}`;
 
-export default function FadeSlider({ before, after, view, revealText, onRevealChange }) {
+export default function FadeSlider({
+  before,
+  after,
+  view,
+  revealText,
+  onRevealChange,
+  // Sounds for the two ends of the slider. With edgeTrigger they fire
+  // only at the extremes (0 / 100); otherwise at the 10% / 90% crossings.
+  highSound = 'chime',
+  lowSound = 'trombone',
+  edgeTrigger = false,
+}) {
   // 0 = full before, 100 = full after
   const [value, setValue] = useState(50);
   const [imgError, setImgError] = useState({ before: false, after: false });
@@ -73,13 +84,15 @@ export default function FadeSlider({ before, after, view, revealText, onRevealCh
     setValue(v);
 
     const fx = fxRef.current;
-    if (v >= 90 && !fx.chimeFired) {
+    const highAt = edgeTrigger ? 100 : 90;
+    const lowAt = edgeTrigger ? 0 : 10;
+    if (v >= highAt && !fx.chimeFired) {
       fx.chimeFired = true;
-      play('chime');
+      play(highSound, { channel: view });
     }
-    if (v <= 10 && !fx.tromboneFired) {
+    if (v <= lowAt && !fx.tromboneFired) {
       fx.tromboneFired = true;
-      play('trombone');
+      play(lowSound, { channel: view });
     }
     if (v > 10 && v < 90) {
       fx.chimeFired = false;

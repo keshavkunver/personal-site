@@ -5,6 +5,8 @@ const SOUND_URLS = {
   snip: '/fade/sounds/snip.mp3',
   chime: '/fade/sounds/chime.mp3',
   trombone: '/fade/sounds/trombone.mp3',
+  before: '/fade/sounds/before.mp3',
+  after: '/fade/sounds/after.mp3',
 };
 
 const VOLUME = 0.8;
@@ -16,6 +18,9 @@ const state = {
   warned: {},
   initPromise: null,
   muted: false,
+  // One playing source per channel: starting a sound on a channel
+  // stops whatever was playing there (keeps long clips from stacking).
+  channels: {},
 };
 
 export function initAudio() {
@@ -47,7 +52,7 @@ export function initAudio() {
   );
 }
 
-export function play(name, { rate = 1 } = {}) {
+export function play(name, { rate = 1, channel } = {}) {
   if (!state.ctx || !state.buffers[name]) return;
   try {
     if (state.ctx.state === 'suspended') state.ctx.resume();
@@ -55,6 +60,14 @@ export function play(name, { rate = 1 } = {}) {
     src.buffer = state.buffers[name];
     src.playbackRate.value = rate;
     src.connect(state.gain);
+    if (channel) {
+      try {
+        state.channels[channel]?.stop();
+      } catch {
+        // already stopped
+      }
+      state.channels[channel] = src;
+    }
     src.start();
   } catch {
     // never let audio take the page down

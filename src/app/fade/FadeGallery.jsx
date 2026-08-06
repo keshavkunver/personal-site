@@ -25,6 +25,9 @@ export default function FadeGallery() {
         view="front"
         revealText="I'm HIM."
         onRevealChange={markRevealed('front')}
+        highSound="after"
+        lowSound="before"
+        edgeTrigger
       />
 
       <p className="text-text-tertiary text-xs font-semibold tracking-[0.25em] uppercase mt-12 mb-3">
