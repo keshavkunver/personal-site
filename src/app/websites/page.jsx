@@ -5,8 +5,7 @@ import headshotImage from '../../assets/images/profile/headshot.png';
 
 const BOOKING_URL = 'https://cal.com/keshav-kunver/15-minute-website-call';
 
-// TODO: replace with your real email address
-const EMAIL = 'REPLACE_ME@example.com';
+const EMAIL = 'keshavkunver@gmail.com';
 
 const ctaClasses =
   'inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
