@@ -116,7 +116,7 @@ const Navbar = () => {
     const navLinks = [
         { id: 'home', label: 'Home' },
         { id: 'work-with-me', label: 'Work with me' },
-        { id: 'work', label: 'Work' },
+        { id: 'work', label: 'Startups' },
         { id: 'capabilities', label: 'Capabilities' },
         { id: 'experience', label: 'Industry' },
         { id: 'education', label: 'Education' },

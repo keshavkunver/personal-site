@@ -19,6 +19,7 @@ const defaultArticleMeta = {
 export default function BlogPost() {
   const params = useParams();
   const article = articles[params.slug];
+  const readingEndRef = useRef(null);
 
   if (!article) {
     return (
@@ -32,8 +33,6 @@ export default function BlogPost() {
       </div>
     );
   }
-
-  const readingEndRef = useRef(null);
 
   return (
     <div className="min-h-screen bg-dark-bg">
