@@ -1,6 +1,6 @@
 import { Home, Contact, Capabilities, Experience } from "../components/pages";
 import { Navbar, Footer } from "../components/common";
-import { ImpactStrip, Writing, Education } from "../components/sections";
+import { ImpactStrip, WorkWithMe, Writing, Education } from "../components/sections";
 import { ScrollProgress } from "../components/ui";
 import Work from "../components/work/Work";
 
@@ -17,6 +17,7 @@ export default function Page() {
       <Navbar />
       <Home />
       <ImpactStrip />
+      <WorkWithMe />
       <Work />
       <Capabilities />
       <Experience />
