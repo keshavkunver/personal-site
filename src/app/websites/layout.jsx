@@ -1,6 +1,8 @@
 export const metadata = {
   title: 'Websites for Local Service Businesses | Keshav Kunver',
   description: 'I build websites for local service businesses. Flat price, live in about two weeks, built by one engineer instead of a template or an agency.',
+  // Suppress the site-wide AI engineering keywords; they don't fit this page.
+  keywords: null,
   alternates: {
     canonical: '/websites',
   },

@@ -5,8 +5,14 @@ import headshotImage from '../../assets/images/profile/headshot.png';
 
 const BOOKING_URL = 'https://cal.com/keshav-kunver/15-minute-website-call';
 
+// TODO: replace with your real email address
+const EMAIL = 'REPLACE_ME@example.com';
+
 const ctaClasses =
   'inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
+
+const ctaSecondaryClasses =
+  'inline-flex h-11 items-center justify-center rounded-lg border border-dark-border px-6 font-heading text-base font-medium text-text-secondary transition-all duration-200 hover:text-text-primary hover:border-dark-border-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
 
 const problems = [
   "A customer finds you on Google and opens your site on their phone. They can't find your phone number, so they call the next company on the list.",
@@ -150,9 +156,12 @@ export default function WebsitesPage() {
             <p className="text-4xl font-bold text-text-primary mb-4">
               $99<span className="text-lg font-medium text-text-tertiary">/month</span>
             </p>
-            <p className="text-text-secondary leading-loose flex-1">
+            <p className="text-text-secondary leading-loose mb-6 flex-1">
               Updates, fixes, hosting oversight. Optional. Cancel anytime.
             </p>
+            <a href={BOOKING_URL} rel="noopener" className={ctaSecondaryClasses}>
+              Book a 15 minute call
+            </a>
           </div>
         </div>
 
@@ -241,6 +250,16 @@ export default function WebsitesPage() {
           <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
             Book a 15 minute call
           </a>
+          <p className="text-sm text-text-tertiary mt-6">
+            Not ready for a call?{' '}
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
+            >
+              Email me instead
+            </a>
+            .
+          </p>
         </div>
       </div>
     </div>
