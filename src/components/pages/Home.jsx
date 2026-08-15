@@ -173,14 +173,15 @@ const Home = () => {
                         className="text-text-tertiary text-sm mb-10"
                         variants={itemVariants}
                     >
-                        I also run one-hour{' '}
+                        I also run build sessions and make websites for local
+                        businesses.{' '}
                         <Link
-                            href="/build"
+                            href="#work-with-me"
                             className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
                         >
-                            build sessions
+                            Two ways to work with me
                         </Link>
-                        {' '}for non-technical people.
+                        .
                     </motion.p>
 
                     {/* Off the clock drawer */}

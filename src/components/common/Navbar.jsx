@@ -64,7 +64,7 @@ const Navbar = () => {
 
     // Track active section with Intersection Observer
     useEffect(() => {
-        const sections = ['home', 'work', 'capabilities', 'experience', 'education', 'writing', 'contact'];
+        const sections = ['home', 'work-with-me', 'work', 'capabilities', 'experience', 'education', 'writing', 'contact'];
         
         const observer = new IntersectionObserver(
             (entries) => {
@@ -115,6 +115,7 @@ const Navbar = () => {
 
     const navLinks = [
         { id: 'home', label: 'Home' },
+        { id: 'work-with-me', label: 'Work with me' },
         { id: 'work', label: 'Work' },
         { id: 'capabilities', label: 'Capabilities' },
         { id: 'experience', label: 'Industry' },
@@ -269,7 +270,7 @@ const Navbar = () => {
                         >
                             <ul className='flex flex-col items-center gap-1 sm:gap-2'>
                                 {navLinks.map((link, index) => {
-                                    const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
+                                    const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
                                     return (
                                         <motion.li
                                             key={link.id}
