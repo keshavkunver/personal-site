@@ -121,11 +121,6 @@ export default function WebsitesPage() {
           <li>Ongoing content updates (that's what the maintenance plan below is for)</li>
           <li>E-commerce</li>
         </ul>
-        <p className="text-text-secondary leading-loose mt-4">
-          If you need those, I'll tell you on the call and point you somewhere
-          that does them well.
-        </p>
-
         {/* Pricing */}
         <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
           Pricing
