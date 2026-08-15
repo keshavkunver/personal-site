@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card } from '../../components/ui';
+import headshotImage from '../../assets/images/profile/headshot.png';
 
 // TODO: replace with your real Calendly link
 const CALENDLY_URL = 'https://calendly.com/REPLACE_ME';
@@ -23,7 +25,7 @@ const deliverables = [
   {
     outcome: 'You show up when someone searches your service near your city.',
     detail:
-      'Meta titles and descriptions, a sitemap, and your Google Business Profile connected.',
+      'The page titles and descriptions Google reads, a sitemap, and your Google Business Profile connected.',
   },
   {
     outcome: 'People know what you charge before they call.',
@@ -31,11 +33,11 @@ const deliverables = [
   },
   {
     outcome: 'It works on a phone, where almost everyone will see it.',
-    detail: 'A mobile-first responsive build.',
+    detail: "Built for phones first, because that's where your customers will find you.",
   },
   {
     outcome: "It's done and live, not a project that drags.",
-    detail: 'Up to 5 pages, 2 rounds of revisions, deployed on your domain.',
+    detail: 'Up to 5 pages, 2 rounds of revisions, live on your domain.',
   },
 ];
 
@@ -62,8 +64,8 @@ export default function WebsitesPage() {
           Websites for local service businesses, live in two weeks.
         </h1>
         <p className="text-body-lg text-text-secondary leading-loose max-w-2xl">
-          I'm an engineer and I build it myself, not a template and not an
-          agency passing your project down a chain.
+          I'm an engineer and I build it myself. No template, no account
+          manager, no chain of handoffs. You talk to the person doing the work.
         </p>
         <div className="mt-8">
           <a href={CALENDLY_URL} rel="noopener" className={ctaClasses}>
@@ -131,9 +133,12 @@ export default function WebsitesPage() {
               The build
             </p>
             <p className="text-4xl font-bold text-text-primary mb-4">$1,500</p>
-            <p className="text-text-secondary leading-loose mb-6 flex-1">
+            <p className="text-text-secondary leading-loose mb-3">
               $500 deposit to start, $1,000 at launch. Roughly two weeks from
               kickoff to live.
+            </p>
+            <p className="text-text-tertiary text-sm mb-6 flex-1">
+              Flat price. No hourly billing, no add-ons later.
             </p>
             <a href={CALENDLY_URL} rel="noopener" className={ctaClasses}>
               Book a 15 minute call
@@ -169,6 +174,30 @@ export default function WebsitesPage() {
             </li>
           ))}
         </ol>
+
+        {/* Who's building it */}
+        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+          Who's building it
+        </h2>
+        <div className="flex items-start gap-5">
+          <div className="relative w-20 h-20 rounded-xl overflow-hidden border border-dark-border shrink-0">
+            <Image
+              src={headshotImage}
+              alt="Keshav Kunver"
+              fill
+              sizes="80px"
+              className="object-cover object-top"
+            />
+          </div>
+          <p className="text-text-secondary leading-loose">
+            I'm Keshav. I build software for a living, and this site is mine.
+            When you hire me, I'm the one on the call and the one writing the
+            code.{' '}
+            <Link href="/" className="text-text-primary hover:underline">
+              Here's the rest of my work.
+            </Link>
+          </p>
+        </div>
 
         {/* TODO: Case study. Activate this section once the client site is live.
         Fill in the client name, the broken list, what changed, and the live URL.
