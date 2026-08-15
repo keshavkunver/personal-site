@@ -21,5 +21,43 @@ export const metadata = {
 };
 
 export default function WebsitesLayout({ children }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Websites for Local Service Businesses',
+            serviceType: 'Website design and development',
+            url: 'https://www.kunver.com/websites',
+            provider: {
+              '@type': 'Person',
+              name: 'Keshav Kunver',
+              url: 'https://www.kunver.com',
+            },
+            offers: [
+              {
+                '@type': 'Offer',
+                name: 'Website build',
+                price: '1500',
+                priceCurrency: 'USD',
+                description:
+                  'Up to 5 pages, mobile-first, live on your domain in about two weeks.',
+              },
+              {
+                '@type': 'Offer',
+                name: 'Maintenance plan',
+                price: '99',
+                priceCurrency: 'USD',
+                description: 'Monthly updates, fixes, and hosting oversight. Optional.',
+              },
+            ],
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

@@ -69,6 +69,17 @@ export default function NowPage() {
           </Link>
           .
         </p>
+        <p className="text-text-secondary leading-loose mt-6">
+          I've also started building websites for local service businesses.
+          Flat price, live in about two weeks. Details at{' '}
+          <Link
+            href="/websites"
+            className="text-text-tertiary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
+          >
+            /websites
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
