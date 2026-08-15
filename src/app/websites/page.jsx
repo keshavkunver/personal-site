@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { Card } from '../../components/ui';
 import headshotImage from '../../assets/images/profile/headshot.png';
 
-// TODO: replace with your real Calendly link
-const CALENDLY_URL = 'https://calendly.com/REPLACE_ME';
+// TODO: replace with your real booking link (Cal.com, Google appointment schedule, etc.)
+const BOOKING_URL = 'https://REPLACE_ME';
 
 const ctaClasses =
   'inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
@@ -68,7 +68,7 @@ export default function WebsitesPage() {
           manager, no chain of handoffs. You talk to the person doing the work.
         </p>
         <div className="mt-8">
-          <a href={CALENDLY_URL} rel="noopener" className={ctaClasses}>
+          <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
             Book a 15 minute call
           </a>
         </div>
@@ -140,7 +140,7 @@ export default function WebsitesPage() {
             <p className="text-text-tertiary text-sm mb-6 flex-1">
               Flat price. No hourly billing, no add-ons later.
             </p>
-            <a href={CALENDLY_URL} rel="noopener" className={ctaClasses}>
+            <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
               Book a 15 minute call
             </a>
           </div>
@@ -239,7 +239,7 @@ export default function WebsitesPage() {
           <p className="text-lg text-text-primary mb-6">
             One short call. If it's not a fit, you'll know in 15 minutes.
           </p>
-          <a href={CALENDLY_URL} rel="noopener" className={ctaClasses}>
+          <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
             Book a 15 minute call
           </a>
         </div>
