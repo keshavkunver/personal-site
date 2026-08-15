@@ -252,7 +252,7 @@ export default function WebsitesPage() {
           <p className="text-sm text-text-tertiary mt-6">
             Not ready for a call?{' '}
             <a
-              href={`mailto:${EMAIL}`}
+              href={`mailto:${EMAIL}?subject=Website%20inquiry`}
               className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
             >
               Email me instead
