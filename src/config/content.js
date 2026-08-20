@@ -47,7 +47,7 @@ export const selectedWork = [
     name: "FourthSpace",
     problem: "Social media isn't social. People scroll for hours and end up lonelier than when they started.",
     built: "A social web app with an AI agent that plans real-world meetups from natural-language chat. Built on a Claude tool-calling agent with multi-turn confirmation and safety guardrails, a real-time voice AI moderator (Pegasus, on LiveKit), and ~20 generative endpoints. Backed by a unit-test suite that encodes past agent failures as regression tests.",
-    outcome: "MVP live.",
+    outcome: "Shipped the MVP. Co-founded and built 2025–2026.",
     stack: ["Next.js", "React 19", "TypeScript", "Supabase", "Vercel", "Anthropic Claude", "LiveKit", "Python"],
     links: {
       website: "https://www.fourthspace.vip/",
@@ -55,7 +55,6 @@ export const selectedWork = [
     },
     image: fourthspaceImg,
     featured: true,
-    isActive: true,
   },
   {
     id: "eternal-dharma",

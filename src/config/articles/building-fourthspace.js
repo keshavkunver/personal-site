@@ -4,6 +4,8 @@ export default {
   readingTime: '3 min read',
   signature: 'Keshav',
   content: `
+**Update — August 2026:** I'm no longer working on FourthSpace. This post reflects what I was building and thinking about at the time.
+
 FourthSpace turns shared interests into real-world hangouts. The core feature is an AI agent that reads a natural-language message ("find me a coffee spot near Silver Lake this Saturday afternoon") and plans an actual meetup: venue, time, and a confirmation flow.
 
 **The build.** The agent runs on Anthropic Claude through the Vercel AI SDK, in a roughly 1,200-line route with tool-calling and multi-turn confirmation. It has guardrails: it passes venue identity straight through so it can't invent a place, and it refuses to schedule in the past or the far future. Around it sit about 20 generative endpoints (captions, prompt cards, Socratic questions, video analysis, semantic search).

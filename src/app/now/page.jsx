@@ -35,32 +35,14 @@ export default function NowPage() {
         <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-4 tracking-tight">
           Now
         </h1>
-        <p className="text-text-tertiary text-sm mb-12">Updated July 2026</p>
+        <p className="text-text-tertiary text-sm mb-12">Updated August 2026</p>
         <p className="text-text-secondary leading-loose mb-6">
-          Building FourthSpace: shipping the AI meetup-planning agent, improving
-          the voice moderator, and growing the eval suite as the product evolves.
-          Live at{' '}
-          <a
-            href="https://www.fourthspace.vip/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            fourthspace.vip
-          </a>
-          .
+          I worked on FourthSpace until August 2026. These days I help people
+          build things, two ways.
         </p>
         <p className="text-text-secondary leading-loose mb-6">
-          Also publishing an open-source RAG project with a full evaluation harness.
-        </p>
-        <p className="text-text-secondary leading-loose mb-6">
-          Outside of that: traveling, basketball and pickleball, and hanging out
-          with friends around LA.
-        </p>
-        <p className="text-text-secondary leading-loose">
-          And I'm taking on a few build sessions each month. One hour, screen share,
-          for non-technical people who want to actually ship the thing they've been
-          putting off. Details at{' '}
+          If you want to build it yourself, I run one-hour build sessions where
+          we turn your idea into working software together, using AI. Details at{' '}
           <Link
             href="/build"
             className="text-text-tertiary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
@@ -69,9 +51,9 @@ export default function NowPage() {
           </Link>
           .
         </p>
-        <p className="text-text-secondary leading-loose mt-6">
-          I've also started building websites for local service businesses.
-          Flat price, live in about two weeks. Details at{' '}
+        <p className="text-text-secondary leading-loose mb-6">
+          If you want it built for you, I design and build websites for local
+          service businesses. Flat price, live in about two weeks. Details at{' '}
           <Link
             href="/websites"
             className="text-text-tertiary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
@@ -79,6 +61,13 @@ export default function NowPage() {
             /websites
           </Link>
           .
+        </p>
+        <p className="text-text-secondary leading-loose mb-6">
+          Also publishing an open-source RAG project with a full evaluation harness.
+        </p>
+        <p className="text-text-secondary leading-loose">
+          Outside of that: traveling, basketball and pickleball, and hanging out
+          with friends around LA.
         </p>
       </div>
     </div>

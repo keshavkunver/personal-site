@@ -185,9 +185,11 @@ export default function BuildPage() {
               Do I need to install anything first?
             </h3>
             <p className="text-text-secondary leading-loose">
-              Nothing to install. One thing to do: sign up for a free{' '}
-              <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline">Bolt</a>
-              {' '}account before we meet. It's the tool we'll build in, and it saves us from spending session time on setup.
+              Nothing to install. One thing to do: make sure you have a{' '}
+              <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline">ChatGPT</a>
+              {' '}account before we meet. We'll build in ChatGPT Codex, which is
+              available through ChatGPT, including limited access on the free plan.
+              No paid coding tool required to get started.
             </p>
             <p className="text-text-secondary leading-loose mt-6">
               That's the only homework. Bring your idea and a laptop.
