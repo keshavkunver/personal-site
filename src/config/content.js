@@ -9,7 +9,7 @@ import hoopintelImg from '../assets/images/projects/hoop-intel/hoopintel-screens
 export const personalInfo = {
   name: "Keshav Kunver",
   title: "AI Engineer building reliable AI-native products from 0 to 1.",
-  tagline: "I build production LLM apps: agents, RAG, and the evals that keep them from breaking.",
+  tagline: "I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.",
   location: "Los Angeles",
   email: "keshav@kunver.com",
   availability: "Open to remote and hybrid roles",
@@ -35,9 +35,9 @@ export const socialLinks = {
 };
 
 export const impactMetrics = [
+  { value: "4", label: "Products Shipped", caption: "From 0 to 1" },
   { value: "200+", label: "Users", caption: "Eternal Dharma, at peak" },
-  { value: "4", label: "Products Shipped" },
-  { value: "1M+", label: "Views", caption: "Short-form social content" },
+  { value: "~20", label: "LLM Endpoints", caption: "In production at FourthSpace" },
   { value: "6+", label: "Years Experience" },
 ];
 
@@ -86,17 +86,17 @@ export const selectedWork = [
 
 export const capabilities = [
   {
-    category: "AI Engineering",
-    description: "Production LLM apps: tool-calling agents, RAG, structured outputs, and real-time voice AI. Hands-on with Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
-  },
-  {
-    category: "Reliability & Evaluation",
+    category: "AI Product Engineering",
     lead: true,
-    description: "Eval suites and regression tests that turn past agent failures into named tests, so the same bug can't ship twice. Six years of SDET discipline, pointed at non-deterministic AI.",
+    description: "I take LLM products from idea to production: tool-calling agents, RAG, structured outputs, and real-time voice AI. Hands-on with Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
   },
   {
     category: "Full-Stack Delivery",
     description: "Next.js, React, React Native, TypeScript, Python. Supabase, Firebase, Vercel. From idea to a live, monetized app.",
+  },
+  {
+    category: "Reliability, Evals & Testing",
+    description: "The reason my AI features hold up in production. Eval suites and regression tests turn every agent failure into a named test, so the same bug can't ship twice. Six years of quality engineering, pointed at non-deterministic systems.",
   },
 ];
 
@@ -106,9 +106,9 @@ export const experience = [
     role: "Software Development Engineer in Test (SDET)",
     duration: "Mar 2021 - Present",
     achievements: [
-      "Design and maintain UI, API, and CI/CD test-automation frameworks that improve coverage and release stability",
-      "Cut regression effort 40% and related API defects 25%",
-      "Integrating AI tooling into the testing workflow",
+      "Design and maintain the UI, API, and CI/CD automation frameworks that gate releases for enterprise product teams",
+      "Cut regression effort 40% and related API defects 25% through framework and pipeline design",
+      "Working with dev and product teams to fold AI tooling into the release workflow",
     ],
     technologies: ["Java", "REST APIs", "MySQL", "React", "TypeScript", "CI/CD", "AI"],
   },

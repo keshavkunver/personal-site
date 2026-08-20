@@ -19,7 +19,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata = {
   title: 'Keshav Kunver | AI Engineer',
-  description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
+  description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
   keywords: ['Keshav Kunver', 'AI Engineer', 'LLM', 'AI Agents', 'RAG', 'LLM Evaluation', 'React Native'],
   authors: [{ name: 'Keshav Kunver' }],
   creator: 'Keshav Kunver',
@@ -33,14 +33,14 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.kunver.com',
     title: 'Keshav Kunver | AI Engineer',
-    description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
+    description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
     siteName: 'Keshav Kunver',
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Keshav Kunver | AI Engineer',
-    description: 'I build production LLM apps: agents, RAG, and the evals that keep them from breaking.',
+    description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
     images: ['/og.png'],
   },
   robots: {
@@ -98,7 +98,7 @@ export default function RootLayout({ children }) {
                 "React Native",
                 "Backend Engineering"
               ],
-              "description": "AI Engineer building production LLM apps: agents, RAG, and the evals that keep them from breaking.",
+              "description": "AI Engineer shipping LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.",
               "sameAs": [
                 "https://www.linkedin.com/in/keshav-kunver",
                 "https://github.com/keshavkunver"
