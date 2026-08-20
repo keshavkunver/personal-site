@@ -38,7 +38,7 @@ export default function NowPage() {
         <p className="text-text-tertiary text-sm mb-12">Updated August 2026</p>
         <p className="text-text-secondary leading-loose mb-6">
           I worked on FourthSpace until August 2026. These days I help people
-          build things, two ways.
+          turn ideas into working software in two ways.
         </p>
         <p className="text-text-secondary leading-loose mb-6">
           If you want to build it yourself, I run one-hour build sessions where
