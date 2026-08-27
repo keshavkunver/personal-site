@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://www.kunver.com/websites',
     type: 'website',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. Live in two weeks, $1,500 flat.' }],
+    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. Live in two weeks, $1,300 flat.' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -43,7 +43,7 @@ export default function WebsitesLayout({ children }) {
               {
                 '@type': 'Offer',
                 name: 'Website build',
-                price: '1500',
+                price: '1300',
                 priceCurrency: 'USD',
                 description:
                   'Up to 5 pages, mobile-first, live on your domain in about two weeks.',

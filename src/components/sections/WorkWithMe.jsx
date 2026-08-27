@@ -18,7 +18,7 @@ const offers = [
     label: 'Done for you',
     title: 'Websites for local service businesses',
     body: "I build the site myself and it's live in about two weeks. The full price and process is on the page.",
-    price: '$1,500 flat. Optional $99/month maintenance.',
+    price: '$1,300 flat. Optional $99/month maintenance.',
     linkText: "See what's included",
     href: '/websites',
   },

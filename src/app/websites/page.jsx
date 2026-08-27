@@ -136,9 +136,9 @@ export default function WebsitesPage() {
             <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
               The build
             </p>
-            <p className="text-4xl font-bold text-text-primary mb-4">$1,500</p>
+            <p className="text-4xl font-bold text-text-primary mb-4">$1,300</p>
             <p className="text-text-secondary leading-loose mb-3">
-              $500 deposit to start, $1,000 at launch. Roughly two weeks from
+              $500 deposit to start, $800 at launch. Roughly two weeks from
               kickoff to live.
             </p>
             <p className="text-text-tertiary text-sm mb-6 flex-1">
