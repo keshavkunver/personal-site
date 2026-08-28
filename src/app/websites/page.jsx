@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '../../components/ui';
+import ConceptForm from '../../components/websites/ConceptForm';
 import headshotImage from '../../assets/images/profile/headshot.png';
-
-const BOOKING_URL = 'https://cal.com/keshav-kunver/15-minute-website-call';
 
 const EMAIL = 'keshavkunver@gmail.com';
 
@@ -46,10 +45,22 @@ const deliverables = [
 ];
 
 const steps = [
-  { name: '15 minute call', detail: 'You tell me about your business. I tell you if this is a fit.' },
-  { name: 'Deposit and kickoff', detail: 'You send $500 and whatever you have: photos, prices, your old site.' },
-  { name: 'Build', detail: 'I build the site, with one check-in partway through.' },
-  { name: 'Launch', detail: 'The site goes live on your domain. You pay the rest.' },
+  {
+    name: 'Tell me about your business',
+    detail: 'Send your website and a sentence or two about what you do. It should take about a minute.',
+  },
+  {
+    name: 'I create a concept',
+    detail: "If I think we're a good fit, I'll put together a website concept and send you a short private video walking through the direction I'd take.",
+  },
+  {
+    name: 'You decide',
+    detail: 'If you like the direction, you sign the agreement and send the $500 deposit.',
+  },
+  {
+    name: 'I build it',
+    detail: 'I turn the concept into the full site, we make revisions, and get it live.',
+  },
 ];
 
 export default function WebsitesPage() {
@@ -72,9 +83,13 @@ export default function WebsitesPage() {
           manager, no chain of handoffs. You talk to the person doing the work.
         </p>
         <div className="mt-8">
-          <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
-            Book a 15 minute call
+          <a href="#concept" className={ctaClasses}>
+            Get a Website Concept
           </a>
+          <p className="text-sm text-text-tertiary mt-4">
+            No call required. See the direction I'd take your site before
+            deciding to hire me.
+          </p>
         </div>
 
         {/* The problem */}
@@ -142,10 +157,10 @@ export default function WebsitesPage() {
               kickoff to live.
             </p>
             <p className="text-text-tertiary text-sm mb-6 flex-1">
-              Flat price. No hourly billing, no add-ons later.
+              Flat price. No hourly billing, no surprise add-ons later.
             </p>
-            <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
-              Book a 15 minute call
+            <a href="#concept" className={ctaClasses}>
+              Get a Website Concept
             </a>
           </div>
           <div className="rounded-xl border border-dark-border bg-dark-surface p-8 flex flex-col">
@@ -158,8 +173,8 @@ export default function WebsitesPage() {
             <p className="text-text-secondary leading-loose mb-6 flex-1">
               Updates, fixes, hosting oversight. Optional. Cancel anytime.
             </p>
-            <a href={BOOKING_URL} rel="noopener" className={ctaSecondaryClasses}>
-              Book a 15 minute call
+            <a href="#concept" className={ctaSecondaryClasses}>
+              Get a Website Concept
             </a>
           </div>
         </div>
@@ -198,7 +213,7 @@ export default function WebsitesPage() {
           </div>
           <p className="text-text-secondary leading-loose">
             I'm Keshav. I build software for a living, and this site is mine.
-            When you hire me, I'm the one on the call and the one writing the
+            When you hire me, I'm the one you talk to and the one writing the
             code.{' '}
             <Link href="/" className="text-text-primary hover:underline">
               Here's the rest of my work.
@@ -241,23 +256,26 @@ export default function WebsitesPage() {
         </Card>
         */}
 
-        {/* Closing CTA */}
-        <div className="mt-16 pt-10 border-t border-dark-border text-center">
-          <p className="text-lg text-text-primary mb-6">
-            One short call. If it's not a fit, you'll know in 15 minutes.
+        {/* Website Concept form */}
+        <div id="concept" className="mt-16 pt-10 border-t border-dark-border scroll-mt-20">
+          <h2 className="text-2xl font-bold text-text-primary mb-4 tracking-tight">
+            See what I'd do with your website.
+          </h2>
+          <p className="text-text-secondary leading-loose max-w-2xl mb-8">
+            Tell me a little about your business. If I think we're a good fit,
+            I'll put together a website concept and send you a short private
+            video walking through the direction I'd take.
           </p>
-          <a href={BOOKING_URL} rel="noopener" className={ctaClasses}>
-            Book a 15 minute call
-          </a>
-          <p className="text-sm text-text-tertiary mt-6">
-            Not ready for a call?{' '}
+          <ConceptForm />
+          <p className="text-sm text-text-tertiary mt-8">
+            Prefer email?{' '}
             <a
               href={`mailto:${EMAIL}?subject=Website%20inquiry`}
               className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
             >
-              Email me instead
-            </a>
-            .
+              {EMAIL}
+            </a>{' '}
+            works too.
           </p>
         </div>
       </div>
