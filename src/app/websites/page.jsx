@@ -9,9 +9,6 @@ const EMAIL = 'keshavkunver@gmail.com';
 const ctaClasses =
   'inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
 
-const ctaSecondaryClasses =
-  'inline-flex h-11 items-center justify-center rounded-lg border border-dark-border px-6 font-heading text-base font-medium text-text-secondary transition-all duration-200 hover:text-text-primary hover:border-dark-border-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
-
 const problems = [
   "A customer finds you on Google and opens your site on their phone. They can't find your phone number, so they call the next company on the list.",
   'Your contact form sends to an inbox nobody checks. Or it broke months ago and nobody noticed.',
@@ -146,36 +143,49 @@ export default function WebsitesPage() {
         <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
           Pricing
         </h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl border border-dark-border-hover bg-dark-elevated shadow-glow p-8 flex flex-col">
+        <div className="rounded-xl border border-dark-border-hover bg-dark-elevated shadow-glow p-8">
+          <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
+            Website build
+          </p>
+          <p className="text-5xl font-bold text-text-primary mb-4">
+            $1,300
+            <span className="text-lg font-medium text-text-tertiary"> one-time</span>
+          </p>
+          <p className="text-text-secondary leading-loose mb-5">
+            Everything you need to get your new site designed, built, and
+            launched.
+          </p>
+          <ul className="space-y-2 text-text-secondary leading-loose list-disc pl-5 mb-6">
+            <li>Up to 5 pages, built for phones first</li>
+            <li>Click-to-call, click-to-text, and a contact form that works</li>
+            <li>The titles and descriptions Google reads, plus your Google Business Profile connected</li>
+            <li>2 rounds of revisions, live on your domain</li>
+          </ul>
+          <p className="text-text-primary font-medium mb-2">
+            $500 to start · $800 at launch
+          </p>
+          <p className="text-text-tertiary text-sm mb-6">
+            Roughly two weeks from kickoff to live. Flat price. No hourly
+            billing, no surprise add-ons later.
+          </p>
+          <a href="#concept" className={ctaClasses}>
+            Get a Website Concept
+          </a>
+
+          <div className="mt-8 pt-8 border-t border-dark-border">
             <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-              The build
+              Optional care
             </p>
-            <p className="text-4xl font-bold text-text-primary mb-4">$1,300</p>
-            <p className="text-text-secondary leading-loose mb-3">
-              $500 deposit to start, $800 at launch. Roughly two weeks from
-              kickoff to live.
+            <p className="text-lg font-semibold text-text-primary mb-1">
+              Want me to look after it afterward?
             </p>
-            <p className="text-text-tertiary text-sm mb-6 flex-1">
-              Flat price. No hourly billing, no surprise add-ons later.
+            <p className="text-2xl font-bold text-text-primary mb-3">
+              +$99<span className="text-base font-medium text-text-tertiary">/month</span>
             </p>
-            <a href="#concept" className={ctaClasses}>
-              Get a Website Concept
-            </a>
-          </div>
-          <div className="rounded-xl border border-dark-border bg-dark-surface p-8 flex flex-col">
-            <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-              Maintenance
+            <p className="text-text-secondary leading-loose">
+              Hosting oversight, updates, small edits, and monitoring. Cancel
+              anytime.
             </p>
-            <p className="text-4xl font-bold text-text-primary mb-4">
-              $99<span className="text-lg font-medium text-text-tertiary">/month</span>
-            </p>
-            <p className="text-text-secondary leading-loose mb-6 flex-1">
-              Updates, fixes, hosting oversight. Optional. Cancel anytime.
-            </p>
-            <a href="#concept" className={ctaSecondaryClasses}>
-              Get a Website Concept
-            </a>
           </div>
         </div>
 
