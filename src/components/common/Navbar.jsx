@@ -180,7 +180,7 @@ const Navbar = () => {
                 transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             >
                 {/* Desktop Navigation */}
-                <div className='hidden md:flex items-center gap-10'>
+                <div className='hidden lg:flex items-center gap-6 xl:gap-10'>
                     {/* Logo */}
                     <Logo onClick={() => scrollToSection('home')} />
 
@@ -191,7 +191,7 @@ const Navbar = () => {
                                 <button
                                     onClick={() => scrollToSection(link.id)}
                                     className={`
-                                        relative px-4 py-2 text-sm transition-colors duration-200 rounded-md
+                                        relative px-3 xl:px-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 rounded-md
                                         ${activeSection === link.id
                                             ? 'text-text-primary'
                                             : 'text-text-secondary hover:text-text-primary'
@@ -212,7 +212,7 @@ const Navbar = () => {
                     </ul>
 
                     {/* Social Links */}
-                    <div className='flex items-center gap-6 pl-6 border-l border-dark-border/50'>
+                    <div className='flex items-center gap-4 xl:gap-6 pl-4 xl:pl-6 border-l border-dark-border/50'>
                         <a
                             href={socialLinks.linkedin}
                             target="_blank"
@@ -233,7 +233,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Header */}
-                <div className='md:hidden flex justify-between items-center w-full'>
+                <div className='lg:hidden flex justify-between items-center w-full'>
                     <Logo onClick={() => scrollToSection('home')} />
                     <HamburgerIcon isOpen={nav} toggle={handleClick} />
                 </div>
@@ -243,7 +243,7 @@ const Navbar = () => {
             <AnimatePresence>
                 {nav && (
                     <motion.div
-                        className='fixed inset-0 bg-dark-bg z-40 md:hidden'
+                        className='fixed inset-0 bg-dark-bg z-40 lg:hidden'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
