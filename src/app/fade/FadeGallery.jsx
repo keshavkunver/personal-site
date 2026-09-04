@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import FadeSlider from './FadeSlider';
 import { preloadAudio } from './audio';
+import { cuts, photo } from './cuts';
+
+const [latest, ...archive] = cuts;
 
 export default function FadeGallery() {
   // Sticky: once a slider has been fully revealed, it counts forever,
@@ -27,8 +30,8 @@ export default function FadeGallery() {
         Front
       </p>
       <FadeSlider
-        before="/fade/front-before.jpg"
-        after="/fade/front-after.jpg"
+        before={photo(latest, 'front-before')}
+        after={photo(latest, 'front-after')}
         view="front"
         revealText="Tera Raja is HIM."
         onRevealChange={markRevealed('front')}
@@ -41,8 +44,8 @@ export default function FadeGallery() {
         Side
       </p>
       <FadeSlider
-        before="/fade/side-before.jpg"
-        after="/fade/side-after.jpg"
+        before={photo(latest, 'side-before')}
+        after={photo(latest, 'side-after')}
         view="side"
         revealText="You may bark now."
         onRevealChange={markRevealed('side')}
@@ -50,7 +53,7 @@ export default function FadeGallery() {
       />
 
       <p
-        className={`text-center text-sm mt-10 pb-20 ${
+        className={`text-center text-sm mt-10 ${archive.length ? 'pb-14' : 'pb-20'} ${
           bothRevealed ? 'text-text-primary' : 'text-text-tertiary'
         }`}
       >
@@ -60,6 +63,40 @@ export default function FadeGallery() {
             : 'You said you wanted pics ma, I gotchu.'}
         </span>
       </p>
+
+      {archive.length > 0 && (
+        <div className="pt-10 pb-20 border-t border-dark-border">
+          <p className="text-text-tertiary text-xs font-semibold tracking-[0.25em] uppercase mb-1">
+            The Archive
+          </p>
+          <p className="text-text-tertiary text-sm mb-8">
+            Every era gets remembered, bb.
+          </p>
+          {archive.map((cut) => (
+            <div key={cut.slug} className="mb-12 last:mb-0">
+              <p className="text-text-secondary text-sm font-medium mb-3">{cut.label}</p>
+              <div className="grid grid-cols-2 gap-3">
+                {['front', 'side'].flatMap((view) =>
+                  ['before', 'after'].map((stage) => (
+                    <figure key={`${view}-${stage}`}>
+                      <img
+                        src={photo(cut, `${view}-${stage}`)}
+                        alt={`${stage === 'before' ? 'Before' : 'After'} the haircut, ${view} view, ${cut.label}`}
+                        loading="lazy"
+                        draggable={false}
+                        className="w-full aspect-[4/5] object-cover rounded-xl border border-dark-border bg-dark-surface"
+                      />
+                      <figcaption className="text-text-tertiary text-xs uppercase tracking-[0.25em] mt-2">
+                        {view} · {stage}
+                      </figcaption>
+                    </figure>
+                  ))
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
