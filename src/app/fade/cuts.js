@@ -6,8 +6,7 @@
 //      to public/fade/<YYYY-MM-DD>/
 //   2. Add { slug: '<YYYY-MM-DD>', label: '<Month D, YYYY>' } at the top here.
 export const cuts = [
-  // TODO: drop the new photos into public/fade/2026-09-03/ then uncomment:
-  // { slug: '2026-09-03', label: 'September 3, 2026' },
+  { slug: '2026-09-03', label: 'September 3, 2026' },
   { slug: '2026-08-06', label: 'August 6, 2026' },
 ];
 
