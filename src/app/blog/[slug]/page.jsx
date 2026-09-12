@@ -49,7 +49,7 @@ export default function BlogPost() {
             <ShareButton articleSlug={params?.slug ?? 'unknown'} articleTitle={article.title} />
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mb-4">
             {article.title}
           </h1>
 

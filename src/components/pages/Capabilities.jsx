@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Section, Card } from '../ui';
+import { Section } from '../ui';
 import { capabilities } from '../../config/content';
 
 const Capabilities = () => {
@@ -29,43 +29,39 @@ const Capabilities = () => {
   };
 
   return (
-    <Section id="capabilities" className="bg-dark-surface/30">
-      <motion.div 
-        className="mb-14"
+    <Section id="capabilities">
+      <motion.div
+        className="mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-h1 font-bold text-text-primary">Capabilities</h2>
+        <h2 className="text-h1 font-medium text-text-primary">Capabilities</h2>
       </motion.div>
 
       <motion.div
         ref={ref}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="max-w-3xl border-y border-dark-border divide-y divide-dark-border"
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInView ? 'visible' : 'hidden'}
       >
         {capabilities.map((category, index) => (
-          <motion.div key={index} variants={itemVariants} className={`relative${category.lead ? ' mt-7 md:mt-0' : ''}`}>
-            {category.lead && (
-              <div className="absolute -top-[1.65rem] left-4 z-20">
-                <span
-                  className="bg-dark-surface text-text-primary text-xs font-medium px-3 py-1.5 border border-dark-border-hover border-b-0 rounded-t-lg"
-                  style={{
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  }}
-                >
-                  Core focus
+          <motion.div key={index} variants={itemVariants} className="py-8">
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+              <h3 className="font-display text-2xl font-medium text-text-primary">
+                {category.category}
+              </h3>
+              {category.lead && (
+                <span className="text-gold text-sm font-heading font-medium">
+                  Most of my work lives here
                 </span>
-              </div>
-            )}
-            <Card hover className={`h-full ${category.lead ? 'border border-dark-border-hover' : ''}`}>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">{category.category}</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">{category.description}</p>
-            </Card>
+              )}
+            </div>
+            <p className="text-text-secondary leading-loose max-w-2xl">
+              {category.description}
+            </p>
           </motion.div>
         ))}
       </motion.div>

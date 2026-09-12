@@ -1,4 +1,4 @@
-import { Inter, Instrument_Sans } from 'next/font/google'
+import { Inter, Instrument_Sans, Source_Serif_4 } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/react"
 import SmoothScroll from '../components/providers/SmoothScroll'
 import ConsoleGreeting from '../components/common/ConsoleGreeting'
@@ -15,6 +15,13 @@ const instrumentSans = Instrument_Sans({
   weight: ['500', '600', '700'],
   display: 'swap',
   variable: '--font-instrument-sans',
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-source-serif',
 })
 
 export const metadata = {
@@ -62,9 +69,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
-        <meta name="theme-color" content="#0f0f0f" />
+        <meta name="theme-color" content="#0f1322" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -107,7 +114,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${inter.className} ${instrumentSans.variable} bg-dark-bg text-text-secondary antialiased`}>
+      <body className={`${inter.className} ${instrumentSans.variable} ${sourceSerif.variable} bg-dark-bg text-text-secondary antialiased`}>
         <SmoothScroll>
           {children}
         </SmoothScroll>

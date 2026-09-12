@@ -1,12 +1,16 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { MotionConfig } from 'framer-motion';
 import Lenis from 'lenis';
 
 export default function SmoothScroll({ children }) {
     const lenisRef = useRef(null);
 
     useEffect(() => {
+        // Respect reduced motion: no scroll hijacking, native jumps only
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
         // Initialize Lenis
         const lenis = new Lenis({
             duration: 1.2,
@@ -68,5 +72,7 @@ export default function SmoothScroll({ children }) {
         };
     }, []);
 
-    return children;
+    // reducedMotion="user" makes every framer-motion animation respect
+    // the OS-level prefers-reduced-motion setting.
+    return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }

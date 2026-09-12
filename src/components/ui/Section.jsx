@@ -11,7 +11,6 @@ const Section = ({
   return (
     <section
       id={id}
-      name={id}
       className={`w-full ${heightClass} py-20 px-6 md:px-8 ${className}`}
     >
       <div className="max-w-5xl mx-auto">

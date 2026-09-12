@@ -2,24 +2,35 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
-import { track } from '@vercel/analytics';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import Link from 'next/link';
 import { Button, Section, TextReveal } from '../ui';
-import { personalInfo, socialLinks, offTheClock } from '../../config/content';
+import { personalInfo } from '../../config/content';
 import headshotImage from '../../assets/images/profile/headshot.png';
+
+const QuickLink = ({ href, title, desc, align = 'left' }) => (
+    <Link
+        href={href}
+        className={`block w-full lg:w-[300px] rounded-2xl border border-dark-border bg-dark-surface/45 backdrop-blur-sm px-6 py-4 transition-all duration-200 hover:border-dark-border-hover hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg ${
+            align === 'right' ? 'lg:text-right' : ''
+        }`}
+    >
+        <p className="font-heading font-semibold text-text-primary">{title}</p>
+        <p className="text-sm text-text-tertiary mt-1 leading-relaxed">{desc}</p>
+    </Link>
+);
 
 const Home = () => {
     const sectionRef = useRef(null);
     const [isHovered, setIsHovered] = useState(false);
-    
+
     // Cursor spotlight position with spring physics
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
     const springConfig = { damping: 30, stiffness: 200 };
     const smoothX = useSpring(mouseX, springConfig);
     const smoothY = useSpring(mouseY, springConfig);
-    
+
     // Create the gradient template
     const spotlightBackground = useMotionTemplate`radial-gradient(600px circle at ${smoothX}px ${smoothY}px, rgba(255, 255, 255, 0.04), transparent 60%)`;
 
@@ -68,15 +79,6 @@ const Home = () => {
         },
     };
 
-    const imageVariants = {
-        hidden: { opacity: 0, scale: 0.9 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 0.8, ease: [0.25, 0.4, 0.25, 1], delay: 0.3 },
-        },
-    };
-
     return (
         <Section id="home" fullHeight className="flex items-center relative overflow-hidden">
             {/* Cursor spotlight container */}
@@ -91,188 +93,110 @@ const Home = () => {
                 />
             </div>
 
-            {/* Animated background glow effect */}
-            <motion.div 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-hero-glow opacity-50 pointer-events-none"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 0.5 }}
+            {/* Aurora sky: teal upper-left, gold lower-right, under film grain */}
+            <motion.div
+                className="absolute inset-0 bg-aurora pointer-events-none"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, ease: 'easeOut' }}
             />
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full relative z-10">
+            <div className="absolute inset-0 bg-grain opacity-[0.05] mix-blend-screen pointer-events-none" />
 
-                {/* Left: Text Content */}
+            {/* Centered monument */}
+            <motion.div
+                className="relative z-10 w-full flex flex-col items-center text-center hero-lg:pb-24"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
                 <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
+                    variants={itemVariants}
+                    className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-text-primary/25 shadow-2xl shadow-black/50 mb-8"
                 >
-                    {/* Status line */}
-                    <motion.div
-                        className="flex items-center gap-2 text-text-tertiary text-xs uppercase tracking-[0.15em] font-medium mb-6"
-                        variants={itemVariants}
-                    >
-                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span>{personalInfo.availability}</span>
-                    </motion.div>
-
-                    {/* Name as Main Headline */}
-                    <h1 className="text-5xl sm:text-6xl lg:text-display font-bold text-text-primary mb-4 tracking-tight">
-                        <TextReveal delay={0.3} staggerDelay={0.1} duration={0.6}>
-                            {personalInfo.name}
-                        </TextReveal>
-                    </h1>
-
-                    {/* Location eyebrow */}
-                    <motion.p
-                        className="text-text-tertiary text-xs uppercase tracking-[0.15em] font-medium mb-6"
-                        variants={itemVariants}
-                    >
-                        {personalInfo.location}
-                    </motion.p>
-
-                    {/* Title/Role */}
-                    <motion.p
-                        className="text-xl sm:text-2xl text-text-primary mb-6 font-semibold tracking-wide"
-                        variants={itemVariants}
-                    >
-                        {personalInfo.title}
-                    </motion.p>
-
-                    {/* Tagline */}
-                    <motion.p
-                        className="text-lg text-text-tertiary max-w-lg mb-6 leading-relaxed"
-                        variants={itemVariants}
-                    >
-                        {personalInfo.tagline}
-                    </motion.p>
-
-                    {/* CTAs */}
-                    <motion.div
-                        className="flex flex-wrap gap-4 mb-10"
-                        variants={itemVariants}
-                    >
-                        <Button variant="primary" size="lg" href="#contact">
-                            Get in Touch
-                        </Button>
-                        <Button variant="secondary" size="lg" href="#work">
-                            View Work
-                        </Button>
-                        <a
-                            href="/keshav-kunver-resume.pdf"
-                            download
-                            onClick={() => track('resume_download', { source: 'hero' })}
-                            className="self-center text-text-tertiary hover:text-text-primary transition-colors duration-200 text-sm"
-                        >
-                            Download resume (PDF)
-                        </a>
-                    </motion.div>
-
-                    {/* Build prompt */}
-                    <motion.p
-                        className="text-text-tertiary text-sm mb-10"
-                        variants={itemVariants}
-                    >
-                        I also run build sessions and make websites for local
-                        businesses.{' '}
-                        <Link
-                            href="#work-with-me"
-                            className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
-                        >
-                            Two ways to work with me
-                        </Link>
-                        .
-                    </motion.p>
-
-                    {/* Off the clock drawer */}
-                    <motion.div variants={itemVariants} className="mb-10">
-                        <details className="group" onToggle={(e) => { if (e.currentTarget.open) track('off_the_clock_open'); }}>
-                            <summary className="inline-flex h-9 cursor-pointer list-none items-center gap-2 rounded-lg border border-dark-border px-4 font-heading text-sm font-medium text-text-secondary transition-all duration-200 hover:border-dark-border-hover hover:bg-white/[0.04] hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg [&::-webkit-details-marker]:hidden">
-                                Off the clock
-                                <span className="text-[10px] text-text-tertiary transition-transform duration-200 group-open:rotate-180">&#9662;</span>
-                            </summary>
-                            <div className="mt-3 max-w-lg border-l-2 border-white/10 pl-4">
-                                <p className="text-text-secondary text-sm leading-relaxed mb-2.5">
-                                    {offTheClock.intro}
-                                </p>
-                                <p className="text-sm leading-relaxed mb-2">
-                                    <span className="text-text-secondary">{offTheClock.predictionLabel}</span>{' '}
-                                    <span className="text-text-primary font-heading font-semibold">{offTheClock.prediction}</span>{' '}
-                                    <span className="text-text-tertiary text-xs">· {offTheClock.receipt}</span>
-                                </p>
-                                <ul className="space-y-1.5">
-                                    {offTheClock.reasons.map((reason, i) => (
-                                        <li key={i} className="relative pl-3.5 text-text-tertiary text-[13px] leading-relaxed before:absolute before:left-0 before:top-[0.65em] before:h-px before:w-[5px] before:bg-white/30 before:content-['']">
-                                            {reason}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </details>
-                    </motion.div>
-
-                    {/* Social Links */}
-                    <motion.div
-                        className="flex items-center gap-6 text-sm"
-                        variants={itemVariants}
-                    >
-                        <a
-                            href={socialLinks.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
-                        >
-                            LinkedIn
-                        </a>
-                        <a
-                            href={socialLinks.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
-                        >
-                            GitHub
-                        </a>
-                        <a
-                            href={`mailto:${personalInfo.email}`}
-                            className="text-text-tertiary hover:text-text-primary transition-colors duration-200"
-                        >
-                            Email
-                        </a>
-                    </motion.div>
+                    <Image
+                        src={headshotImage}
+                        alt={personalInfo.name}
+                        fill
+                        sizes="112px"
+                        className="object-cover object-top"
+                        priority
+                    />
                 </motion.div>
 
-                {/* Right: Headshot */}
-                <motion.div 
-                    className="relative order-first lg:order-last flex justify-center lg:justify-end"
-                    variants={imageVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    {/* Glow effect behind photo */}
-                    <motion.div 
-                        className="absolute inset-0 flex items-center justify-center"
-                        initial={{ scale: 0.5, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                    >
-                        <div className="w-72 h-72 sm:w-96 sm:h-96 bg-accent/10 blur-3xl rounded-full" />
-                    </motion.div>
+                <h1 className="text-5xl sm:text-6xl lg:text-display font-medium text-text-primary mb-6">
+                    <TextReveal delay={0.3} staggerDelay={0.1} duration={0.6}>
+                        {personalInfo.name}
+                    </TextReveal>
+                </h1>
 
-                    <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border border-dark-border shadow-2xl shadow-black/50">
-                        <Image
-                            src={headshotImage}
-                            alt={personalInfo.name}
-                            fill
-                            sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 320px"
-                            className="object-cover object-top"
-                            priority
-                        />
-                        {/* Subtle overlay for premium feel */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/20 to-transparent" />
-                    </div>
+                <motion.p
+                    className="text-xl sm:text-2xl text-text-secondary max-w-xl mb-7 leading-snug"
+                    variants={itemVariants}
+                >
+                    {personalInfo.title}
+                </motion.p>
+
+                <motion.div
+                    className="flex items-center gap-2.5 text-text-tertiary text-sm mb-9"
+                    variants={itemVariants}
+                >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Open to remote and hybrid roles, based in Los Angeles</span>
                 </motion.div>
 
-            </div>
+                <motion.div className="flex flex-wrap justify-center gap-4" variants={itemVariants}>
+                    <Button variant="primary" size="lg" href="#contact">
+                        Get in Touch
+                    </Button>
+                    <Button variant="secondary" size="lg" href="#work">
+                        View Work
+                    </Button>
+                </motion.div>
+
+                {/* Quick links: stacked rows on small screens */}
+                <motion.div
+                    className="mt-12 grid w-full max-w-md grid-cols-1 sm:grid-cols-2 gap-3 hero-lg:hidden"
+                    variants={itemVariants}
+                >
+                    <QuickLink
+                        href="/build"
+                        title="Build with me"
+                        desc="One-hour build sessions, on a screen share"
+                    />
+                    <QuickLink
+                        href="/websites"
+                        title="Websites"
+                        desc="For local service businesses, live in two weeks"
+                    />
+                </motion.div>
+            </motion.div>
+
+            {/* Quick links: corner cards on desktop */}
+            <motion.div
+                className="hidden hero-lg:block absolute bottom-10 left-8 xl:left-14 z-10"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9, ease: [0.25, 0.4, 0.25, 1] }}
+            >
+                <QuickLink
+                    href="/build"
+                    title="Build with me"
+                    desc="One-hour build sessions, on a screen share"
+                />
+            </motion.div>
+            <motion.div
+                className="hidden hero-lg:block absolute bottom-10 right-8 xl:right-14 z-10"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0, ease: [0.25, 0.4, 0.25, 1] }}
+            >
+                <QuickLink
+                    href="/websites"
+                    title="Websites"
+                    desc="For local service businesses, live in two weeks"
+                    align="right"
+                />
+            </motion.div>
         </Section>
     );
 };

@@ -53,7 +53,7 @@ export default function FadePage() {
         >
           ← Back
         </Link>
-        <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-4 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mt-8 mb-4">
           The Fade
         </h1>
         <p className="text-text-secondary mb-2">

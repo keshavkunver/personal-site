@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
-    @apply bg-dark-bg text-text-secondary antialiased;
+    @apply bg-dark-bg text-text-secondary antialiased text-body;
   }
 
-  h1, h2, h3 {
-    @apply font-heading;
+  /* Display headings: warm serif, calm weight */
+  h1, h2 {
+    @apply font-display font-medium;
+  }
+
+  /* Smaller headings and UI stay in the sans */
+  h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-text-primary font-semibold tracking-tight;
+    @apply text-text-primary;
   }
 
   /* Remove default cursor pointer on list items */
@@ -32,21 +34,15 @@
 }
 
 @layer components {
-  /* Subtle dot grid pattern */
-  .bg-grid-pattern {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
-    background-size: 40px 40px;
+  /* Film grain: keeps large soft gradients from banding or looking plasticky */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
   }
-
 }
 
 @layer utilities {
   .transition-smooth {
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Text gradient utility */
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary;
   }
 }

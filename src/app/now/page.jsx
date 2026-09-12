@@ -32,7 +32,7 @@ export default function NowPage() {
         >
           ← Back
         </Link>
-        <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-4 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mt-8 mb-4">
           Now
         </h1>
         <p className="text-text-tertiary text-sm mb-12">Updated August 2026</p>

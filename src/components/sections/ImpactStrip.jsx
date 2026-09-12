@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MetricTile } from '../ui';
+import { Section } from '../ui';
 import { impactMetrics } from '../../config/content';
 
 const ImpactStrip = () => {
@@ -30,27 +30,27 @@ const ImpactStrip = () => {
   };
 
   return (
-    <section id="impact" className="w-full py-12 px-4 border-y border-dark-border bg-dark-surface/30">
-      <div className="max-w-5xl mx-auto">
-        <motion.div 
-          ref={ref}
-          className="grid grid-cols-2 md:grid-cols-4 md:divide-x md:divide-dark-border gap-y-6 md:gap-y-0"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-          {impactMetrics.map((metric, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <MetricTile
-                value={metric.value}
-                label={metric.label}
-                caption={metric.caption}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <Section id="impact">
+      <motion.div
+        ref={ref}
+        className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+      >
+        {impactMetrics.map((metric, index) => (
+          <motion.div key={index} variants={itemVariants}>
+            <p className="font-display text-5xl font-medium text-text-primary mb-2">
+              {metric.value}
+            </p>
+            <p className="text-text-secondary text-sm">{metric.label}</p>
+            {metric.caption && (
+              <p className="text-text-tertiary text-sm mt-0.5">{metric.caption}</p>
+            )}
+          </motion.div>
+        ))}
+      </motion.div>
+    </Section>
   );
 };
 

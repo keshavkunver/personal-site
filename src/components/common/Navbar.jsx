@@ -10,7 +10,7 @@ const HamburgerIcon = ({ isOpen, toggle }) => {
     return (
         <button
             onClick={toggle}
-            className='relative w-10 h-10 flex items-center justify-center z-50'
+            className='relative w-11 h-11 flex items-center justify-center z-50'
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
             <div className='w-6 h-5 relative flex flex-col justify-between'>
@@ -180,7 +180,7 @@ const Navbar = () => {
                 transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             >
                 {/* Desktop Navigation */}
-                <div className='hidden lg:flex items-center gap-6 xl:gap-10'>
+                <div className='hidden lg:flex items-center gap-5 xl:gap-10'>
                     {/* Logo */}
                     <Logo onClick={() => scrollToSection('home')} />
 
@@ -191,7 +191,7 @@ const Navbar = () => {
                                 <button
                                     onClick={() => scrollToSection(link.id)}
                                     className={`
-                                        relative px-3 xl:px-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 rounded-md
+                                        relative px-2.5 xl:px-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 rounded-md
                                         ${activeSection === link.id
                                             ? 'text-text-primary'
                                             : 'text-text-secondary hover:text-text-primary'
@@ -201,7 +201,7 @@ const Navbar = () => {
                                     {link.label}
                                     {activeSection === link.id && (
                                         <motion.div
-                                            className='absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full'
+                                            className='absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-gold rounded-full'
                                             layoutId='activeSection'
                                             transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                                         />
@@ -212,7 +212,7 @@ const Navbar = () => {
                     </ul>
 
                     {/* Social Links */}
-                    <div className='flex items-center gap-4 xl:gap-6 pl-4 xl:pl-6 border-l border-dark-border/50'>
+                    <div className='flex items-center gap-3 xl:gap-6 pl-3 xl:pl-6 border-l border-dark-border/50'>
                         <a
                             href={socialLinks.linkedin}
                             target="_blank"

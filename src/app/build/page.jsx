@@ -51,7 +51,7 @@ export default function BuildPage() {
           ← Back
         </Link>
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-12 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mt-8 mb-12">
           Build with me
         </h1>
 
@@ -87,7 +87,7 @@ export default function BuildPage() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           Who this is for
         </h2>
         <div className="space-y-6 text-text-secondary leading-loose">
@@ -103,7 +103,7 @@ export default function BuildPage() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           How the hour goes
         </h2>
         <div className="space-y-6 text-text-secondary leading-loose">
@@ -123,7 +123,7 @@ export default function BuildPage() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           What you walk away with
         </h2>
         <p className="text-text-secondary leading-loose">
@@ -131,7 +131,7 @@ export default function BuildPage() {
           prompts that actually worked, and where to go next.
         </p>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           What we can actually get done in an hour
         </h2>
         <div className="space-y-6 text-text-secondary leading-loose">
@@ -158,7 +158,7 @@ export default function BuildPage() {
         {/* Guarantee in a card */}
         <div className="mt-12">
           <Card>
-            <h2 className="text-2xl font-bold text-text-primary mb-4 tracking-tight">
+            <h2 className="text-3xl font-medium text-text-primary mb-4">
               My guarantee
             </h2>
             <div className="space-y-6 text-text-secondary leading-loose">
@@ -176,7 +176,7 @@ export default function BuildPage() {
           </Card>
         </div>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           Questions people ask
         </h2>
         <div className="space-y-8">
@@ -215,13 +215,14 @@ export default function BuildPage() {
         </div>
 
         {/* Pricing */}
-        <h2 className="text-2xl font-bold text-text-primary mt-12 mb-4 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-12 mb-4">
           What it costs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
           {tiers.map((tier) => (
             <button
               key={tier.id}
+              aria-pressed={selected === tier.id}
               onClick={() => setSelected(selected === tier.id ? null : tier.id)}
               className={`text-left rounded-xl p-4 transition-all duration-200 border ${
                 selected === tier.id

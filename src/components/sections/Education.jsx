@@ -5,6 +5,21 @@ import { motion, useInView } from 'framer-motion';
 import { Section } from '../ui';
 import { education } from '../../config/content';
 
+const degrees = [
+  {
+    degree: education.masters.degree,
+    school: education.masters.school,
+    year: education.masters.year,
+    gpa: education.masters.gpa,
+  },
+  {
+    degree: education.bachelors.degree,
+    school: education.bachelors.school,
+    year: education.bachelors.year,
+    gpa: education.bachelors.gpa,
+  },
+];
+
 const Education = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-10% 0px' });
@@ -14,7 +29,7 @@ const Education = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -29,47 +44,44 @@ const Education = () => {
   };
 
   return (
-    <Section id="education" className="bg-dark-surface/30">
-      <motion.div 
-        className="mb-14"
+    <Section id="education">
+      <motion.div
+        className="mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-h1 font-bold text-text-primary">Education</h2>
+        <h2 className="text-h1 font-medium text-text-primary">Education</h2>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         ref={ref}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl"
+        className="max-w-3xl border-y border-dark-border divide-y divide-dark-border"
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInView ? 'visible' : 'hidden'}
       >
-        {/* Master's */}
-        <motion.div variants={itemVariants} className="space-y-2">
-          <h3 className="text-xl font-semibold text-text-primary">
-            {education.masters.degree}
-          </h3>
-          <p className="text-text-secondary">
-            {education.masters.school}{education.masters.year && `, ${education.masters.year}`}
-          </p>
-          {education.masters.gpa && (
-            <p className="text-accent text-sm font-medium">{education.masters.gpa} GPA</p>
-          )}
-        </motion.div>
-
-        {/* Bachelor's */}
-        <motion.div variants={itemVariants} className="space-y-2">
-          <h3 className="text-xl font-semibold text-text-primary">
-            {education.bachelors.degree}
-          </h3>
-          <p className="text-text-secondary">{education.bachelors.school}</p>
-          {education.bachelors.gpa && (
-            <p className="text-accent text-sm font-medium">{education.bachelors.gpa} GPA</p>
-          )}
-        </motion.div>
+        {degrees.map((item) => (
+          <motion.div
+            key={item.degree}
+            variants={itemVariants}
+            className="flex flex-col gap-1 py-8 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+          >
+            <div>
+              <h3 className="font-display text-2xl font-medium text-text-primary">
+                {item.degree}
+              </h3>
+              <p className="text-text-secondary mt-1">
+                {item.school}
+                {item.year && `, ${item.year}`}
+              </p>
+            </div>
+            {item.gpa && (
+              <p className="text-text-tertiary text-sm shrink-0">{item.gpa} GPA</p>
+            )}
+          </motion.div>
+        ))}
       </motion.div>
     </Section>
   );

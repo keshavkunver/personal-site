@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Card } from '../../components/ui';
 import ConceptForm from '../../components/websites/ConceptForm';
 import headshotImage from '../../assets/images/profile/headshot.png';
 
@@ -72,7 +71,7 @@ export default function WebsitesPage() {
         </Link>
 
         {/* Hero */}
-        <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-8 mb-6 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mt-8 mb-6">
           Websites for local service businesses, live in two weeks.
         </h1>
         <p className="text-body-lg text-text-secondary leading-loose max-w-2xl">
@@ -90,7 +89,7 @@ export default function WebsitesPage() {
         </div>
 
         {/* The problem */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           This is probably costing you money right now
         </h2>
         <ul className="space-y-5">
@@ -115,7 +114,7 @@ export default function WebsitesPage() {
         </div>
 
         {/* What you get */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           What you get
         </h2>
         <div className="space-y-7">
@@ -130,7 +129,7 @@ export default function WebsitesPage() {
         </div>
 
         {/* What's not included */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           What's not included
         </h2>
         <ul className="space-y-3 text-text-secondary leading-loose list-disc list-inside">
@@ -140,7 +139,7 @@ export default function WebsitesPage() {
           <li>E-commerce</li>
         </ul>
         {/* Pricing */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           Pricing
         </h2>
         <div className="rounded-xl border border-dark-border-hover bg-dark-elevated shadow-glow p-8">
@@ -190,7 +189,7 @@ export default function WebsitesPage() {
         </div>
 
         {/* Process */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           How it works
         </h2>
         <ol className="space-y-4">
@@ -208,7 +207,7 @@ export default function WebsitesPage() {
         </ol>
 
         {/* Who's building it */}
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           Who's building it
         </h2>
         <div className="flex items-start gap-5">
@@ -234,7 +233,7 @@ export default function WebsitesPage() {
         {/* TODO: Case study. Activate this section once the client site is live.
         Fill in the client name, the broken list, what changed, and the live URL.
 
-        <h2 className="text-2xl font-bold text-text-primary mt-16 mb-6 tracking-tight">
+        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
           Recent work
         </h2>
         <Card>
@@ -268,7 +267,7 @@ export default function WebsitesPage() {
 
         {/* Website Concept form */}
         <div id="concept" className="mt-16 pt-10 border-t border-dark-border scroll-mt-20">
-          <h2 className="text-2xl font-bold text-text-primary mb-4 tracking-tight">
+          <h2 className="text-3xl font-medium text-text-primary mb-4">
             See what I'd do with your website.
           </h2>
           <p className="text-text-secondary leading-loose max-w-2xl mb-8">
