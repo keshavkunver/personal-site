@@ -35,10 +35,10 @@ export const socialLinks = {
 };
 
 export const impactMetrics = [
-  { value: "4", label: "Products Shipped", caption: "From 0 to 1" },
-  { value: "200+", label: "Users", caption: "Eternal Dharma, at peak" },
-  { value: "1M+", label: "Views", caption: "Short-form social content" },
-  { value: "6+", label: "Years Experience" },
+  { value: "6+", label: "Years in Engineering" },
+  { value: "3", label: "Products Built" },
+  { value: "200+", label: "Product Users" },
+  { value: "1M+", label: "Content Views" },
 ];
 
 export const selectedWork = [
