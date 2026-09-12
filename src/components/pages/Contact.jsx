@@ -27,7 +27,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Want to talk software, AI, or basketball? Either works.
+          Whether it&rsquo;s work, an idea, basketball, or just saying hello, I&rsquo;d love to hear from you.
         </motion.p>
 
         <motion.div
