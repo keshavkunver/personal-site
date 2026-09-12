@@ -13,8 +13,8 @@ const ProjectRow = ({ id, name, problem, built, outcome, stack, links, image, is
   const titleHref = links?.website || links?.appStore;
 
   return (
-    <article className="py-12 first:pt-0">
-      <div className="flex items-center gap-4 mb-3">
+    <article>
+      <div className="flex items-center gap-4 mb-4">
         {image && (
           <div className="w-11 h-11 rounded-xl overflow-hidden border border-dark-border bg-dark-elevated flex items-center justify-center flex-shrink-0">
             <Image
@@ -47,9 +47,9 @@ const ProjectRow = ({ id, name, problem, built, outcome, stack, links, image, is
         </div>
       </div>
 
-      <div className="max-w-2xl space-y-4">
-        <p className="text-text-secondary leading-loose">{problem}</p>
-        <p className="text-text-secondary leading-loose">{built}</p>
+      <div className="max-w-2xl space-y-3">
+        <p className="text-text-secondary leading-relaxed">{problem}</p>
+        <p className="text-text-secondary leading-relaxed">{built}</p>
         <p className="text-text-primary font-medium">{outcome}</p>
         {stack?.length > 0 && (
           <p className="text-text-tertiary text-sm">Built with {stack.join(', ')}.</p>
@@ -57,7 +57,7 @@ const ProjectRow = ({ id, name, problem, built, outcome, stack, links, image, is
       </div>
 
       {links && Object.keys(links).length > 0 && (
-        <div className="flex gap-6 mt-6">
+        <div className="flex gap-6 mt-5">
           {links.appStore && (
             <a
               href={links.appStore}
@@ -128,8 +128,7 @@ const Work = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-h1 font-medium text-text-primary mb-3">The Work</h2>
-        <p className="text-text-secondary text-lg">A selection</p>
+        <h2 className="text-h1 font-medium text-text-primary">The Work</h2>
       </motion.div>
 
       <motion.div
@@ -140,7 +139,7 @@ const Work = () => {
         animate={isInView ? 'visible' : 'hidden'}
       >
         {featuredProjects.map((project) => (
-          <motion.div key={project.id} variants={itemVariants}>
+          <motion.div key={project.id} variants={itemVariants} className="py-12 first:pt-0 last:pb-0">
             <ProjectRow {...project} />
           </motion.div>
         ))}

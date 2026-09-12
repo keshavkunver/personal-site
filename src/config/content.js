@@ -45,9 +45,9 @@ export const selectedWork = [
   {
     id: "fourthspace",
     name: "FourthSpace",
-    problem: "Social media isn't social. People scroll for hours and end up lonelier than when they started.",
-    built: "A social web app with an AI agent that plans real-world meetups from natural-language chat. Built on a Claude tool-calling agent with multi-turn confirmation and safety guardrails, a real-time voice AI moderator (Pegasus, on LiveKit), and ~20 generative endpoints. Backed by a unit-test suite that encodes past agent failures as regression tests.",
-    outcome: "Shipped the MVP. Co-founded and built 2025–2026.",
+    problem: "AI-powered social app that turns natural-language chat into real-world meetups.",
+    built: "Claude tool-calling agent with multi-turn guardrails, real-time voice moderation, ~20 generative endpoints, and regression tests built from past agent failures.",
+    outcome: "Co-founded and built 2025–2026.",
     stack: ["Next.js", "React 19", "TypeScript", "Supabase", "Vercel", "Anthropic Claude", "LiveKit", "Python"],
     links: {
       website: "https://www.fourthspace.vip/",
@@ -59,9 +59,9 @@ export const selectedWork = [
   {
     id: "eternal-dharma",
     name: "Eternal Dharma",
-    problem: "People want spiritual guidance but don't know where to start or how to apply ancient wisdom to modern life.",
-    built: "An iOS app giving personalized, scripture-grounded spiritual guidance. A persona-constrained LLM assistant (Claude) with a scripture-sourced system prompt and citation rules, backed by structured verse and commentary data.",
-    outcome: "Grew to 200+ users at peak",
+    problem: "Personalized, scripture-grounded spiritual guidance for iOS.",
+    built: "Persona-constrained Claude assistant with citation rules and structured verse and commentary data.",
+    outcome: "Grew to 200+ users at peak.",
     stack: ["React Native", "Expo", "TypeScript", "Firebase", "Claude (via OpenRouter)"],
     links: {
       appStore: "https://apps.apple.com/us/app/eternal-dharma/id6744546350",
@@ -72,8 +72,8 @@ export const selectedWork = [
   {
     id: "hoopintel",
     name: "HoopIntel",
-    problem: "Basketball stats are scattered and hard to read. Coaches, scouts, and fans want clear insights without digging through raw box scores.",
-    built: "A web app that turns player and team stats into visual, digestible analysis for coaches, scouts, and super-fans.",
+    problem: "Basketball analytics app that turns player and team stats into clear visual insights.",
+    built: "Interactive analysis for coaches, scouts, and fans.",
     outcome: "Live web app",
     stack: ["Next.js", "Node.js", "D3.js", "Chart.js", "MongoDB"],
     links: {
