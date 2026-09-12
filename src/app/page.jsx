@@ -25,12 +25,12 @@ export default function Page() {
         <Navbar />
         <Home />
         <ImpactStrip />
-        <WorkWithMe />
         <Work />
         <Capabilities />
         <Experience />
         <Education />
         <Writing />
+        <WorkWithMe />
         <Contact />
         <Footer />
       </div>

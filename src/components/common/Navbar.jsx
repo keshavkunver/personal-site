@@ -64,7 +64,7 @@ const Navbar = () => {
 
     // Track active section with Intersection Observer
     useEffect(() => {
-        const sections = ['home', 'work-with-me', 'work', 'capabilities', 'experience', 'education', 'writing', 'contact'];
+        const sections = ['home', 'work', 'capabilities', 'experience', 'education', 'writing', 'work-with-me', 'contact'];
         
         const observer = new IntersectionObserver(
             (entries) => {
@@ -115,12 +115,12 @@ const Navbar = () => {
 
     const navLinks = [
         { id: 'home', label: 'Home' },
-        { id: 'work-with-me', label: 'Work with me' },
         { id: 'work', label: 'Work' },
         { id: 'capabilities', label: 'Capabilities' },
         { id: 'experience', label: 'Experience' },
         { id: 'education', label: 'Education' },
         { id: 'writing', label: 'Writing' },
+        { id: 'work-with-me', label: 'Work with me' },
         { id: 'contact', label: 'Contact' },
     ];
 
