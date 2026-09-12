@@ -71,18 +71,20 @@ const Writing = () => {
       </motion.div>
 
       <motion.div
-        className="max-w-3xl mt-10"
+        className="max-w-3xl mt-14"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
       >
-        <h3 className="text-sm text-text-tertiary tracking-normal mb-4">On my desk</h3>
-        <ul className="space-y-2.5">
+        <h3 className="font-display text-2xl font-medium text-text-primary tracking-normal mb-6">
+          Coming next
+        </h3>
+        <ul className="space-y-5">
           {writing.filter((article) => !article.published).map((article, index) => (
-            <li key={index} className="flex items-baseline gap-3">
-              <span className="font-display text-lg text-text-secondary">{article.title}</span>
-              <span className="text-text-tertiary text-xs shrink-0">Draft</span>
+            <li key={index}>
+              <p className="font-display text-xl font-medium text-text-primary">{article.title}</p>
+              <p className="text-text-tertiary text-sm mt-0.5">Coming soon</p>
             </li>
           ))}
         </ul>
