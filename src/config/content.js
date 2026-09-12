@@ -105,21 +105,16 @@ export const experience = [
     company: "Infosys",
     role: "Software Development Engineer in Test (SDET)",
     duration: "Mar 2021 - Present",
-    achievements: [
-      "Design and maintain the UI, API, and CI/CD automation frameworks that gate releases for enterprise product teams",
-      "Cut regression effort 40% and related API defects 25% through framework and pipeline design",
-      "Working with dev and product teams to fold AI tooling into the release workflow",
-    ],
+    summary: "Built and maintained the automation systems that gate enterprise releases across UI, API, and CI/CD workflows.",
+    outcome: "Reduced regression effort 40% and API defects 25%.",
     technologies: ["Java", "REST APIs", "MySQL", "React", "TypeScript", "CI/CD", "AI"],
   },
   {
     company: "Prathibha Management",
     role: "Software Engineer",
     duration: "Aug 2019 - Jan 2021",
-    achievements: [
-      "Shipped full-stack Django platform connecting LA talent with Hollywood casting opportunities",
-      "Built talent-matching system that helped performers land real roles",
-    ],
+    summary: "Built a full-stack Django platform connecting Los Angeles talent with Hollywood casting opportunities.",
+    outcome: "Shipped a matching system that helped performers land real roles.",
     technologies: ["Python", "Django", "PostgreSQL", "Full-Stack"],
   },
 ];

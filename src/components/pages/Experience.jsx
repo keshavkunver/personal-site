@@ -37,7 +37,7 @@ const Experience = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-h1 font-medium text-text-primary">Industry</h2>
+        <h2 className="text-h1 font-medium text-text-primary">Experience</h2>
       </motion.div>
 
       <motion.div
@@ -59,16 +59,13 @@ const Experience = () => {
                 {role.role}
               </h3>
               <p className="text-text-secondary mt-0.5 mb-4">{role.company}</p>
-              <ul className="space-y-2.5">
-                {role.achievements.map((achievement, i) => (
-                  <li key={i} className="text-text-secondary leading-relaxed pl-4 relative before:absolute before:left-0 before:top-[0.7em] before:h-px before:w-2 before:bg-white/30">
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-text-tertiary text-sm mt-4">
-                {role.technologies.join(', ')}
-              </p>
+              <div className="max-w-2xl space-y-3">
+                <p className="text-text-secondary leading-relaxed">{role.summary}</p>
+                <p className="text-text-primary font-medium">{role.outcome}</p>
+                <p className="text-text-tertiary text-sm">
+                  {role.technologies.join(', ')}
+                </p>
+              </div>
             </div>
           </motion.div>
         ))}

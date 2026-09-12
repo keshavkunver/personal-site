@@ -118,7 +118,7 @@ const Navbar = () => {
         { id: 'work-with-me', label: 'Work with me' },
         { id: 'work', label: 'Work' },
         { id: 'capabilities', label: 'Capabilities' },
-        { id: 'experience', label: 'Industry' },
+        { id: 'experience', label: 'Experience' },
         { id: 'education', label: 'Education' },
         { id: 'writing', label: 'Writing' },
         { id: 'contact', label: 'Contact' },
