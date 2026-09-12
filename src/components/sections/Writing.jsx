@@ -84,7 +84,7 @@ const Writing = () => {
           {writing.filter((article) => !article.published).map((article, index) => (
             <li key={index}>
               <p className="font-display text-xl font-medium text-text-primary">{article.title}</p>
-              <p className="text-text-tertiary text-sm mt-0.5">Coming soon</p>
+              <p className="text-text-tertiary text-sm mt-0.5">In progress</p>
             </li>
           ))}
         </ul>
