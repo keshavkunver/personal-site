@@ -63,22 +63,16 @@ const Education = () => {
         animate={isInView ? 'visible' : 'hidden'}
       >
         {degrees.map((item) => (
-          <motion.div
-            key={item.degree}
-            variants={itemVariants}
-            className="flex flex-col gap-1 py-8 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
-          >
-            <div>
-              <h3 className="font-display text-2xl font-medium text-text-primary">
-                {item.degree}
-              </h3>
-              <p className="text-text-secondary mt-1">
-                {item.school}
-                {item.year && `, ${item.year}`}
-              </p>
-            </div>
+          <motion.div key={item.degree} variants={itemVariants} className="py-8">
+            <h3 className="font-display text-2xl font-medium text-text-primary">
+              {item.degree}
+            </h3>
+            <p className="text-text-secondary mt-1">
+              {item.school}
+              {item.year && `, ${item.year}`}
+            </p>
             {item.gpa && (
-              <p className="text-text-tertiary text-sm shrink-0">{item.gpa} GPA</p>
+              <p className="text-text-tertiary text-sm mt-1">{item.gpa} GPA</p>
             )}
           </motion.div>
         ))}
