@@ -97,7 +97,7 @@ export const capabilities = [
   },
   {
     category: "Quality & Reliability",
-    description: "Production-minded engineering shaped by 6+ years in quality.",
+    description: "Production-minded engineering shaped by 6+ years of quality engineering.",
     tools: "API automation · Regression testing · CI/CD · AI evals",
   },
 ];
