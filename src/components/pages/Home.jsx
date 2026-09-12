@@ -93,16 +93,7 @@ const Home = () => {
                 />
             </div>
 
-            {/* Aurora sky: teal upper-left, gold lower-right, under film grain */}
-            <motion.div
-                className="absolute inset-0 bg-aurora pointer-events-none"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <div className="absolute inset-0 bg-grain opacity-[0.05] mix-blend-screen pointer-events-none" />
-
-            {/* Centered monument */}
+            {/* Centered monument (aurora sky comes from the page-level canvas) */}
             <motion.div
                 className="relative z-10 w-full flex flex-col items-center text-center hero-lg:pb-24"
                 variants={containerVariants}

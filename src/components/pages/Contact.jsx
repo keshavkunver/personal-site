@@ -9,16 +9,7 @@ import { personalInfo, socialLinks, offTheClock } from '../../config/content';
 const Contact = () => {
   return (
     <Section id="contact" className="py-24 relative overflow-hidden">
-      {/* Aurora bookend: the page closes under the same sky it opened with */}
-      <motion.div
-        className="absolute inset-0 bg-aurora pointer-events-none"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
-      />
-      <div className="absolute inset-0 bg-grain opacity-[0.05] mix-blend-screen pointer-events-none" />
-
+      {/* Aurora bookend comes from the page-level canvas */}
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <motion.h2
           className="text-4xl sm:text-5xl font-medium text-text-primary mb-6"

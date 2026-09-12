@@ -4,7 +4,7 @@ import { personalInfo } from '../../config/content';
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-dark-border py-6 px-4 bg-dark-bg">
+    <footer className="w-full border-t border-dark-border py-6 px-4">
       <div className="max-w-6xl mx-auto text-center space-y-2">
         <p className="text-text-tertiary text-xs">
           Thanks for scrolling this far.

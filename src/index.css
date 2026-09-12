@@ -34,6 +34,23 @@
 }
 
 @layer components {
+  /* Page-level aurora bookends. Same palette as the bg-aurora token, but the
+     glows and wash are sized in vh so every gradient completes into the page
+     base color (#0f1322) well inside its box: no stop ever lands on a section
+     boundary, so there is no full-width seam. */
+  .bg-aurora-top {
+    background-image:
+      radial-gradient(ellipse 60% 44vh at 82% 88vh, rgba(217, 164, 65, 0.22) 0%, transparent 65%),
+      radial-gradient(ellipse 55% 40vh at 12% 8vh, rgba(52, 211, 153, 0.11) 0%, transparent 60%),
+      linear-gradient(160deg, #0c101d 0%, #101528 30%, #12182b 55%, #0f1322 78%);
+  }
+  .bg-aurora-bottom {
+    background-image:
+      radial-gradient(ellipse 60% 44vh at 82% calc(100% - 12vh), rgba(217, 164, 65, 0.22) 0%, transparent 65%),
+      radial-gradient(ellipse 55% 40vh at 12% calc(100% - 75vh), rgba(52, 211, 153, 0.11) 0%, transparent 60%),
+      linear-gradient(160deg, #0f1322 0%, #0f1322 20%, #101528 60%, #12182b 100%);
+  }
+
   /* Film grain: keeps large soft gradients from banding or looking plasticky */
   .bg-grain {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
