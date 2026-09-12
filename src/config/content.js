@@ -8,11 +8,12 @@ import hoopintelImg from '../assets/images/projects/hoop-intel/hoopintel-screens
 
 export const personalInfo = {
   name: "Keshav Kunver",
-  title: "AI Engineer building reliable AI-native products from 0 to 1.",
-  tagline: "I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.",
+  title: "Software Engineer building AI-powered products.",
+  tagline: "I build full-stack software from idea to production, with a focus on AI-powered experiences, reliable systems, and products people actually use.",
+  experience: "6+ years across software engineering and quality engineering, with hands-on experience building with TypeScript, React, Next.js, Python, APIs, databases, and modern AI tooling.",
   location: "Los Angeles",
   email: "keshav@kunver.com",
-  availability: "Open to remote and hybrid roles",
+  availability: "Open to hybrid & remote",
 };
 
 export const offTheClock = {

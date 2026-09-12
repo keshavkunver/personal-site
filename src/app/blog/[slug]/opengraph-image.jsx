@@ -5,12 +5,12 @@ import { writing } from '../../../config/content';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-export const alt = 'Keshav Kunver, AI Engineer';
+export const alt = 'Keshav Kunver, Software Engineer';
 
 export default async function OgImage({ params }) {
   const { slug } = await params;
   const article = writing.find((a) => a.url === `/blog/${slug}`);
-  const title = article?.title ?? 'Keshav Kunver | AI Engineer';
+  const title = article?.title ?? 'Keshav Kunver | Software Engineer';
   const metaParts = [article?.tag, article?.readingTime].filter(Boolean).join(' · ');
   const fontData = await readFile(
     join(process.cwd(), 'src/assets/fonts/InstrumentSans-Bold.ttf')

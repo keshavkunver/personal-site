@@ -130,10 +130,24 @@ const Home = () => {
                 </h1>
 
                 <motion.p
-                    className="text-xl sm:text-2xl text-text-secondary max-w-xl mb-7 leading-snug"
+                    className="text-xl sm:text-2xl text-text-secondary max-w-xl mb-5 leading-snug"
                     variants={itemVariants}
                 >
                     {personalInfo.title}
+                </motion.p>
+
+                <motion.p
+                    className="text-[15px] sm:text-base text-text-secondary max-w-2xl mb-3 leading-relaxed"
+                    variants={itemVariants}
+                >
+                    {personalInfo.tagline}
+                </motion.p>
+
+                <motion.p
+                    className="text-[13px] sm:text-sm text-text-secondary/80 max-w-xl mb-8 leading-relaxed"
+                    variants={itemVariants}
+                >
+                    {personalInfo.experience}
                 </motion.p>
 
                 <motion.div
@@ -141,7 +155,7 @@ const Home = () => {
                     variants={itemVariants}
                 >
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Open to remote and hybrid roles, based in Los Angeles</span>
+                    <span>{personalInfo.location} · {personalInfo.availability}</span>
                 </motion.div>
 
                 <motion.div className="flex flex-wrap justify-center gap-4" variants={itemVariants}>

@@ -25,9 +25,9 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata = {
-  title: 'Keshav Kunver | AI Engineer',
-  description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
-  keywords: ['Keshav Kunver', 'AI Engineer', 'LLM', 'AI Agents', 'RAG', 'LLM Evaluation', 'React Native'],
+  title: 'Keshav Kunver | Software Engineer',
+  description: 'Software Engineer in Los Angeles building full-stack and AI-powered products with TypeScript, React, Next.js, Python, and modern AI tooling.',
+  keywords: ['Keshav Kunver', 'Software Engineer', 'Full-Stack Engineer', 'AI Products', 'TypeScript', 'React', 'Next.js', 'Python'],
   authors: [{ name: 'Keshav Kunver' }],
   creator: 'Keshav Kunver',
   publisher: 'Keshav Kunver',
@@ -39,15 +39,15 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.kunver.com',
-    title: 'Keshav Kunver | AI Engineer',
-    description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
+    title: 'Keshav Kunver | Software Engineer',
+    description: 'Software Engineer in Los Angeles building full-stack and AI-powered products with TypeScript, React, Next.js, Python, and modern AI tooling.',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, Software Engineer' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Keshav Kunver | AI Engineer',
-    description: 'I ship LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.',
+    title: 'Keshav Kunver | Software Engineer',
+    description: 'Software Engineer in Los Angeles building full-stack and AI-powered products with TypeScript, React, Next.js, Python, and modern AI tooling.',
     images: ['/og.png'],
   },
   robots: {
@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               "name": "Keshav Kunver",
               "url": "https://www.kunver.com",
-              "jobTitle": "AI Engineer",
+              "jobTitle": "Software Engineer",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Independent"
@@ -98,14 +98,16 @@ export default function RootLayout({ children }) {
                 }
               ],
               "knowsAbout": [
-                "LLM Agents",
-                "RAG",
-                "LLM Evaluation",
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Python",
+                "Full-Stack Development",
                 "AI Product Development",
-                "React Native",
-                "Backend Engineering"
+                "API Design",
+                "Quality Engineering"
               ],
-              "description": "AI Engineer shipping LLM products end to end: tool-calling agents, real-time voice AI, and the eval suites that keep them working in production.",
+              "description": "Software Engineer in Los Angeles building full-stack and AI-powered products with TypeScript, React, Next.js, Python, and modern AI tooling.",
               "sameAs": [
                 "https://www.linkedin.com/in/keshav-kunver",
                 "https://github.com/keshavkunver"

@@ -10,7 +10,7 @@ export const metadata = {
     url: 'https://www.kunver.com/build',
     type: 'website',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, AI Engineer' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Keshav Kunver, Software Engineer' }],
   },
   twitter: {
     card: 'summary_large_image',
