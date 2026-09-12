@@ -60,8 +60,15 @@ const Experience = () => {
               </h3>
               <p className="text-text-secondary mt-0.5 mb-4">{role.company}</p>
               <div className="max-w-2xl space-y-3">
-                <p className="text-text-secondary leading-relaxed">{role.summary}</p>
-                <p className="text-text-primary font-medium">{role.outcome}</p>
+                {(Array.isArray(role.summary) ? role.summary : [role.summary]).map((line, i) => (
+                  <p key={i} className="text-text-secondary leading-relaxed">{line}</p>
+                ))}
+                {role.outcome && (
+                  <p className="text-text-primary font-medium">{role.outcome}</p>
+                )}
+                {role.note && (
+                  <p className="text-text-secondary text-sm leading-relaxed">{role.note}</p>
+                )}
                 <p className="text-text-tertiary text-sm">
                   {role.technologies.join(', ')}
                 </p>
