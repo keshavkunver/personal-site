@@ -49,18 +49,14 @@ const Capabilities = () => {
       >
         {capabilities.map((category, index) => (
           <motion.div key={index} variants={itemVariants} className="py-8">
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
-              <h3 className="font-display text-2xl font-medium text-text-primary">
-                {category.category}
-              </h3>
-              {category.lead && (
-                <span className="text-gold text-sm font-heading font-medium">
-                  Most of my work lives here
-                </span>
-              )}
-            </div>
-            <p className="text-text-secondary leading-loose max-w-2xl">
+            <h3 className="font-display text-2xl font-medium text-text-primary mb-3">
+              {category.category}
+            </h3>
+            <p className="text-text-secondary leading-relaxed max-w-2xl">
               {category.description}
+            </p>
+            <p className="text-text-tertiary text-sm mt-3">
+              {category.tools}
             </p>
           </motion.div>
         ))}

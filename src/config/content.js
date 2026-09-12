@@ -86,17 +86,19 @@ export const selectedWork = [
 
 export const capabilities = [
   {
-    category: "AI Product Engineering",
-    lead: true,
-    description: "I take LLM products from idea to production: tool-calling agents, RAG, structured outputs, and real-time voice AI. Hands-on with Claude and OpenAI APIs, the Vercel AI SDK, and LiveKit.",
+    category: "Full-Stack Engineering",
+    description: "Modern web and mobile products from frontend to backend.",
+    tools: "TypeScript · React · Next.js · React Native · Python · SQL",
   },
   {
-    category: "Full-Stack Delivery",
-    description: "Next.js, React, React Native, TypeScript, Python. Supabase, Firebase, Vercel. From idea to a live, monetized app.",
+    category: "Applied AI",
+    description: "LLM-powered features, agents, tool calling, voice AI, and evals.",
+    tools: "Claude · OpenAI · Vercel AI SDK · LiveKit",
   },
   {
-    category: "Reliability, Evals & Testing",
-    description: "The reason my AI features hold up in production. Eval suites and regression tests turn every agent failure into a named test, so the same bug can't ship twice. Six years of quality engineering, pointed at non-deterministic systems.",
+    category: "Quality & Reliability",
+    description: "Production-minded engineering shaped by 6+ years in quality.",
+    tools: "API automation · Regression testing · CI/CD · AI evals",
   },
 ];
 
