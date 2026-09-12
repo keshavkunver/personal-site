@@ -9,8 +9,7 @@ import hoopintelImg from '../assets/images/projects/hoop-intel/hoopintel-screens
 export const personalInfo = {
   name: "Keshav Kunver",
   title: "Software Engineer building AI-powered products.",
-  tagline: "I build full-stack software from idea to production, with a focus on AI-powered experiences, reliable systems, and products people actually use.",
-  experience: "6+ years across software engineering and quality engineering, with hands-on experience building with TypeScript, React, Next.js, Python, APIs, databases, and modern AI tooling.",
+  tagline: "Full-stack engineering, applied AI, and reliable systems.",
   location: "Los Angeles",
   email: "keshav@kunver.com",
   availability: "Open to hybrid & remote",

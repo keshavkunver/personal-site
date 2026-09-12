@@ -137,17 +137,10 @@ const Home = () => {
                 </motion.p>
 
                 <motion.p
-                    className="text-[15px] sm:text-base text-text-secondary max-w-2xl mb-3 leading-relaxed"
+                    className="text-[15px] sm:text-base text-text-secondary max-w-xl mb-8 leading-relaxed"
                     variants={itemVariants}
                 >
                     {personalInfo.tagline}
-                </motion.p>
-
-                <motion.p
-                    className="text-[13px] sm:text-sm text-text-secondary/80 max-w-xl mb-8 leading-relaxed"
-                    variants={itemVariants}
-                >
-                    {personalInfo.experience}
                 </motion.p>
 
                 <motion.div
