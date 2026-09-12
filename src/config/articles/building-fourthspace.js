@@ -1,5 +1,5 @@
 export default {
-  title: 'FourthSpace: Shipping an LLM Agent That Plans Real-World Meetups',
+  title: 'FourthSpace: Building an AI Agent That Plans Real-World Meetups',
   date: 'July 2026',
   readingTime: '3 min read',
   signature: 'Keshav',

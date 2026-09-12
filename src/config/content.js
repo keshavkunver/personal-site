@@ -126,7 +126,7 @@ export const experience = [
 
 export const writing = [
   {
-    title: 'FourthSpace: Shipping an LLM Agent That Plans Real-World Meetups',
+    title: 'FourthSpace: Building an AI Agent That Plans Real-World Meetups',
     url: '/blog/building-fourthspace',
     description: 'A Claude tool-calling agent, a voice AI moderator, and the test suite that keeps them from breaking.',
     readingTime: '3 min read',
