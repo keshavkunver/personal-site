@@ -114,11 +114,18 @@ const Home = () => {
                     />
                 </motion.div>
 
-                <h1 className="text-5xl sm:text-6xl lg:text-display font-medium text-text-primary mb-6">
+                <h1 className="text-5xl sm:text-6xl lg:text-display font-medium text-text-primary mb-3">
                     <TextReveal delay={0.3} staggerDelay={0.1} duration={0.6}>
                         {personalInfo.name}
                     </TextReveal>
                 </h1>
+
+                <motion.p
+                    className="text-sm text-text-tertiary tracking-wide mb-7"
+                    variants={itemVariants}
+                >
+                    Kay-SHUV KUN-vur
+                </motion.p>
 
                 <motion.p
                     className="text-xl sm:text-2xl text-text-secondary max-w-xl mb-5 leading-snug"
