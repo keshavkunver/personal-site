@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ConceptForm from '../../components/websites/ConceptForm';
 import SitePreview from '../../components/websites/SitePreview';
 import headshotImage from '../../assets/images/profile/headshot.png';
-import { websiteExamples, websiteOffer as offer, websiteCopy as copy, aeoOffer as aeo, testimonials } from '../../config/websites';
+import { websiteExamples, websiteOffer as offer, websiteCopy as copy, aeoOffer as aeo } from '../../config/websites';
 import styles from './websites.module.css';
 function Example({
   example
@@ -16,6 +16,10 @@ function Example({
     </div>
     <p className={styles.exampleLabel}>{example.label}</p>
     <p>{example.summary}</p>
+    {example.quote && <figure className={styles.exampleQuote}>
+      <blockquote>{example.quote}</blockquote>
+      <figcaption>{example.name}</figcaption>
+    </figure>}
     <div className={styles.exampleFoot}>
       <a className={styles.exampleLink} href={example.href} target="_blank" rel="noopener noreferrer">
         Visit the site <span aria-hidden="true">↗</span>
@@ -108,16 +112,6 @@ export default function WebsitesPage() {
             </div>
           </aside>
         </section>
-
-        {testimonials.length > 0 && <section className={styles.quotes} aria-label="What clients said">
-          {testimonials.map(t => <figure key={t.name} className={styles.quote}>
-            <blockquote>{t.quote}</blockquote>
-            <figcaption>
-              {t.name}
-              <span>{t.business}</span>
-            </figcaption>
-          </figure>)}
-        </section>}
 
         <section className={styles.process} aria-labelledby="process-title">
           <div className={styles.sectionIntro}>

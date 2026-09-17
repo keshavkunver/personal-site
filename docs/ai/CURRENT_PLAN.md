@@ -488,3 +488,37 @@ Still open: NV Studio testimonial (Noel's reaction not yet supplied, and that
 repo's testimonial-permission blocker is separate and still open); build the
 AEO page and set aeoOffer.href; swap both client hrefs to real domains when
 they land.
+
+
+## Round 12 (Claude, 2026-09-17): quotes attach to their site
+
+Keshav: put each testimonial directly under the site it is about, and drop the
+profanity.
+
+Structural change: the standalone `testimonials` export and the
+`.quotes` section are gone. A reaction is now an optional `quote` field on the
+example entry itself, rendered inside the card beneath the summary. Adding
+Noel's is a one-line edit to the nv-studio entry. Styled with a left rule and
+the serif face so it reads as someone else's voice rather than more page copy.
+
+Profanity: Keshav asked whether we could rephrase to "this website is fire ...
+bro thank you". Declined the rewording and offered excerpting instead, because
+client-work/AGENTS.md treats paraphrased-beyond-recognition reviews as an FTC
+problem and a launch blocker, and altered words inside quotation marks are
+exactly what that rule covers. Dropping the first two words achieves the same
+result with nothing reworded. Published quote:
+
+  "THIS WEBSITE ITS FIREEEEE ... Brooo thank you so much for the website"
+
+Every character is his. Starting mid-sentence is normal excerpting, so no
+leading ellipsis.
+
+One self-caught rule violation: my first version of the attribution used an em
+dash (CSS `content: '\2014'`), which the house rule bans in rendered copy.
+Attribution dashes are a conventional exception, but rather than silently
+introduce one I switched to an en dash (`\2013`). Verified 0 em dashes in both
+the built HTML and the built CSS.
+
+Lighthouse mobile unchanged: performance 92, accessibility 100 (contrast
+PASS), best practices 96, SEO 100. No overflow at 390, 820, or 1440. Build
+passes, lint 0 errors.

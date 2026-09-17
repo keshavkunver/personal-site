@@ -30,6 +30,10 @@ export const websiteExamples = [
     summary: 'His work was buried. Now it leads, and Book a Shoot is one tap from every page.',
     status: 'Live on a preview link while the domain moves over.',
     href: 'https://mack-minaya-site.vercel.app',
+    // Mack's own words from messages after the site went up, excerpted to
+    // contiguous fragments with an ellipsis marking the cut. Nothing reworded;
+    // only the opening expletive is dropped. Permission confirmed 2026-09-17.
+    quote: 'THIS WEBSITE ITS FIREEEEE \u2026 Brooo thank you so much for the website',
     shots: [
       { src: '/work/mack-minaya/home.webp', page: 'Home', alt: 'Mack Minaya homepage: a full-width studio portrait above a row of gallery tiles.' },
       { src: '/work/mack-minaya/work.webp', page: 'Work', alt: 'Work index page showing photography galleries by category.' },
@@ -138,23 +142,11 @@ export const websiteOffer = {
   ],
 };
 
-// Client reactions. VERBATIM WORDS ONLY, and only with permission recorded
-// (see client-work/AGENTS.md house rule: paraphrased or invented reviews are
-// an FTC problem and a launch blocker). While this is empty the section does
-// not render, so there is nothing to be wrong.
-//
-// Mack Minaya: his own words from messages after the site went up, excerpted
-// to contiguous fragments with an ellipsis marking the cut. Nothing reworded.
-// Keshav confirmed permission to quote publicly, 2026-09-17.
-export const testimonials = [
-  {
-    quote:
-      'HOLY SHIT THIS WEBSITE ITS FIREEEEE \u2026 Brooo thank you so much for the website',
-    name: 'Mack Minaya',
-    business: 'Photographer, NYC and Connecticut',
-    href: 'https://mack-minaya-site.vercel.app',
-  },
-];
+// Quotes live on the example entries above (`quote`), so a reaction sits
+// under the site it is about. VERBATIM WORDS ONLY, and only with permission
+// recorded: paraphrased or invented reviews are an FTC problem and a launch
+// blocker (client-work/AGENTS.md). Trimming to contiguous fragments is fine;
+// rewording is not.
 
 // The AEO audit: a second, smaller offer for businesses whose site is fine but
 // invisible. Set `href` to the real page when it exists; while it is null the

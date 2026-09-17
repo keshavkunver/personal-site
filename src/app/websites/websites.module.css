@@ -1027,60 +1027,34 @@
 }
 
 /* Client reactions. Renders only when real, permitted quotes exist. */
-/* One quote reads as a feature, not a card: give it measure and scale rather
-   than stretching a short sentence across the full column. Two or more fall
-   back into a grid. */
-.quotes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-  gap: 28px;
-  margin-top: 96px;
+
+
+
+/* A client's reaction, sitting under the site it is about. Marked off by a
+   rule and set in the serif so it reads as someone else's voice, not more of
+   the page's own copy. */
+.exampleQuote {
+  margin: 0.9rem 0 0;
+  padding-left: 0.95rem;
+  border-left: 2px solid rgba(248, 246, 240, 0.22);
 }
 
-.quotes:has(> :only-child) {
-  grid-template-columns: minmax(0, 46rem);
-  justify-content: center;
-  text-align: center;
-}
-
-.quote {
+.exampleQuote blockquote {
   margin: 0;
-  padding: 24px;
-  border: 1px solid rgba(248, 246, 240, 0.1);
-  border-radius: 12px;
-  background: rgba(23, 28, 43, 0.4);
-}
-
-.quotes:has(> :only-child) .quote {
-  padding: 40px 32px;
-}
-
-.quote blockquote {
-  margin: 0;
-  color: #e6e5e1;
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
-
-.quotes:has(> :only-child) .quote blockquote {
   font-family: var(--font-source-serif), Georgia, serif;
-  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
-  line-height: 1.45;
-  color: #f2f0eb;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e6e5e1;
 }
 
-.quote blockquote::before { content: '\201C'; }
-.quote blockquote::after { content: '\201D'; }
+.exampleQuote blockquote::before { content: '\201C'; }
+.exampleQuote blockquote::after { content: '\201D'; }
 
-.quote figcaption {
-  margin-top: 0.9rem;
-  color: #f8f6f0;
-  font-size: 0.875rem;
-}
-
-.quote figcaption span {
-  display: block;
+.exampleQuote figcaption {
+  margin-top: 0.4rem;
   color: #898c94;
   font-size: 0.8125rem;
-  margin-top: 0.15rem;
 }
+
+/* En dash, not em: the house rule bans em dashes in rendered copy. */
+.exampleQuote figcaption::before { content: '\2013\00a0'; }
