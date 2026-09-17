@@ -13,7 +13,7 @@ export const metadata = {
     url: 'https://www.kunver.com/websites',
     type: 'website',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. $1,300 flat.' }],
+    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. $1,300 flat, built in about a week.' }],
   },
   twitter: {
     card: 'summary_large_image',
