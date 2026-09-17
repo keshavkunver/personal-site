@@ -51,4 +51,6 @@ docs/superpowers/
 
 # Codex CLI artifacts (recreated by its import sync; Codex not used here)
 .codex/
-AGENTS.md
+
+# Agent hook config (local)
+.claude/
