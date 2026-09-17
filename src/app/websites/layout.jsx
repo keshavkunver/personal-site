@@ -1,6 +1,7 @@
+import Footer from '../../components/common/Footer';
 export const metadata = {
   title: 'Websites for Local Service Businesses | Keshav Kunver',
-  description: 'I build websites for local service businesses. Flat price, live in about two weeks, built by one engineer instead of a template or an agency.',
+  description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
   // Suppress the site-wide AI engineering keywords; they don't fit this page.
   keywords: null,
   alternates: {
@@ -8,16 +9,16 @@ export const metadata = {
   },
   openGraph: {
     title: 'Websites for Local Service Businesses | Keshav Kunver',
-    description: 'I build websites for local service businesses. Flat price, live in about two weeks, built by one engineer instead of a template or an agency.',
+    description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
     url: 'https://www.kunver.com/websites',
     type: 'website',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. Live in two weeks, $1,300 flat.' }],
+    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. $1,300 flat.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Websites for Local Service Businesses | Keshav Kunver',
-    description: 'I build websites for local service businesses. Flat price, live in about two weeks, built by one engineer instead of a template or an agency.',
+    description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
     images: ['/og-websites.png'],
   },
 };
@@ -46,7 +47,7 @@ export default function WebsitesLayout({ children }) {
                 price: '1300',
                 priceCurrency: 'USD',
                 description:
-                  'Up to 5 pages, mobile-first, live on your domain in about two weeks.',
+                  'Up to 5 pages, mobile-first, live on your domain.',
               },
               {
                 '@type': 'Offer',
@@ -60,6 +61,7 @@ export default function WebsitesLayout({ children }) {
         }}
       />
       {children}
+      <Footer />
     </>
   );
 }

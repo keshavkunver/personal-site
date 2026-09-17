@@ -144,6 +144,30 @@ const Work = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* The products above are the case studies; client website work lives on
+          its own page, so point there rather than mixing it into this list. */}
+      <motion.div
+        className="mt-12 pt-8 border-t border-dark-border flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-10% 0px' }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="text-text-secondary leading-relaxed">
+          I also build websites for local businesses.
+        </p>
+        <Link
+          href="/websites"
+          onClick={() => track('websites_click', { placement: 'work_section' })}
+          className="group inline-flex items-center gap-2 text-sm font-medium text-text-primary hover:underline underline-offset-4 decoration-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg rounded-sm"
+        >
+          See the websites
+          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">
+            &rarr;
+          </span>
+        </Link>
+      </motion.div>
     </Section>
   );
 };

@@ -1,293 +1,187 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ConceptForm from '../../components/websites/ConceptForm';
+import SitePreview from '../../components/websites/SitePreview';
 import headshotImage from '../../assets/images/profile/headshot.png';
-
-const EMAIL = 'keshavkunver@gmail.com';
-
-const ctaClasses =
-  'inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg w-full sm:w-auto';
-
-const problems = [
-  "A customer finds you on Google and opens your site on their phone. They can't find your phone number, so they call the next company on the list.",
-  'Your contact form sends to an inbox nobody checks. Or it broke months ago and nobody noticed.',
-  "There's no pricing and no service area on the site. The people who would have hired you never call to ask.",
-  "The site looks old enough that a customer wonders if you're still in business.",
-];
-
-const deliverables = [
-  {
-    outcome: 'Customers can reach you in one tap.',
-    detail:
-      'Click-to-call and click-to-text on every page, and a contact form wired to an inbox you actually check.',
-  },
-  {
-    outcome: 'You show up when someone searches your service near your city.',
-    detail:
-      'The page titles and descriptions Google reads, a sitemap, and your Google Business Profile connected.',
-  },
-  {
-    outcome: 'People know what you charge before they call.',
-    detail: 'Your pricing and service area, right on the page.',
-  },
-  {
-    outcome: 'It works on a phone, where almost everyone will see it.',
-    detail: "Built for phones first, because that's where your customers will find you.",
-  },
-  {
-    outcome: "It's done and live, not a project that drags.",
-    detail: 'Up to 5 pages, 2 rounds of revisions, live on your domain.',
-  },
-];
-
-const steps = [
-  {
-    name: 'Tell me about your business',
-    detail: 'Send your website and a sentence or two about what you do. It should take about a minute.',
-  },
-  {
-    name: 'I create a concept',
-    detail: "If I think we're a good fit, I'll put together a website concept and send you a short private video walking through the direction I'd take.",
-  },
-  {
-    name: 'You decide',
-    detail: 'If you like the direction, you sign the agreement and send the $500 deposit.',
-  },
-  {
-    name: 'I build it',
-    detail: 'I turn the concept into the full site, we make revisions, and get it live.',
-  },
-];
+import { websiteExamples, websiteOffer as offer, websiteCopy as copy, aeoOffer as aeo, testimonials } from '../../config/websites';
+import styles from './websites.module.css';
+function Example({
+  example
+}) {
+  return <article className={styles.example}>
+    <SitePreview shots={example.shots} name={example.name} href={example.href} />
+    <div className={styles.exampleTitle}>
+      <h3>{example.name}</h3>
+      <span>{example.category}</span>
+    </div>
+    <p className={styles.exampleLabel}>{example.label}</p>
+    <p>{example.summary}</p>
+    <div className={styles.exampleFoot}>
+      <a className={styles.exampleLink} href={example.href} target="_blank" rel="noopener noreferrer">
+        Visit the site <span aria-hidden="true">↗</span>
+      </a>
+      <span className={styles.exampleStatus}>{example.status}</span>
+    </div>
+  </article>;
+}
 
 export default function WebsitesPage() {
-  return (
-    <div className="min-h-screen bg-dark-bg">
-      <div className="max-w-3xl mx-auto px-6 pt-8 pb-16 md:pt-16 md:pb-20">
-        <Link
-          href="/"
-          className="text-text-tertiary hover:text-text-primary transition-colors text-sm"
-        >
-          ← Back
+  return <div className={styles.page}>
+    <div className={styles.canvas} aria-hidden="true" />
+    <div className={styles.container}>
+      <nav className={styles.nav} aria-label="Page navigation">
+        <Link href="/">Keshav Kunver<span> / Websites</span>
         </Link>
-
-        {/* Hero */}
-        <h1 className="text-4xl sm:text-5xl font-medium text-text-primary mt-8 mb-6">
-          Websites for local service businesses, live in two weeks.
-        </h1>
-        <p className="text-body-lg text-text-secondary leading-loose max-w-2xl">
-          I'm an engineer and I build it myself. No template, no account
-          manager, no chain of handoffs. You talk to the person doing the work.
-        </p>
-        <div className="mt-8">
-          <a href="#concept" className={ctaClasses}>
-            Get a Website Concept
-          </a>
-          <p className="text-sm text-text-tertiary mt-4">
-            No call required. See the direction I'd take your site before
-            deciding to hire me.
-          </p>
-        </div>
-
-        {/* The problem */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          This is probably costing you money right now
-        </h2>
-        <ul className="space-y-5">
-          {problems.map((problem) => (
-            <li
-              key={problem}
-              className="text-text-secondary leading-loose pl-5 border-l border-dark-border-hover"
-            >
-              {problem}
-            </li>
-          ))}
-        </ul>
-
-        {/* Framing */}
-        <div className="mt-16 py-8 border-y border-dark-border">
-          <p className="text-lg text-text-primary leading-relaxed max-w-2xl">
-            For a service business, a website has one job: turn someone who
-            found you into someone who contacts you. Most small business sites
-            fail at that one job. The reasons are almost always small and
-            fixable.
-          </p>
-        </div>
-
-        {/* What you get */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          What you get
-        </h2>
-        <div className="space-y-7">
-          {deliverables.map((item) => (
-            <div key={item.outcome}>
-              <h3 className="text-lg font-semibold text-text-primary mb-1">
-                {item.outcome}
-              </h3>
-              <p className="text-text-secondary leading-loose">{item.detail}</p>
+        <a href="#concept">Let’s talk <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+      <main>
+        <header className={styles.hero}>
+          <p className={styles.eyebrow}>Websites for local service businesses</p>
+          <h1>{offer.headline}</h1>
+          <div className={styles.heroBottom}>
+            <p>{offer.intro}</p>
+            <div className={styles.heroAction}>
+              <a className={styles.button} href="#concept">Request a website concept <span aria-hidden="true">↗</span>
+              </a>
+              <p>Free, and I reply either way.</p>
             </div>
-          ))}
-        </div>
+          </div>
+          <div className={styles.offerLine}>
+            <span>
+              <strong>$1,300</strong> flat price</span>
+            <span>Up to 5 pages</span>
+            <span>{copy.buildSpeed}</span>
+            <a href="#package">See what’s included <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </header>
 
-        {/* What's not included */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          What's not included
-        </h2>
-        <ul className="space-y-3 text-text-secondary leading-loose list-disc list-inside">
-          <li>Logo design</li>
-          <li>Copywriting from scratch</li>
-          <li>Ongoing content updates (that's what the maintenance plan below is for)</li>
-          <li>E-commerce</li>
-        </ul>
-        {/* Pricing */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          Pricing
-        </h2>
-        <div className="rounded-xl border border-dark-border-hover bg-dark-elevated shadow-glow p-8">
-          <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-            Website build
-          </p>
-          <p className="text-5xl font-bold text-text-primary mb-4">
-            $1,300
-            <span className="text-lg font-medium text-text-tertiary"> one-time</span>
-          </p>
-          <p className="text-text-secondary leading-loose mb-5">
-            Everything you need to get your new site designed, built, and
-            launched.
-          </p>
-          <ul className="space-y-2 text-text-secondary leading-loose list-disc pl-5 mb-6">
-            <li>Up to 5 pages, built for phones first</li>
-            <li>Click-to-call, click-to-text, and a contact form that works</li>
-            <li>The titles and descriptions Google reads, plus your Google Business Profile connected</li>
-            <li>2 rounds of revisions, live on your domain</li>
-          </ul>
-          <p className="text-text-primary font-medium mb-2">
-            $500 to start · $800 at launch
-          </p>
-          <p className="text-text-tertiary text-sm mb-6">
-            Roughly two weeks from kickoff to live. Flat price. No hourly
-            billing, no surprise add-ons later.
-          </p>
-          <a href="#concept" className={ctaClasses}>
-            Get a Website Concept
-          </a>
+        <section id="examples" className={styles.work} aria-labelledby="work-title">
+          <h2 id="work-title" className={styles.srOnly}>Recent websites</h2>
+          <div className={styles.gallery}>
+            {websiteExamples.map(example => <Example key={example.id} example={example} />)}
+            <a className={`${styles.invitation} ${websiteExamples.length % 2 === 0 ? styles.invitationWide : ''}`} href="#concept">
+              <div className={styles.emptyFrame}>
+                <span className={styles.plus} aria-hidden="true">+</span>
+                <h3>Your website here.</h3>
+                <p>{copy.invitationBody}</p>
+                <span className={styles.invitationCta}>{copy.invitationCta} <span aria-hidden="true">↗</span>
+                </span>
+              </div>
+              <div className={styles.invitationCaption}>{copy.invitationCaption}</div>
+            </a>
+          </div>
+        </section>
 
-          <div className="mt-8 pt-8 border-t border-dark-border">
-            <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-              Optional care
-            </p>
-            <p className="text-lg font-semibold text-text-primary mb-1">
-              Want me to look after it afterward?
-            </p>
-            <p className="text-2xl font-bold text-text-primary mb-3">
-              +$99<span className="text-base font-medium text-text-tertiary">/month</span>
-            </p>
-            <p className="text-text-secondary leading-loose">
-              Hosting oversight, updates, small edits, and monitoring. Cancel
-              anytime.
+        <section id="package" className={styles.package} aria-labelledby="package-title">
+          <div>
+            <p className={styles.eyebrow}>{copy.packageEyebrow}</p>
+            <h2 id="package-title">{copy.packageTitle}</h2>
+            <p className={styles.sectionCopy}>{copy.packageIntro}</p>
+            <div className={styles.features}>{offer.features.map(([title, detail]) => <div key={title}>
+                <h3>{title}</h3>
+                <p>{detail}</p>
+              </div>)}</div>
+          </div>
+          <aside className={styles.priceCard} aria-label="Website package pricing">
+            <p>Design, build & launch</p>
+            <div className={styles.price}>$1,300<span>one-time</span>
+            </div>
+            <p>{copy.priceDescription}</p>
+            <div className={styles.payment}>
+              <span>$500 to start</span>
+              <span>$800 at launch</span>
+            </div>
+            <p className={styles.guarantee}>{copy.priceGuarantee}</p>
+            <a className={styles.button} href="#concept">Request a website concept <span aria-hidden="true">↗</span>
+            </a>
+            <p className={styles.priceNote}>{copy.priceRunning}</p>
+            <div className={styles.care}>
+              <div>
+                <h3>{copy.careTitle}</h3>
+                <span>Optional</span>
+              </div>
+              <p className={styles.carePrice}>$99 <span>/ month</span>
+              </p>
+              <p>{copy.careBody}</p>
+            </div>
+          </aside>
+        </section>
+
+        {testimonials.length > 0 && <section className={styles.quotes} aria-label="What clients said">
+          {testimonials.map(t => <figure key={t.name} className={styles.quote}>
+            <blockquote>{t.quote}</blockquote>
+            <figcaption>
+              {t.name}
+              <span>{t.business}</span>
+            </figcaption>
+          </figure>)}
+        </section>}
+
+        <section className={styles.process} aria-labelledby="process-title">
+          <div className={styles.sectionIntro}>
+            <h2 id="process-title">{copy.processTitle}</h2>
+            <p>{copy.processIntro}</p>
+          </div>
+          <ol>{offer.steps.map(([title, detail], i) => <li key={title}>
+              <span className={styles.stepNumber}>0{i + 1}</span>
+              <h3>{title}</h3>
+              <p>{detail}</p>
+            </li>)}</ol>
+        </section>
+
+        <section className={styles.about} aria-labelledby="about-title">
+          <Image src={headshotImage} alt="Keshav Kunver" width={96} height={96} className={styles.portrait} />
+          <div>
+            <h2 id="about-title">{copy.aboutTitle}</h2>
+            <p>{copy.aboutBody}</p>
+          </div>
+          <Link href="/#experience">More about me <span aria-hidden="true">↗</span>
+          </Link>
+        </section>
+
+        <section className={styles.faq} aria-labelledby="faq-title">
+          <h2 id="faq-title">{copy.faqTitle}</h2>
+          <div>{offer.faqs.map(([question, answer]) => <details key={question}>
+              <summary>{question}<span aria-hidden="true">+</span>
+              </summary>
+              <p>{answer}</p>
+            </details>)}</div>
+        </section>
+
+        <section className={styles.aeo} aria-labelledby="aeo-title">
+          <div className={styles.aeoBody}>
+            <p className={styles.eyebrow}>{aeo.eyebrow}</p>
+            <h2 id="aeo-title">{aeo.title}</h2>
+            <p className={styles.aeoLede}>{aeo.body}</p>
+            <p>{aeo.detail}</p>
+            <p className={styles.aeoCaveat}>{aeo.caveat}</p>
+          </div>
+          <div className={styles.aeoAction}>
+            {aeo.href ? <a className={styles.button} href={aeo.href}>{aeo.cta} <span aria-hidden="true">↗</span>
+            </a> : <>
+              <a className={styles.button} href="#concept">{aeo.ctaSoon} <span aria-hidden="true">↓</span>
+              </a>
+              <p className={styles.aeoSoon}>{aeo.soonNote}</p>
+            </>}
+          </div>
+        </section>
+
+        <section id="concept" className={styles.contact} aria-labelledby="concept-title">
+          <div>
+            <p className={styles.eyebrow}>{copy.contactEyebrow}</p>
+            <h2 id="concept-title">{copy.contactTitle}</h2>
+            <p>{copy.contactBody}</p>
+            <p className={styles.email}>Prefer email?<br />
+              <a href={`mailto:${offer.email}?subject=Website%20inquiry`}>{offer.email}</a>
             </p>
           </div>
-        </div>
-
-        {/* Process */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          How it works
-        </h2>
-        <ol className="space-y-4">
-          {steps.map((step, i) => (
-            <li key={step.name} className="flex gap-4 text-text-secondary leading-loose">
-              <span className="text-text-tertiary font-heading font-medium shrink-0">
-                {i + 1}.
-              </span>
-              <span>
-                <span className="text-text-primary font-medium">{step.name}.</span>{' '}
-                {step.detail}
-              </span>
-            </li>
-          ))}
-        </ol>
-
-        {/* Who's building it */}
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          Who's building it
-        </h2>
-        <div className="flex items-start gap-5">
-          <div className="relative w-20 h-20 rounded-xl overflow-hidden border border-dark-border shrink-0">
-            <Image
-              src={headshotImage}
-              alt="Keshav Kunver"
-              fill
-              sizes="80px"
-              className="object-cover object-top"
-            />
+          <div className={styles.form}>
+            <ConceptForm />
           </div>
-          <p className="text-text-secondary leading-loose">
-            I'm Keshav. I build software for a living, and this site is mine.
-            When you hire me, I'm the one you talk to and the one writing the
-            code.{' '}
-            <Link href="/" className="text-text-primary hover:underline">
-              Here's the rest of my work.
-            </Link>
-          </p>
-        </div>
-
-        {/* TODO: Case study. Activate this section once the client site is live.
-        Fill in the client name, the broken list, what changed, and the live URL.
-
-        <h2 className="text-3xl font-medium text-text-primary mt-16 mb-6">
-          Recent work
-        </h2>
-        <Card>
-          <h3 className="text-lg font-semibold text-text-primary mb-4">
-            CLIENT_NAME
-          </h3>
-          <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-            What was broken
-          </p>
-          <ul className="space-y-2 text-text-secondary leading-loose list-disc list-inside mb-6">
-            <li>BROKEN_ITEM_1</li>
-            <li>BROKEN_ITEM_2</li>
-            <li>BROKEN_ITEM_3</li>
-          </ul>
-          <p className="text-sm font-medium text-text-tertiary uppercase tracking-wide mb-2">
-            What changed
-          </p>
-          <p className="text-text-secondary leading-loose mb-6">
-            WHAT_CHANGED_COPY
-          </p>
-          <a
-            href="LIVE_SITE_URL"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-primary hover:underline"
-          >
-            See the live site
-          </a>
-        </Card>
-        */}
-
-        {/* Website Concept form */}
-        <div id="concept" className="mt-16 pt-10 border-t border-dark-border scroll-mt-20">
-          <h2 className="text-3xl font-medium text-text-primary mb-4">
-            See what I'd do with your website.
-          </h2>
-          <p className="text-text-secondary leading-loose max-w-2xl mb-8">
-            Tell me a little about your business. If I think we're a good fit,
-            I'll put together a website concept and send you a short private
-            video walking through the direction I'd take.
-          </p>
-          <ConceptForm />
-          <p className="text-sm text-text-tertiary mt-8">
-            Prefer email?{' '}
-            <a
-              href={`mailto:${EMAIL}?subject=Website%20inquiry`}
-              className="text-text-secondary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
-            >
-              {EMAIL}
-            </a>{' '}
-            works too.
-          </p>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
-  );
+  </div>;
 }

@@ -1,4 +1,5 @@
 import { writing } from '../../../config/content';
+import Footer from '../../../components/common/Footer';
 
 export async function generateMetadata({ params }) {
   const { slug } = (await params) ?? {};
@@ -38,5 +39,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default function BlogLayout({ children }) {
-  return children;
+  return (
+    <>
+      {children}
+      <Footer />
+    </>
+  );
 }

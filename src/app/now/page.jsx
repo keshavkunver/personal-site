@@ -1,3 +1,4 @@
+import Footer from '../../components/common/Footer';
 import Link from 'next/link';
 
 export const metadata = {
@@ -24,7 +25,8 @@ export const metadata = {
 
 export default function NowPage() {
   return (
-    <div className="min-h-screen bg-dark-bg">
+    <>
+  <div className="min-h-screen bg-dark-bg">
       <div className="max-w-2xl mx-auto px-6 pt-8 pb-16 md:pt-16 md:pb-20">
         <Link
           href="/"
@@ -53,7 +55,7 @@ export default function NowPage() {
         </p>
         <p className="text-text-secondary leading-loose mb-6">
           If you want it built for you, I design and build websites for local
-          service businesses. Flat price, live in about two weeks. Details at{' '}
+          service businesses. Flat price, built in about a week. Details at{' '}
           <Link
             href="/websites"
             className="text-text-tertiary hover:text-text-primary transition-colors underline underline-offset-4 decoration-white/30"
@@ -70,6 +72,8 @@ export default function NowPage() {
           with friends around LA.
         </p>
       </div>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

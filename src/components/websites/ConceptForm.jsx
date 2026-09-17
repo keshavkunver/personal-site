@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useForm } from '@formspree/react';
+import { websiteCopy as copy } from '../../config/websites';
 
 const FORMSPREE_FORM_ID = 'mgolnrrn';
 
@@ -21,18 +22,16 @@ export default function ConceptForm() {
         className="rounded-xl border border-dark-border bg-dark-surface p-8"
       >
         <h3 className="text-xl font-bold text-text-primary mb-4 tracking-tight">
-          Your project is in.
+          {copy.successTitle}
         </h3>
         <p className="text-text-secondary leading-loose mb-4">
-          I'll personally review what you've sent to make sure I'm the right
-          fit for the project.
+          {copy.successReview}
         </p>
         <p className="text-text-secondary leading-loose mb-4">
-          If it looks like a good fit, I'll create a website concept and send
-          you a private video walking through the direction.
+          {copy.successNext}
         </p>
         <p className="text-text-secondary leading-loose">
-          There's nothing to book in the meantime.
+          {copy.successEnd}
         </p>
       </div>
     );
@@ -102,7 +101,7 @@ export default function ConceptForm() {
           type="text"
           inputMode="url"
           autoComplete="url"
-          placeholder="Don't have one? Leave this blank."
+          placeholder="Your website URL"
           disabled={state.submitting}
           className={inputClasses}
         />
@@ -125,10 +124,10 @@ export default function ConceptForm() {
 
       <fieldset>
         <legend className={labelClasses}>
-          My website package is $1,300. Is that within your budget?
+          My website package is $1,300. Does that work for you?
         </legend>
         <div className="flex flex-col sm:flex-row gap-3">
-          {['Yes', 'Not right now'].map((option) => (
+          {['Yes', 'Depends what it includes', 'Not right now'].map((option) => (
             <label
               key={option}
               className="flex items-center gap-3 rounded-lg border border-dark-border bg-dark-surface px-4 py-3 text-text-secondary cursor-pointer transition-colors hover:border-dark-border-hover sm:flex-1"
@@ -137,7 +136,6 @@ export default function ConceptForm() {
                 type="radio"
                 name="budget"
                 value={option}
-                required
                 disabled={state.submitting}
                 className="h-4 w-4 accent-accent"
               />
@@ -153,10 +151,10 @@ export default function ConceptForm() {
           disabled={state.submitting}
           className="inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 font-heading text-base font-medium text-dark-bg transition-all duration-200 hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
         >
-          {state.submitting ? 'Sending...' : 'Get My Website Concept'}
+          {state.submitting ? 'Sending...' : 'Request my website concept'}
         </button>
         <p className="text-sm text-text-tertiary mt-4">
-          No calls. No commitment. I personally review every submission.
+          {copy.formNote}
         </p>
         {state.errors && (
           <p role="alert" className="text-red-400 text-sm mt-3">

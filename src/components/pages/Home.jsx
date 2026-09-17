@@ -171,7 +171,7 @@ const Home = () => {
                     <QuickLink
                         href="/websites"
                         title="Websites"
-                        desc="For local service businesses, live in two weeks"
+                        desc="For local service businesses, built in about a week"
                     />
                 </motion.div>
             </motion.div>
@@ -198,7 +198,7 @@ const Home = () => {
                 <QuickLink
                     href="/websites"
                     title="Websites"
-                    desc="For local service businesses, live in two weeks"
+                    desc="For local service businesses, built in about a week"
                     align="right"
                 />
             </motion.div>
