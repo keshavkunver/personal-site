@@ -16,9 +16,14 @@ function Example({
     </div>
     <p className={styles.exampleLabel}>{example.label}</p>
     <p>{example.summary}</p>
-    {example.quote && <figure className={styles.exampleQuote}>
-      <blockquote>{example.quote}</blockquote>
-      <figcaption>{example.name}</figcaption>
+    {(example.quote || example.reaction) && <figure className={styles.exampleQuote}>
+      {example.quote
+        ? <blockquote className={styles.verbatim}>{example.quote}</blockquote>
+        : <p className={styles.paraphrase}>{example.reaction}</p>}
+      <figcaption>
+        {example.name}
+        {!example.quote && <span>, paraphrased</span>}
+      </figcaption>
     </figure>}
     <div className={styles.exampleFoot}>
       <a className={styles.exampleLink} href={example.href} target="_blank" rel="noopener noreferrer">

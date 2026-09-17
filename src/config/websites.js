@@ -30,10 +30,14 @@ export const websiteExamples = [
     summary: 'His work was buried. Now it leads, and Book a Shoot is one tap from every page.',
     status: 'Live on a preview link while the domain moves over.',
     href: 'https://mack-minaya-site.vercel.app',
-    // Mack's own words from messages after the site went up, excerpted to
-    // contiguous fragments with an ellipsis marking the cut. Nothing reworded;
-    // only the opening expletive is dropped. Permission confirmed 2026-09-17.
-    quote: 'THIS WEBSITE ITS FIREEEEE \u2026 Brooo thank you so much for the website',
+    // Mack's reaction after the site went up, tidied for grammar and to drop
+    // an expletive (Keshav, 2026-09-17). Because the wording is no longer
+    // his literal text, it is rendered WITHOUT quotation marks and labelled
+    // as a paraphrase: attributing reworded text to a named client inside
+    // quote marks is what the client-work house rule and FTC testimonial
+    // guidance both cover. If he ever approves this exact sentence, move it
+    // to `quote` and it can carry quote marks.
+    reaction: 'This website is FIREEEEEE \u2026 Brooo thank you so much for this!',
     shots: [
       { src: '/work/mack-minaya/home.webp', page: 'Home', alt: 'Mack Minaya homepage: a full-width studio portrait above a row of gallery tiles.' },
       { src: '/work/mack-minaya/work.webp', page: 'Work', alt: 'Work index page showing photography galleries by category.' },

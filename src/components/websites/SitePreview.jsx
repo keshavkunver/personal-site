@@ -123,20 +123,29 @@ export default function SitePreview({ shots, name, href }) {
       </div>
 
       <div className={styles.previewControls}>
-        <div className={styles.dots} role="tablist" aria-label={`${name} pages`}>
+        <div className={styles.dots} role="group" aria-label={`${name} pages`}>
           {shots.map((shot, i) => (
             <button
               key={shot.src}
               type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={shot.page}
+              aria-current={i === index ? 'true' : undefined}
+              aria-label={`Show ${shot.page}`}
               title={shot.page}
               className={`${styles.dot} ${i === index ? styles.dotActive : ''} ${i < index ? styles.dotSeen : ''}`}
               onClick={() => go(i, true)}
             />
           ))}
         </div>
+        {shots.length > 1 && !reduced && (
+          <button
+            type="button"
+            className={styles.playToggle}
+            aria-label={auto ? `Pause ${name} preview` : `Play ${name} preview`}
+            onClick={() => setAuto(a => !a)}
+          >
+            {auto ? 'Pause' : 'Play'}
+          </button>
+        )}
         <span className={styles.shotCount} aria-hidden="true">
           {index + 1} / {shots.length}
         </span>

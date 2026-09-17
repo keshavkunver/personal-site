@@ -1039,7 +1039,8 @@
   border-left: 2px solid rgba(248, 246, 240, 0.22);
 }
 
-.exampleQuote blockquote {
+.exampleQuote blockquote,
+.exampleQuote .paraphrase {
   margin: 0;
   font-family: var(--font-source-serif), Georgia, serif;
   font-size: 1rem;
@@ -1047,8 +1048,10 @@
   color: #e6e5e1;
 }
 
-.exampleQuote blockquote::before { content: '\201C'; }
-.exampleQuote blockquote::after { content: '\201D'; }
+/* Curly quotes only on verbatim quotes. A paraphrase carries none, so it
+   never reads as the client's literal words. */
+.verbatim::before { content: '\201C'; }
+.verbatim::after { content: '\201D'; }
 
 .exampleQuote figcaption {
   margin-top: 0.4rem;
@@ -1058,3 +1061,28 @@
 
 /* En dash, not em: the house rule bans em dashes in rendered copy. */
 .exampleQuote figcaption::before { content: '\2013\00a0'; }
+
+/* Autoplay pause control. Required because the rotation runs well past five
+   seconds; hovering or clicking a frame also stops it, but neither is
+   discoverable. */
+.playToggle {
+  border: 0;
+  background: none;
+  padding: 2px 4px;
+  margin-left: 0.25rem;
+  color: #898c94;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: color 200ms ease;
+}
+
+.playToggle:hover {
+  color: #f8f6f0;
+}
+
+.playToggle:focus-visible {
+  outline: 2px solid rgba(248, 246, 240, 0.7);
+  outline-offset: 2px;
+}

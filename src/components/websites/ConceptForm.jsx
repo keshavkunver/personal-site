@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from '@formspree/react';
 import { websiteCopy as copy } from '../../config/websites';
 
@@ -12,6 +12,7 @@ const inputClasses =
 const labelClasses = 'block text-text-primary text-sm font-medium mb-2';
 
 export default function ConceptForm() {
+  const errorRef = useRef(null);
   const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
   const [name, setName] = useState('');
 
@@ -84,7 +85,9 @@ export default function ConceptForm() {
           name="email"
           type="email"
           required
+          inputMode="email"
           autoComplete="email"
+          spellCheck={false}
           disabled={state.submitting}
           className={inputClasses}
         />
@@ -101,7 +104,7 @@ export default function ConceptForm() {
           type="text"
           inputMode="url"
           autoComplete="url"
-          placeholder="Your website URL"
+          placeholder="yourbusiness.com…"
           disabled={state.submitting}
           className={inputClasses}
         />
@@ -116,7 +119,7 @@ export default function ConceptForm() {
           name="business"
           required
           rows={4}
-          placeholder="What do you do? A sentence or two is plenty."
+          placeholder="What do you do? A sentence or two is plenty…"
           disabled={state.submitting}
           className={`${inputClasses} resize-none`}
         />
@@ -157,7 +160,7 @@ export default function ConceptForm() {
           {copy.formNote}
         </p>
         {state.errors && (
-          <p role="alert" className="text-red-400 text-sm mt-3">
+          <p ref={errorRef} tabIndex={-1} role="alert" className="text-red-400 text-sm mt-3">
             Something went wrong and your request didn't send. Your answers are
             still here, so please try again.
           </p>
