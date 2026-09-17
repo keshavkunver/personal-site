@@ -522,3 +522,36 @@ the built HTML and the built CSS.
 Lighthouse mobile unchanged: performance 92, accessibility 100 (contrast
 PASS), best practices 96, SEO 100. No overflow at 390, 820, or 1440. Build
 passes, lint 0 errors.
+
+
+## Round 14 (Claude, 2026-09-17): Noel's testimonial
+
+Noel's messages had no profanity and no grammar to fix, so unlike Mack's this
+is a genuine verbatim `quote` and carries real quotation marks:
+
+  "Dude this is amazing, so much better than I could have ever thought of
+   doing ... Looks so good"
+
+Two of his three messages, joined with an ellipsis marking the cut. "Woahhh"
+was left out: stitching three fragments starts to read as assembled rather
+than said. Permission confirmed 2026-09-17, logged in
+client-work/nv-studio/AGENTS.md and explicitly distinguished from that repo's
+open blocker about the reviewers on Noel's own site.
+
+Signature is "Noel (NV Studio)" per Keshav.
+
+Bug found while verifying: the attribution rendered `example.name`, which is
+the SITE name. It happened to look right for Mack (his site is named after
+him) but produced "NV Studio" as the speaker of a personal testimonial. Added
+an explicit `said_by` field; the caption now falls back to `name` only if it
+is absent.
+
+Noel also likes that tapping the address opens the studio in Google Maps.
+Verified real (Visit.tsx and Footer.tsx both link to a Maps search for the
+studio). Written into Keshav's own summary of the build rather than into
+Noel's quote, since his messages never mention it; putting it there would be
+inventing testimonial content. Worded as "opens the studio in Google Maps",
+not "directions", because the link is a location search rather than
+turn-by-turn navigation.
+
+Build passes, lint 0 errors, 0 em dashes, no overflow at 390 or 1440.

@@ -38,6 +38,7 @@ export const websiteExamples = [
     // guidance both cover. If he ever approves this exact sentence, move it
     // to `quote` and it can carry quote marks.
     reaction: 'This website is FIREEEEEE \u2026 Brooo thank you so much for this!',
+    said_by: 'Mack Minaya',
     shots: [
       { src: '/work/mack-minaya/home.webp', page: 'Home', alt: 'Mack Minaya homepage: a full-width studio portrait above a row of gallery tiles.' },
       { src: '/work/mack-minaya/work.webp', page: 'Work', alt: 'Work index page showing photography galleries by category.' },
@@ -52,9 +53,14 @@ export const websiteExamples = [
     kind: 'client',
     label: 'Barber, Lake Forest CA',
     category: 'Client work',
-    summary: 'One page, built to send people straight to his booking page.',
+    summary: 'One page, built to send people straight to his booking page. Tapping the address opens the studio in Google Maps.',
     status: 'Live. Custom domain still to come.',
     href: 'https://nv-studio-nine.vercel.app',
+    // Noel's own words from three messages after the site went up, joined with
+    // an ellipsis marking the cuts. Nothing reworded, so this carries real
+    // quote marks. Permission confirmed 2026-09-17.
+    quote: 'Dude this is amazing, so much better than I could have ever thought of doing \u2026 Looks so good',
+    said_by: 'Noel (NV Studio)',
     shots: [
       { src: '/work/nv-studio/home.webp', page: 'Home', alt: 'NV Studio homepage: the barber\u2019s name in heavy type beside a photo of a finished cut.' },
       { src: '/work/nv-studio/work.webp', page: 'The work', alt: 'Gallery section showing before and after haircut photographs.' },

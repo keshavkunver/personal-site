@@ -21,7 +21,7 @@ function Example({
         ? <blockquote className={styles.verbatim}>{example.quote}</blockquote>
         : <p className={styles.paraphrase}>{example.reaction}</p>}
       <figcaption>
-        {example.name}
+        {example.said_by || example.name}
         {!example.quote && <span>, paraphrased</span>}
       </figcaption>
     </figure>}
