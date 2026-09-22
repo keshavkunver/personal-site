@@ -111,6 +111,15 @@ All site content is centralized in `src/config/content.js`; articles live in
 
 ## Verification before claiming done
 
+If the change altered a stated fact (price, turnaround, capacity, a URL), run
+the sweep in the workspace `AGENTS.md` under "Changing a stated fact" before
+anything else. This site has bitten us four times: `/websites` copy plus
+`src/config/websites.js`, the four metadata strings and JSON-LD in
+`src/app/websites/layout.jsx`, the hero quick-link cards in
+`src/components/pages/Home.jsx`, the `/now` freelance line, and the text
+rendered into `public/og-websites.png` (regenerate with
+`node scripts/generate-og-websites.mjs`).
+
 - `npm run build` passes and `npm run lint` (scoped to `src`) is clean
 - Every touched page checked at 390 / 820 / 1440
 - No console errors
