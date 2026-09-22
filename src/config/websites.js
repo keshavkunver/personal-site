@@ -28,7 +28,7 @@ export const websiteExamples = [
     label: 'Photographer, NYC and Connecticut',
     category: 'Client work',
     summary: 'His work was buried. Now it leads, and Book a Shoot is one tap from every page.',
-    status: 'Live on a preview link while the domain moves over.',
+    status: 'Live and signed off by the client.',
     href: 'https://mack-minaya-site.vercel.app',
     // Mack's reaction after the site went up, tidied for grammar and to drop
     // an expletive (Keshav, 2026-09-17). Because the wording is no longer
