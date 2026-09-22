@@ -583,3 +583,27 @@ building AI-powered products" line matches current positioning. Left alone.
 Build passes. The only remaining "two weeks" in the codebase is the FAQ
 conditional at config/websites.js:126, which is contingent on client response
 time rather than a promise.
+
+
+## Round 16 (Claude, 2026-09-22): refresh the Ruvoa About screenshot
+
+Ruvoa's /about page was rewritten into the team voice (ruvoa commits 948274c,
+a18f7b8) and deployed, so the fifth slideshow frame on /websites showed the
+retired first-person author's note.
+
+Confirmed the new copy was live at www.ruvoa.app/about before capturing
+(h1 "Why we're building Ruvoa", signature "The Ruvoa team"), then recaptured
+at 1440 and resized to 1120 webp, matching how the original set was made.
+26KB, up from 21KB.
+
+Checked whether the other four Ruvoa frames were also stale: git log since the
+screenshots were taken shows both commits touched only
+app/(site)/about/page.tsx, so home, life-audit, explore and philosophy are
+still accurate and were left alone.
+
+Also updated that frame's alt text, which still read "About page with the
+author's first-person note" and described exactly what the page no longer is.
+
+Note: one `npm run build` failed with a transient Turbopack error about
+next/font/google import maps. It passed unchanged on re-run; not a real
+failure, and worth knowing before chasing it.

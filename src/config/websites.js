@@ -18,7 +18,7 @@ export const websiteExamples = [
       { src: '/work/ruvoa/life-audit.webp', page: 'Life Audit', alt: 'Life Audit page walking through a miniature version of the product.' },
       { src: '/work/ruvoa/explore.webp', page: 'Explore', alt: 'Explore page: a gallery of example result artifacts.' },
       { src: '/work/ruvoa/philosophy.webp', page: 'Philosophy', alt: 'Philosophy essay page with a drop cap opening.' },
-      { src: '/work/ruvoa/about.webp', page: 'About', alt: "About page with the author's first-person note." },
+      { src: '/work/ruvoa/about.webp', page: 'About', alt: 'About page: a note from the team on why they are building Ruvoa.' },
     ],
   },
   {
