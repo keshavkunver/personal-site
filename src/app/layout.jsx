@@ -1,25 +1,28 @@
-import { Inter, Instrument_Sans, Source_Serif_4 } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from "@vercel/analytics/react"
 import SmoothScroll from '../components/providers/SmoothScroll'
 import ConsoleGreeting from '../components/common/ConsoleGreeting'
 import '../index.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+const inter = localFont({
+  src: './fonts/Inter-latin.woff2',
+  weight: '400 700',
+  style: 'normal',
   display: 'swap',
 })
 
-const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+const instrumentSans = localFont({
+  src: './fonts/InstrumentSans-latin.woff2',
+  weight: '500 700',
+  style: 'normal',
   display: 'swap',
   variable: '--font-instrument-sans',
 })
 
-const sourceSerif = Source_Serif_4({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const sourceSerif = localFont({
+  src: './fonts/SourceSerif4-latin.woff2',
+  weight: '400 600',
+  style: 'normal',
   display: 'swap',
   variable: '--font-source-serif',
 })
