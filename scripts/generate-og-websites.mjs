@@ -13,12 +13,18 @@
 // Design follows the Monument-under-aurora tokens in tailwind.config.js.
 
 import puppeteer from 'puppeteer';
+import { readFileSync } from 'node:fs';
+
+const serifFont = readFileSync(new URL('../src/app/fonts/SourceSerif4-latin.woff2', import.meta.url)).toString('base64');
+const sansFont = readFileSync(new URL('../src/app/fonts/Inter-latin.woff2', import.meta.url)).toString('base64');
 
 // Matches the Monument-under-aurora tokens in tailwind.config.js: ink-indigo
 // ground, teal glow upper-left, gold lower-right, grain, ivory text.
 const html = `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
+  @font-face{font-family:"Source Serif 4";src:url(data:font/woff2;base64,${serifFont}) format("woff2");font-weight:200 900}
+  @font-face{font-family:Inter;src:url(data:font/woff2;base64,${sansFont}) format("woff2");font-weight:100 900}
   *{margin:0;padding:0;box-sizing:border-box}
   body{width:1200px;height:630px;position:relative;overflow:hidden;
        background:linear-gradient(160deg,#0c101d 0%,#101528 60%,#12182b 100%);}
@@ -38,7 +44,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="glow-a"></div><div class="glow-b"></div>
   <div class="wrap">
     <h1>Websites for local service businesses.</h1>
-    <p class="sub"><b>$1,300 flat.</b> Built in about a week, by one engineer.</p>
+    <p class="sub"><b>$997 flat.</b> Built in about a week, by one engineer.</p>
   </div>
   <div class="url">kunver.com<span>/websites</span></div>
 </body></html>`;

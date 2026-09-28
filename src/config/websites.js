@@ -139,7 +139,7 @@ export const websiteOffer = {
     ],
     [
       'How does payment work?',
-      '$1,300 total: $500 to start and $800 when it goes live. Flat price, no hourly billing. If you do not like the first concept, I refund the $500 and we stop there.',
+      '$997 total: $500 to start and $497 when it goes live. Flat price, no hourly billing. If you do not like the first concept, I refund the $500 and we stop there.',
     ],
     [
       'Who handles the domain and hosting?',

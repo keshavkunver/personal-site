@@ -58,7 +58,7 @@ export default function WebsitesPage() {
           </div>
           <div className={styles.offerLine}>
             <span>
-              <strong>$1,300</strong> flat price</span>
+              <strong>$997</strong> flat price</span>
             <span>Up to 5 pages</span>
             <span>{copy.buildSpeed}</span>
             <a href="#package">See what’s included <span aria-hidden="true">↓</span>
@@ -95,12 +95,12 @@ export default function WebsitesPage() {
           </div>
           <aside className={styles.priceCard} aria-label="Website package pricing">
             <p>Design, build & launch</p>
-            <div className={styles.price}>$1,300<span>one-time</span>
+            <div className={styles.price}>$997<span>one-time</span>
             </div>
             <p>{copy.priceDescription}</p>
             <div className={styles.payment}>
               <span>$500 to start</span>
-              <span>$800 at launch</span>
+              <span>$497 at launch</span>
             </div>
             <p className={styles.guarantee}>{copy.priceGuarantee}</p>
             <a className={styles.button} href="#concept">Request a website concept <span aria-hidden="true">↗</span>

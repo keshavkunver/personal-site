@@ -127,7 +127,7 @@ export default function ConceptForm() {
 
       <fieldset>
         <legend className={labelClasses}>
-          My website package is $1,300. Does that work for you?
+          My website package is $997. Does that work for you?
         </legend>
         <div className="flex flex-col sm:flex-row gap-3">
           {['Yes', 'Depends what it includes', 'Not right now'].map((option) => (

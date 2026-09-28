@@ -1,7 +1,7 @@
 import Footer from '../../components/common/Footer';
 export const metadata = {
   title: 'Websites for Local Service Businesses | Keshav Kunver',
-  description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
+  description: 'I build websites for local service businesses. $997 flat, built by one engineer instead of a template or an agency.',
   // Suppress the site-wide AI engineering keywords; they don't fit this page.
   keywords: null,
   alternates: {
@@ -9,17 +9,17 @@ export const metadata = {
   },
   openGraph: {
     title: 'Websites for Local Service Businesses | Keshav Kunver',
-    description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
+    description: 'I build websites for local service businesses. $997 flat, built by one engineer instead of a template or an agency.',
     url: 'https://www.kunver.com/websites',
     type: 'website',
     siteName: 'Keshav Kunver',
-    images: [{ url: '/og-websites.png', width: 1200, height: 630, alt: 'Websites for local service businesses. $1,300 flat, built in about a week.' }],
+    images: [{ url: '/og-websites.png?v=997', width: 1200, height: 630, alt: 'Websites for local service businesses. $997 flat, built in about a week.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Websites for Local Service Businesses | Keshav Kunver',
-    description: 'I build websites for local service businesses. Flat price, built by one engineer instead of a template or an agency.',
-    images: ['/og-websites.png'],
+    description: 'I build websites for local service businesses. $997 flat, built by one engineer instead of a template or an agency.',
+    images: ['/og-websites.png?v=997'],
   },
 };
 
@@ -44,7 +44,7 @@ export default function WebsitesLayout({ children }) {
               {
                 '@type': 'Offer',
                 name: 'Website build',
-                price: '1300',
+                price: '997',
                 priceCurrency: 'USD',
                 description:
                   'Up to 5 pages, mobile-first, live on your domain.',
