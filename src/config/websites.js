@@ -175,9 +175,6 @@ export const websiteCopy = {
   mockContact: 'Call now',
   mockFooterLeft: 'Services & pricing',
   mockFooterRight: 'Service area',
-  invitationBody: 'Yours could be next. Tell me what you have in mind.',
-  invitationCta: 'Tell me about your business',
-  invitationCaption: 'New site or a rebuild. Either works.',
   packageEyebrow: 'The package',
   packageTitle: 'What you get.',
   packageIntro: 'One price, one person. Design, build, and launch.',
@@ -245,5 +242,27 @@ export const websiteShowcase = {
         { id: 'contact', label: 'Contact' },
       ],
     },
+  ],
+};
+
+// Illustrative business concepts, separate from the real client work above.
+export const businessInvitation = {
+  title: 'Your website here.',
+  cta: 'Let’s build yours.',
+  play: 'Play',
+  pause: 'Pause',
+  replay: 'Replay',
+  label: 'Business website concepts',
+  playLabel: 'Play business website concepts',
+  pauseLabel: 'Pause business website concepts',
+  replayLabel: 'Replay business website concepts',
+  scenes: [
+    { id: 'massage', name: 'Massage therapy', headline: 'Make time for yourself.', action: 'Book a session', theme: 'sage' },
+    { id: 'photographer', name: 'Photography', headline: 'See yourself differently.', action: 'View the work', theme: 'mono' },
+    { id: 'barber', name: 'Independent barber', headline: 'Your next good cut.', action: 'Book a chair', theme: 'olive' },
+    { id: 'restaurant', name: 'Restaurant', headline: 'Stay for another course.', action: 'Find a table', theme: 'wine' },
+    { id: 'cafe', name: 'Neighborhood café', headline: 'Your usual. Or something new.', action: 'See the menu', theme: 'blue' },
+    { id: 'hvac', name: 'Heating & cooling', headline: 'Comfort starts at home.', action: 'Schedule a visit', theme: 'navy' },
+    { id: 'consultant', name: 'Independent consulting', headline: 'A clearer way forward.', action: 'Let’s talk', theme: 'forest' },
   ],
 };

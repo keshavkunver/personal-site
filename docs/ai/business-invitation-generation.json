@@ -1,0 +1,84 @@
+{
+  "ids": [
+    "photographer",
+    "barber",
+    "restaurant",
+    "cafe",
+    "hvac",
+    "consultant"
+  ],
+  "requests": [
+    {
+      "index": 0,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual photographer website. An independent portrait photographer's daylight studio. Begin close on a professional camera lens with a beautiful reflection, then smoothly arc sideways to reveal an adult woman in a cobalt blue blouse posing against a pale seamless backdrop. Photographer seen only from behind at edge of shot. Elegant editorial composition, crisp black and white studio furniture, clean daylight, lively authentic expression. No flashing or strobing. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    },
+    {
+      "index": 1,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual barber website. An independent neighborhood barber shop. Begin on a polished steel clipper resting beside a comb on a rich walnut counter, then smoothly dolly sideways to reveal an adult barber carefully finishing the side of an adult customer's short haircut in a vintage leather chair. Refined olive walls, warm brass mirror edges, natural late afternoon light. Realistic tools, safe precise movement, relaxed authentic local shop. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual restaurant website. An intimate contemporary restaurant. Begin close on a beautiful ceramic plate of fresh pasta and herbs being set gently onto a walnut dining table by a server's hand, then smoothly pull back to reveal a welcoming dining room with amber lighting, burgundy banquette and a vase with a single branch. Elegant appetizing tactile food detail, no extravagant plating tricks. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual cafe website. An independent neighborhood cafe. Begin close on a porcelain espresso cup with delicate steam and rich crema on a sunlit counter, then smoothly pull back past a pastry to reveal a cobalt-blue espresso machine, barista softly out of focus and a welcoming street window. Morning sunshine, honey-colored timber, rich blue accents, believable natural steam. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    },
+    {
+      "index": 4,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual hvac website. A professional residential heating and cooling service. Begin close on a neat HVAC manifold gauge and gloved hand, then smoothly slide sideways to reveal an adult technician in a clean navy work shirt inspecting an outdoor air conditioning condenser beside a well-kept California home. Clear late morning daylight, trustworthy realistic everyday service, orderly tools, no sparks, no smoke, no hazardous action. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    },
+    {
+      "index": 5,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "folder_id": "881715b7-0233-4eb5-866a-1463c9ce7c9a",
+        "duration": 4,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "prompt": "A four-second cinematic brand film for a conceptual consultant website. An independent business consultant meeting a small business owner in a bright architecturally simple office. Begin close on an open notebook with indistinct marks and a ceramic cup, then smoothly dolly sideways to reveal two adult professionals seated across a light oak desk, listening and speaking naturally. Soft daylight, navy clothing, forest-green plant, intelligent warm atmosphere, no stock-photo handshake. One continuous confident camera move, physical foreground-to-background parallax, photorealistic materials, beautiful restrained colour grade. Subject remains within the middle two thirds, usable in a square crop. Silent. No text, no logos, no watermarks, no website UI, no borders, no transitions to unrelated scenes. Physically plausible hands, tools and proportions."
+      }
+    }
+  ]
+}

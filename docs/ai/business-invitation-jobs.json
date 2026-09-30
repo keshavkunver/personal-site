@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "index": 0,
+      "job_id": "1fc123de-00b7-4226-a936-5d929fed637e",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035424_1fc123de-00b7-4226-a936-5d929fed637e.mp4"
+    },
+    {
+      "index": 1,
+      "job_id": "22b7017f-899e-48e8-ac1f-6c83f554d84d",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035836_22b7017f-899e-48e8-ac1f-6c83f554d84d.mp4"
+    },
+    {
+      "index": 2,
+      "job_id": "9ff1c4da-b7f6-46d9-ba50-9a655af4e25c",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035424_9ff1c4da-b7f6-46d9-ba50-9a655af4e25c.mp4"
+    },
+    {
+      "index": 3,
+      "job_id": "6cc1bee3-038e-4f1c-9631-c5febaeb2052",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035424_6cc1bee3-038e-4f1c-9631-c5febaeb2052.mp4"
+    },
+    {
+      "index": 4,
+      "job_id": "f6584b7f-6ed6-4822-9e11-cc732ee2ea2b",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035424_f6584b7f-6ed6-4822-9e11-cc732ee2ea2b.mp4"
+    },
+    {
+      "index": 5,
+      "job_id": "946fad7b-1b30-4221-95c1-6f763c18d690",
+      "status": "completed",
+      "type": "video",
+      "model": "cinematic_studio_3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JLUXBUtYZQ0KqinE355oxWvFAI/hf_20260930_035424_946fad7b-1b30-4221-95c1-6f763c18d690.mp4"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "completed": 6,
+    "failed": 0,
+    "active": 0,
+    "errors": 0
+  },
+  "all_terminal": true
+}

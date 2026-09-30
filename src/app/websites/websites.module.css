@@ -297,41 +297,6 @@
   position:relative;aspect-ratio:1.65;
  
 }
-.invitation {
-  display:flex;flex-direction:column;
- 
-}
-.emptyFrame {
-  min-height:340px;
-  flex:1;
-  border:1px dashed #ffffff40;
-  border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:radial-gradient(ellipse at center,#ffffff05,transparent 70%);padding:28px;
- 
-}
-.plus {
-  font-size:35px;line-height:1;color:#898c94;margin-bottom:18px;
- 
-}
-.emptyFrame h3 {
-  font-family:var(--font-source-serif),serif;font-weight:500;font-size:38px;
- 
-}
-.emptyFrame p {
-  font-size:15px;margin:12px 0 26px;
- 
-}
-.invitationCta {
-  font-size:14px;color:#f8f6f0;
- 
-}
-.invitationCaption {
-  font-size:15px;padding-top:18px;
- 
-}
-.invitation:hover .emptyFrame {
-  border-color:#f8f6f0;
- 
-}
 .package {
   display:grid;grid-template-columns:1.2fr 1fr;gap:90px;border-top:1px solid #ffffff16;padding:90px 0;scroll-margin-top:30px;
  

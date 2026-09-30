@@ -1,21 +1,45 @@
-# Websites showcase: Johnny reveal and copy reduction
+# Business invitation film
 
-Owner: Codex, primary checkout on main. All changes continue the same uncommitted user-approved task. No other agent work overwritten. User authorized committing and pushing personal-site changes on 2026-09-29.
+Owner: Codex, primary main checkout. User approved implementation on 2026-09-29.
+Keshav approved the visual preview and authorized committing and pushing this iteration.
+Personal-site showcase previously pushed as fddc5c09. Johnny entrance separately
+pushed in its own repository as 9dc54a7.
 
-Goal completed: create Johnny’s cinematic reveal, then drastically reduce the copy added around the visuals.
+## Delivered
+- Replaced static Your website here card with three randomly selected distinct
+  business concepts per visit, followed by the invitation and one CTA.
+- Six new Higgsfield Cinema Studio 3.0 films: photography, independent barber,
+  restaurant, cafe, HVAC, consultant; approved massage footage reused.
+- Films expand across the canvas then contract into live DOM hero layouts.
+  Business-specific colour/type treatments; real sharp DOM text. Illustrative
+  concepts, separate from real client examples. No new dependencies.
+- Desktop autoplay once in view; mobile waits for Play. Pause/replay, offscreen
+  and hidden-tab pause. Reduced motion and no-JS show static invitation without
+  video requests. Data saving/slow connection disables automatic playback.
+- Removed old invitation body/caption. CTA: Let’s build yours.
 
-Delivered:
-- Johnny replaces Ruvoa in /websites; real captures for Johnny, NV Studio, and Mack Minaya.
-- 10.5-second Johnny film: seven-second Higgsfield linen/room opening, native Higgsedit transition into the actual homepage, then real desktop/phone screens. Separate desktop and phone edits (~1.3 MB / 721 KB).
-- Johnny is selected initially. Desktop plays once in view; phone waits for Play. Film replays; completion selects Home and pauses. Offscreen/tab-hidden pause preserves position. Reduced motion shows the real still site and avoids video downloads.
-- Removed showcase introduction, nine explanatory caption/description pairs, stage labels/footer, category labels, chapter numbers, and the added NV Studio narrative section. Kept Recent work, project names, actual page labels, Film, Play/Pause, Visit site. Noel’s approved testimonial is back in the original gallery card.
+## Media and cost
+Prompts: docs/ai/business-invitation-generation.json.
+Completed jobs and source URLs: docs/ai/business-invitation-jobs.json.
+Six four-second 720p source films, 20 credits each. One barber submission was
+explicitly rejected for concurrency and retried only after capacity freed.
+All six completed: 120 credits spent; balance 53.55 after generation.
+Delivered silent H.264 960px CRF25 faststart films, 230–414KB each, plus JPEG
+posters. Massage uses seconds 3–7 of the original approved source in
+johnny-reveal-generation.json. Only three selected videos requested per play.
+No browser tracking/storage used for random selection.
 
-Design/contracts: existing ink/ivory design and fonts; website text/photos use real captures. AI footage is atmosphere only, not a real client home or invented footage of Johnny. No new dependencies. Existing offer unchanged. Source/prompt/composition archive: docs/ai/WEBSITE_SHOWCASE_MEDIA.md, docs/ai/johnny-reveal-generation.json, scripts/higgsfield/.
+## Verification
+- Production build passes; lint 0 errors, 12 pre-existing warnings.
+- scripts/verify-business-invitation.mjs passes 390/820/1440: real playback,
+  pause/resume, three unique video requests, completion, replay, visible keyboard
+  focus, no overflow/page errors; desktop offscreen pause tested.
+- Reduced-motion and no-JS cases show invitation, download no invitation videos,
+  and CTA navigates to concept form.
+- Film contact sheet reviewed at opening/end; card screenshots reviewed.
+  Artifacts: /tmp/business-films/contact-sheet.png and
+  /tmp/business-invitation-review/.
+- git diff --check passes. Old invitation copy removed from src.
 
-Validation: production build passed. Lint passed with the same 12 pre-existing warnings. Browser checks passed at 390/820/1440: desktop/mobile film selection, real playback, pause/resume, offscreen pause, natural completion to Home, replay, all project/chapter captures, keyboard focus, no overflow, no console/page errors. Reduced motion skips film and video downloads while manual chapters work. Native transition frames at 7.5/8.5/10 seconds visually inspected; final page screenshots reviewed at all sizes. Removed-copy sweep clean in src; git diff --check passed.
-
-Review: http://localhost:3000/websites. Film: http://localhost:3000/work/showcase/johnny-ferraer/reveal.mp4. Screenshots: /tmp/website-showcase-review/johnny-film-{390,820,1440}.png. Full native project archive also retained at the cloud link in media provenance. Publishing approved: commit and push to main; Vercel deploys automatically. No remaining implementation blockers.
-
-Prior completed context: $997 offer update and self-hosted fonts are already committed. Do not reintroduce next/font/google.
-
-Follow-up: Johnny moved to the first showcase tab (already first in gallery). Removed all three project status captions and their content fields at user request. Production build/lint and focused 390/820/1440 checks rerun. The Your website here invitation remains static; proposed next is a short business-scene-to-website reveal with optional name entry and one CTA, no explanatory paragraphs. No new invitation generation submitted.
+Review: http://localhost:3000/websites#your-website (Play on mobile).
+Visual review completed and publishing authorized. No remaining implementation tasks.

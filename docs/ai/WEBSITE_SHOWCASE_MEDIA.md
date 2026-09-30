@@ -44,3 +44,20 @@ Website encodes use FFmpeg `-an -c:v libx264 -crf 23 -preset slow -pix_fmt yuv42
 Johnny is the initial project. Desktop plays the film once in view; phones require Play. Film has replay through the Film control. Playback pauses in hidden tabs and offscreen without discarding its position. Natural completion selects Home and pauses. Reduced motion skips Film and offers the still website controls without video download. The retained ambient loop serves the regular screenshot views.
 
 Copy reduction: removed the showcase intro, all nine scene captions/descriptions, stage meta/footer copy, duplicate category labels, numbered chapters, and the added NV Studio narrative section. Restored Noel’s existing quote to his original gallery card. Controls now use page names, Play/Pause, Film, and Visit site.
+
+## Business invitation, 2026-09-29
+The Your website here card now uses six newly generated illustrative films plus
+the existing massage footage. Source requests, exact prompts, job IDs and URLs
+are in business-invitation-generation.json and business-invitation-jobs.json.
+These are fictional business concepts, not additional client projects.
+
+Cinema Studio 3.0, six four-second 720p 16:9 silent generations, 120 credits total.
+One rejected concurrency submission created no job; only that barber request
+was retried. All six results displayed together through Higgsfield's batch gallery.
+
+Each source was encoded with ffmpeg: scale=960:-2, libx264 CRF25, preset slow,
+no audio, faststart. JPEG posters use the frame at one second, scale 960px,
+q:v 3. Massage is a four-second cut starting at 3s of Johnny's original film;
+its poster uses 2s of the cut. Public assets live under public/work/invitation.
+The component uses native HTML video plus CSS to transform the footage into
+live website layouts. No generated text or UI is baked into the footage.

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ConceptForm from '../../components/websites/ConceptForm';
 import SitePreview from '../../components/websites/SitePreview';
+import BusinessInvitation from '../../components/websites/BusinessInvitation';
 import WebsiteShowcase from '../../components/websites/WebsiteShowcase';
 import headshotImage from '../../assets/images/profile/headshot.png';
 import { websiteExamples, websiteOffer as offer, websiteCopy as copy, aeoOffer as aeo } from '../../config/websites';
@@ -72,16 +73,7 @@ export default function WebsitesPage() {
           <h2 id="work-title" className={styles.srOnly}>Websites</h2>
           <div className={styles.gallery}>
             {websiteExamples.map(example => <Example key={example.id} example={example} />)}
-            <a className={`${styles.invitation} ${websiteExamples.length % 2 === 0 ? styles.invitationWide : ''}`} href="#concept">
-              <div className={styles.emptyFrame}>
-                <span className={styles.plus} aria-hidden="true">+</span>
-                <h3>Your website here.</h3>
-                <p>{copy.invitationBody}</p>
-                <span className={styles.invitationCta}>{copy.invitationCta} <span aria-hidden="true">↗</span>
-                </span>
-              </div>
-              <div className={styles.invitationCaption}>{copy.invitationCaption}</div>
-            </a>
+            <BusinessInvitation className={websiteExamples.length % 2 === 0 ? styles.invitationWide : ''} />
           </div>
         </section>
 
