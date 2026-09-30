@@ -1,40 +1,21 @@
-# Website offer price update
+# Websites showcase: Johnny reveal and copy reduction
 
-Owner: Codex, primary checkout on main.
-Goal: change website build to $997 across copy, form, metadata, JSON-LD, and OG image.
-Confirmed payment: $500 deposit + $497 at launch. Optional care remains $99/month.
-Plan: update references, regenerate social card, run old-price sweep, build/lint, and check /websites at 390/820/1440.
-Status: implementation and validation complete; user approved the OG image and authorized pushing to main. Publishing this change triggers Vercel deployment; deployment outcome is not yet verified. Starting checkout was clean.
-Updated page/form/FAQ, all three metadata descriptions, OG alt text, JSON-LD, and regenerated public/og-websites.png. Social image URLs use ?v=997; generator now embeds existing local fonts.
-Validation: production build passed (outside sandbox after sandbox run stalled); lint passed with 12 pre-existing warnings. Old-price and old-balance sweep clean outside historical docs; sibling repo sweep found no matching offer references. Browser checks at 390/820/1440: correct prices and metadata, no horizontal overflow or page errors; rendered Service JSON-LD price is 997. OG image visually reviewed. Screenshots: /tmp/websites-997-{390,820,1440}.png and /tmp/websites-997-package-{390,820,1440}.png.
-No remaining implementation tasks.
+Owner: Codex, primary checkout on main. All changes continue the same uncommitted user-approved task. No other agent work overwritten. User authorized committing and pushing personal-site changes on 2026-09-29.
 
-# Fonts are self-hosted
+Goal completed: create Johnny’s cinematic reveal, then drastically reduce the copy added around the visuals.
 
-Claude self-hosted the Google Fonts families via `next/font/local` and
-deployed to production. That font task is complete.
+Delivered:
+- Johnny replaces Ruvoa in /websites; real captures for Johnny, NV Studio, and Mack Minaya.
+- 10.5-second Johnny film: seven-second Higgsfield linen/room opening, native Higgsedit transition into the actual homepage, then real desktop/phone screens. Separate desktop and phone edits (~1.3 MB / 721 KB).
+- Johnny is selected initially. Desktop plays once in view; phone waits for Play. Film replays; completion selects Home and pauses. Offscreen/tab-hidden pause preserves position. Reduced motion shows the real still site and avoids video downloads.
+- Removed showcase introduction, nine explanatory caption/description pairs, stage labels/footer, category labels, chapter numbers, and the added NV Studio narrative section. Kept Recent work, project names, actual page labels, Film, Play/Pause, Visit site. Noel’s approved testimonial is back in the original gallery card.
 
-Reason: vercel/next.js#99114 (open). Google's css2 endpoint intermittently
-returns an extensionless `/l/font?kit=...&skey=...&v=..` URL. Turbopack
-serializes font options to JSON and parses that JSON with a query-string
-parser, so the `&` splits it into three pairs and trips an invariant
-requiring exactly one. The response is HTTP 200, so Next's retry path never
-engages. This broke nv-studio's production deploy on 2026-09-26.
+Design/contracts: existing ink/ivory design and fonts; website text/photos use real captures. AI footage is atmosphere only, not a real client home or invented footage of Johnny. No new dependencies. Existing offer unchanged. Source/prompt/composition archive: docs/ai/WEBSITE_SHOWCASE_MEDIA.md, docs/ai/johnny-reveal-generation.json, scripts/higgsfield/.
 
-The upstream fix PR (#99132) touches only the webpack loader, so the
-Turbopack path stays broken; no released or canary version fixes it. Self
--hosting removes the build-time dependency on Google entirely, which is why
-it was preferred over redeploying or switching to `--webpack`.
+Validation: production build passed. Lint passed with the same 12 pre-existing warnings. Browser checks passed at 390/820/1440: desktop/mobile film selection, real playback, pause/resume, offscreen pause, natural completion to Home, replay, all project/chapter captures, keyboard focus, no overflow, no console/page errors. Reduced motion skips film and video downloads while manual chapters work. Native transition frames at 7.5/8.5/10 seconds visually inspected; final page screenshots reviewed at all sizes. Removed-copy sweep clean in src; git diff --check passed.
 
-Do not reintroduce `next/font/google` in this repo. Font files live in
-src/app/fonts/ and are
-updated by hand if a family needs a newer version.
+Review: http://localhost:3000/websites. Film: http://localhost:3000/work/showcase/johnny-ferraer/reveal.mp4. Screenshots: /tmp/website-showcase-review/johnny-film-{390,820,1440}.png. Full native project archive also retained at the cloud link in media provenance. Publishing approved: commit and push to main; Vercel deploys automatically. No remaining implementation blockers.
 
-Validation: clean production build, repo-wide sweep for
-`next/font/google`/`gstatic`/`fonts.googleapis`, headless Chrome check
-that every face serves 200 with no failed requests, and a green Vercel
-production deploy.
+Prior completed context: $997 offer update and self-hosted fonts are already committed. Do not reintroduce next/font/google.
 
-Note: the previous contents of this file described uncommitted Codex work
-(/websites presentation).
-That work was committed and pushed before this session; the note was stale.
+Follow-up: Johnny moved to the first showcase tab (already first in gallery). Removed all three project status captions and their content fields at user request. Production build/lint and focused 390/820/1440 checks rerun. The Your website here invitation remains static; proposed next is a short business-scene-to-website reveal with optional name entry and one CTA, no explanatory paragraphs. No new invitation generation submitted.

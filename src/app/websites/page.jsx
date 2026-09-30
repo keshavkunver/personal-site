@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ConceptForm from '../../components/websites/ConceptForm';
 import SitePreview from '../../components/websites/SitePreview';
+import WebsiteShowcase from '../../components/websites/WebsiteShowcase';
 import headshotImage from '../../assets/images/profile/headshot.png';
 import { websiteExamples, websiteOffer as offer, websiteCopy as copy, aeoOffer as aeo } from '../../config/websites';
 import styles from './websites.module.css';
@@ -29,7 +30,6 @@ function Example({
       <a className={styles.exampleLink} href={example.href} target="_blank" rel="noopener noreferrer">
         Visit the site <span aria-hidden="true">↗</span>
       </a>
-      <span className={styles.exampleStatus}>{example.status}</span>
     </div>
   </article>;
 }
@@ -66,8 +66,10 @@ export default function WebsitesPage() {
           </div>
         </header>
 
+        <WebsiteShowcase />
+
         <section id="examples" className={styles.work} aria-labelledby="work-title">
-          <h2 id="work-title" className={styles.srOnly}>Recent websites</h2>
+          <h2 id="work-title" className={styles.srOnly}>Websites</h2>
           <div className={styles.gallery}>
             {websiteExamples.map(example => <Example key={example.id} example={example} />)}
             <a className={`${styles.invitation} ${websiteExamples.length % 2 === 0 ? styles.invitationWide : ''}`} href="#concept">

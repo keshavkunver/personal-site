@@ -5,20 +5,17 @@
 //   'client' client work, live and cleared for display
 export const websiteExamples = [
   {
-    id: 'ruvoa',
-    name: 'Ruvoa',
-    kind: 'own',
-    label: 'Product site',
-    category: 'My own product',
-    summary: 'Five pages, one question each. A real type system instead of a template.',
-    status: 'Live at ruvoa.app.',
-    href: 'https://www.ruvoa.app',
+    id: 'johnny-ferraer',
+    name: 'Johnny Ferraer',
+    kind: 'client',
+    label: 'In-home massage therapy',
+    category: 'Client work',
+    summary: 'In-home massage. Session finder and online booking.',
+    href: 'https://johnny-ferraer-massage-therapy.vercel.app/',
     shots: [
-      { src: '/work/ruvoa/home.webp', page: 'Home', alt: 'Ruvoa homepage: a large serif question above a table of contents.' },
-      { src: '/work/ruvoa/life-audit.webp', page: 'Life Audit', alt: 'Life Audit page walking through a miniature version of the product.' },
-      { src: '/work/ruvoa/explore.webp', page: 'Explore', alt: 'Explore page: a gallery of example result artifacts.' },
-      { src: '/work/ruvoa/philosophy.webp', page: 'Philosophy', alt: 'Philosophy essay page with a drop cap opening.' },
-      { src: '/work/ruvoa/about.webp', page: 'About', alt: 'About page: a note from the team on why they are building Ruvoa.' },
+      { src: '/work/showcase/johnny-ferraer/home-desktop.webp', page: 'Home', alt: 'Johnny Ferraer Massage Therapy homepage introducing in-home massage.' },
+      { src: '/work/showcase/johnny-ferraer/first-visit-desktop.webp', page: 'First visit', alt: 'First visit page explaining what to expect from an in-home massage session.' },
+      { src: '/work/showcase/johnny-ferraer/services-desktop.webp', page: 'Services', alt: 'Massage session options and links to book with Johnny.' },
     ],
   },
   {
@@ -28,7 +25,6 @@ export const websiteExamples = [
     label: 'Photographer, NYC and Connecticut',
     category: 'Client work',
     summary: 'His work was buried. Now it leads, and Book a Shoot is one tap from every page.',
-    status: 'Live and signed off by the client.',
     href: 'https://mack-minaya-site.vercel.app',
     // Mack's reaction after the site went up, tidied for grammar and to drop
     // an expletive (Keshav, 2026-09-17). Because the wording is no longer
@@ -54,7 +50,6 @@ export const websiteExamples = [
     label: 'Barber, Lake Forest CA',
     category: 'Client work',
     summary: 'One page, built to send people straight to his booking page. Tapping the address opens the studio in Google Maps.',
-    status: 'Live. Custom domain still to come.',
     href: 'https://nv-studio-nine.vercel.app',
     // Noel's own words from three messages after the site went up, joined with
     // an ellipsis marking the cuts. Nothing reworded, so this carries real
@@ -209,4 +204,46 @@ export const websiteCopy = {
     'If I think I can help, you will get a short video walking through the direction I would take.',
   successEnd: 'Nothing to book in the meantime.',
   formNote: 'No call required. I reply either way.',
+};
+
+// The showcase uses real viewport captures, never generated website interfaces.
+// Regenerate with scripts/capture-website-showcase.mjs.
+export const websiteShowcase = {
+  title: 'Recent work.',
+  visit: 'Visit site',
+  play: 'Play',
+  pause: 'Pause',
+  film: 'Film',
+  projects: [
+    {
+      id: 'johnny-ferraer',
+      film: {
+        desktop: '/work/showcase/johnny-ferraer/reveal.mp4',
+        mobile: '/work/showcase/johnny-ferraer/reveal-mobile.mp4',
+        poster: '/work/showcase/johnny-ferraer/reveal.webp',
+        mobilePoster: '/work/showcase/johnny-ferraer/reveal-mobile.webp',
+      },
+      scenes: [
+        { id: 'home', label: 'Home' },
+        { id: 'first-visit', label: 'First visit' },
+        { id: 'services', label: 'Services' },
+      ],
+    },
+    {
+      id: 'nv-studio',
+      scenes: [
+        { id: 'home', label: 'Home' },
+        { id: 'work', label: 'Work' },
+        { id: 'services', label: 'Services' },
+      ],
+    },
+    {
+      id: 'mack-minaya',
+      scenes: [
+        { id: 'home', label: 'Home' },
+        { id: 'work', label: 'Work' },
+        { id: 'contact', label: 'Contact' },
+      ],
+    },
+  ],
 };
